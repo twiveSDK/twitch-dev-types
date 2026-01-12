@@ -1,0 +1,118 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "twitch-dev-types",
+    "description": "Up-to-date Twitch Typings based on the official Twitch Dev Docs",
+    "version": "1.0.0",
+    "homepage": "https://github.com/twiveSDK",
+    "author": "aysib07 <dev@aysib07.de>",
+    "keywords": [
+        "twitch",
+        "twitch api",
+        "twitch eventsub",
+        "types",
+        "twitch types",
+        "twitch dev"
+    ],
+    "exports": {
+        ".": {
+            "types": "./index.d.ts",
+            "require": "./index.js",
+            "import": "./index.js.map"
+        },
+        "./api": {
+            "types": "./api/index.d.ts",
+            "require": "./api/index.js",
+            "import": "./api/index.js.map"
+        },
+        "./authentication": {
+            "types": "./authentication/index.d.ts",
+            "require": "./authentication/index.js",
+            "import": "./authentication/index.js.map"
+        },
+        "./eventsub": {
+            "types": "./eventsub/index.d.ts",
+            "require": "./eventsub/index.js",
+            "import": "./eventsub/index.js.map"
+        }
+    },
+    "files": [
+        "{api,authentication,eventsub}/**/*.{d.ts,d.ts.map,js,js.map}",
+        "*.{d.ts,d.ts.map,js,js.map}"
+    ],
+    "scripts": {
+        "build:ci": "tsc --noEmit --incremental false",
+        "build:node": "tsc",
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+        "lint": "eslint --fix --ext ts .",
+        "prepare": "husky"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@commitlint/cli": "^20.3.1",
+        "@commitlint/config-angular": "^20.3.1",
+        "@typescript-eslint/eslint-plugin": "^8.52.0",
+        "@typescript-eslint/parser": "^8.52.0",
+        "conventional-changelog": "^7.1.1",
+        "conventional-changelog-angular": "^8.1.0",
+        "conventional-recommended-bump": "^11.2.0",
+        "eslint": "^9.39.2",
+        "eslint-plugin-unicorn": "^62.0.0",
+        "husky": "^9.1.7",
+        "jiti": "^2.6.1",
+        "lint-staged": "^16.2.7",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.50.1"
+    },
+    "publishConfig": {
+        "provenance": true,
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/twiveSDK/twitch-dev-types.git"
+    },
+    "bugs": {
+        "url": "https://github.com/twiveSDK/twitch-dev-types/issues"
+    },
+    "lint-staged": {
+        "{api,authentication,eventsub}/**/*.{ts,d.ts,d.ts.map,js,js.map}": [
+            "eslint --fix",
+            "eslint"
+        ],
+        "*.{ts,d.ts,d.ts.map,js,js.map}": [
+            "eslint --fix",
+            "eslint"
+        ]
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-angular"
+        ],
+        "rules": {
+            "type-enum": [
+                2,
+                "always",
+                [
+                    "feat",
+                    "fix",
+                    "refactor",
+                    "perf",
+                    "style",
+                    "test",
+                    "docs",
+                    "build",
+                    "chore",
+                    "src",
+                    "ci",
+                    "revert"
+                ]
+            ],
+            "scope-case": [
+                1,
+                "always",
+                "pascal-case"
+            ]
+        }
+    }
+}

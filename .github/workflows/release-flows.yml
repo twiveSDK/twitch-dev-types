@@ -1,0 +1,82 @@
+name: Release Flows
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+  packages: write
+
+jobs:
+  publish_next:
+    concurrency:
+      group: publish_next
+      cancel-in-progress: true
+
+    name: Publish @next release to npm
+
+    runs-on: ubuntu-latest
+
+    if: github.repository_owner == 'twiveSDK' && !startsWith(github.event.head_commit.message, 'chore(release)')
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build package
+        run: npm run build:node
+
+      - name: Publish new @next version
+        env:
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+            npm publish --access public --tag next
+
+  publish_latest:
+    concurrency:
+      group: publish_latest
+      cancel-in-progress: true
+
+    name: Publish @latest release to npm
+
+    runs-on: ubuntu-latest
+
+    if: github.repository_owner == 'twiveSDK' && startsWith(github.event.head_commit.message, 'chore(release)') && !contains(github.event.head_commit.message, '[skip ci]')
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build package
+        run: npm run build:node
+
+      - name: Publish new @latest version
+        env:
+            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+            npm publish --access public --tag latest

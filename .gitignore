@@ -1,0 +1,30 @@
+# IDE-specific files
+.idea/
+.vscode/
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+api/**/*.d.ts
+api/**/*.d.ts.map
+api/**/*.js
+api/**/*.js.map
+
+auth/**/*.d.ts
+auth/**/*.d.ts.map
+auth/**/*.js
+auth/**/*.js.map
+
+eventsub/**/*.d.ts
+eventsub/**/*.d.ts.map
+eventsub/**/*.js
+eventsub/**/*.js.map
+
+*.d.ts
+*.d.ts.map
+*.js
+*.js.map
+
+.npmrc
