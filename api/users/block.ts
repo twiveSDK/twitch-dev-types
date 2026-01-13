@@ -1,4 +1,4 @@
-import type {APIResponse} from "../common";
+import type {APIResponse, RESTPaginationRequestParams} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-user-block-list
@@ -21,24 +21,11 @@ export interface APIBlockedUser {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-user-block-list
  */
-export interface RESTGetUserBlockListRequestParams {
+export interface RESTGetUserBlockListRequestParams extends RESTPaginationRequestParams {
     /**
      * The ID of the broadcaster whose list of blocked users you want to get.
      */
     broadcaster_id: string;
-    /**
-     * The maximum number of items to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 item per page and the maximum is 100. The default is 20.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: number;
 }
 
 /**

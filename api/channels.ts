@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, APIResponse} from "./common";
+import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
 import type {APIContentClassificationLabelId, APIContentClassificationLabelSettings} from "./ccls";
 
 /**
@@ -207,7 +207,7 @@ export interface APIFollowedChannel {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-followed-channels
  */
-export interface RESTGetFollowedChannelsRequestParams {
+export interface RESTGetFollowedChannelsRequestParams extends RESTPaginationRequestParams {
     /**
      * The ID of the user whose followed channels you want to get.
      *
@@ -221,19 +221,6 @@ export interface RESTGetFollowedChannelsRequestParams {
      * If not specified, the response contains all broadcasters that the user follows.
      */
     broadcaster_id?: string;
-    /**
-     * The maximum number of items to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 item per page and the maximum is 100. The default is 20.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
 }
 
 /**
@@ -273,7 +260,7 @@ export interface APIChannelFollower {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-channel-followers
  */
-export interface RESTGetChannelFollowersRequestParams {
+export interface RESTGetChannelFollowersRequestParams extends RESTPaginationRequestParams {
     /**
      * A user’s ID. Returns the list of broadcasters that this user follows.
      *
@@ -288,19 +275,6 @@ export interface RESTGetChannelFollowersRequestParams {
      * If not specified, the response contains all broadcasters that the user follows.
      */
     broadcaster_id: string;
-    /**
-     * The maximum number of items to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 item per page and the maximum is 100. The default is 20.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
 }
 
 /**

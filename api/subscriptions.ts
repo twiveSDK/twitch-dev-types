@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, APIResponse} from "./common";
+import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-broadcaster-subscriptions
@@ -74,7 +74,7 @@ export interface APIBroadcasterSubscription {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-broadcaster-subscriptions
  */
-export interface RESTGetBroadcasterSubscriptionsRequestParams {
+export interface RESTGetBroadcasterSubscriptionsRequestParams extends RESTPaginationRequestParams {
     /**
      * The broadcaster’s ID.
      *
@@ -88,26 +88,6 @@ export interface RESTGetBroadcasterSubscriptionsRequestParams {
      * For example, `&user_id=1234&user_id=5678`. You may specify a maximum of 100 subscribers.
      */
     user_id?: string;
-    /**
-     * The maximum number of items to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 item per page and the maximum is 100 items per page. The default is 20.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
-    /**
-     * The cursor used to get the previous page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    before?: string;
 }
 
 /**

@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, APIResponse} from "./common";
+import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-drops-entitlements
@@ -45,7 +45,7 @@ export interface APIDropsEntitlement {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-drops-entitlements
  */
-export interface RESTGetDropsEntitlementsRequestParams {
+export interface RESTGetDropsEntitlementsRequestParams extends RESTPaginationRequestParams {
     /**
      * An ID that identifies the entitlement to get.
      * 
@@ -67,20 +67,6 @@ export interface RESTGetDropsEntitlementsRequestParams {
      * @remarks Used to filter the list to only those with the specified status.
      */
     fulfillment_status?: APIDropsEntitlementFulfillmentStatus;
-    /**
-     * The cursor used to get the next page of results.
-     * 
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
-    /**
-     * The maximum number of entitlements to return per page in the response.
-     * 
-     * @remarks The minimum page size is 1 entitlement per page and the maximum is 1000.
-     * The default is 20.
-     */
-    first?: number;
 }
 
 /**

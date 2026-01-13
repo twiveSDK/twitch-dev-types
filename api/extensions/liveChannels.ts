@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse} from "../common";
+import type {APIPaginatedResponse, RESTPaginationRequestParams} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-extension-live-channels
@@ -29,25 +29,11 @@ export interface APIExtensionLiveChannel {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-extension-live-channels
  */
-export interface RESTGetExtensionLiveChannelsRequestParams {
+export interface RESTGetExtensionLiveChannelsRequestParams extends RESTPaginationRequestParams {
     /**
      * The ID of the extension to get.
      */
     extension_id: string;
-    /**
-     * The specific maximum number of items per page in the response.
-     * 
-     * @remarks The actual number returned may be less than this limit.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     * 
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
 }
 
 /**

@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, APIResponse} from "./common";
+import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-custom-rewards
@@ -513,7 +513,7 @@ export interface APICustomRewardRedemption {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-custom-reward-redemption
  */
-export interface RESTGetCustomRewardRedemptionRequestParams {
+export interface RESTGetCustomRewardRedemptionRequestParams extends RESTPaginationRequestParams {
     /*
      * The ID of the broadcaster that owns the custom reward.
      *
@@ -546,19 +546,6 @@ export interface RESTGetCustomRewardRedemptionRequestParams {
      * @remarks The default is OLDEST.
      */
     sort?: "OLDEST"|"NEWEST";
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
-    /**
-     * The maximum number of redemptions to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 redemption per page and the maximum is 50. The default is 20.
-     */
-    first?: number;
 }
 
 /**

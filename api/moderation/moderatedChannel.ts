@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse} from "../common";
+import type {APIPaginatedResponse, RESTPaginationRequestParams} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-moderated-channels
@@ -21,26 +21,13 @@ export interface APIModeratedChannel {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-moderated-channels
  */
-export interface RESTGetModeratedChannelsRequestParams {
+export interface RESTGetModeratedChannelsRequestParams extends RESTPaginationRequestParams {
     /**
      * A user’s ID. Returns the list of channels that this user has moderator privileges in.
      *
      * @remarks ID must match the **user_id** in the authentication token.
      */
     user_id: string;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
-    /**
-     * The maximum number of items to return per page in the response.
-     *
-     * @remarks Minimum page size is 1 item per page and the maximum is 100. The default is 20.
-     */
-    first?: number;
 }
 
 /**

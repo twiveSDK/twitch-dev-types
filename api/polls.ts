@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, APIResponse} from "./common";
+import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-polls
@@ -131,7 +131,7 @@ export interface APIPoll {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-polls
  */
-export interface RESTGetPollsRequestParams {
+export interface RESTGetPollsRequestParams extends RESTPaginationRequestParams {
     /**
      * The ID of the broadcaster that created the polls.
      *
@@ -147,19 +147,6 @@ export interface RESTGetPollsRequestParams {
      * The endpoint ignores duplicate IDs and those not owned by this broadcaster.
      */
     id?: string;
-    /**
-     * The maximum number of items to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 item per page and the maximum is 20 items per page. The default is 20.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
 }
 
 /**

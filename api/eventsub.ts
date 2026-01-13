@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, APIResponse} from "./common";
+import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
 import type {
     EventSubSubscriptionCondition, EventSubSubscriptionStatus, EventSubTransportMethod, EventSubSubscriptionType
 } from "../eventsub";
@@ -176,7 +176,7 @@ export interface RESTDeleteEventSubSubscriptionRequestParams {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-eventsub-subscriptions
  */
-export interface RESTGetEventSubSubscriptionsRequestParams {
+export interface RESTGetEventSubSubscriptionsRequestParams extends RESTPaginationRequestParams {
     /**
      * Filter subscriptions by its status
      */
@@ -197,13 +197,6 @@ export interface RESTGetEventSubSubscriptionsRequestParams {
      * or an empty array if there is no matching subscription.
      */
     subscription_id?: string;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
 }
 
 /**

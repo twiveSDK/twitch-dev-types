@@ -5,6 +5,9 @@ export interface APIResponse<T> {
     data: T[];
 }
 
+/**
+ * @see https://dev.twitch.tv/docs/api/guide/#pagination
+ */
 export interface APIPaginatedResponse<T> extends APIResponse<T> {
     /**
      * The information used to page through the list of results.
@@ -21,6 +24,24 @@ export interface APIPaginatedResponse<T> extends APIResponse<T> {
          */
         cursor?: string;
     };
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/api/guide/#pagination
+ */
+export interface RESTPaginationRequestParams {
+    /**
+     * Use to get the next page of results.
+     */
+    after?: string;
+    /**
+     * Use to get the previous page of results.
+     */
+    before?: string;
+    /**
+     * Use to specify the number of items to include per page.
+     */
+    first?: number;
 }
 
 export interface RESTApiErrorResponse {

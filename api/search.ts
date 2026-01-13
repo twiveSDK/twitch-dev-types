@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse} from "./common";
+import type {APIPaginatedResponse, RESTPaginationRequestParams} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#search-categories
@@ -21,25 +21,12 @@ export interface APICategory {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#search-categories
  */
-export interface RESTGetCategoriesRequestParams {
+export interface RESTGetCategoriesRequestParams extends RESTPaginationRequestParams {
     /**
      * The URI-encoded search string. For example, encode *#archery* as `%23archery`
      * and search strings like *angel of death* as *angel%20of%20death*.
      */
     query: string;
-    /**
-     * The maximum number of items to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 item per page and the maximum is 100 items per page. The default is 20.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
 }
 
 /**
@@ -112,7 +99,7 @@ export interface APIChannel {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#search-channels
  */
-export interface RESTGetChannelsRequestParams {
+export interface RESTGetChannelsRequestParams extends RESTPaginationRequestParams {
     /**
      * The URI-encoded search string. For example, encode search strings like *angel of death* as `angel%20of%20death`.
      */
@@ -124,19 +111,6 @@ export interface RESTGetChannelsRequestParams {
      * The default is **false**.
      */
     live_only?: boolean;
-    /**
-     * The maximum number of items to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 item per page and the maximum is 100 items per page. The default is 20.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
 }
 
 /**

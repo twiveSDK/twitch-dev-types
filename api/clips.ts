@@ -1,4 +1,4 @@
-import type {APIResponse, APIPaginatedResponse} from "./common";
+import type {APIResponse, APIPaginatedResponse, RESTPaginationRequestParams} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#create-clip
@@ -130,7 +130,7 @@ export interface APIClip {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-clips
  */
-export interface RESTGetClipsRequestParams {
+export interface RESTGetClipsRequestParams extends RESTPaginationRequestParams {
     /**
      * An ID that identifies the broadcaster whose video clips you want to get.
      *
@@ -164,26 +164,6 @@ export interface RESTGetClipsRequestParams {
      * @remarks Specify the date and time in RFC3339 format.
      */
     ended_at?: string;
-    /**
-     * The maximum number of clips to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 clip per page and the maximum is 100. The default is 20.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the previous page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    before?: string;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
     /**
      * A Boolean value that determines whether the response includes featured clips.
      *

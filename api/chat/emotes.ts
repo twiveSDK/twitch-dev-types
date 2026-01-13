@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, APIResponse} from "../common";
+import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-global-emotes
@@ -312,20 +312,13 @@ export interface APIUserEmote extends APIBaseEmote {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-user-emotes
  */
-export interface RESTGetUserEmotesRequestParams {
+export interface RESTGetUserEmotesRequestParams extends RESTPaginationRequestParams {
     /**
      * The ID of the user whose emotes you want to get.
      *
      * @remarks ID must match the **user_id** in the authentication token.
      */
     user_id: string;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
     /**
      * The User ID of a broadcaster you wish to get follower emotes of.
      *

@@ -1,4 +1,4 @@
-import type {APIResponse, APIPaginatedResponse} from "./common";
+import type {APIResponse, APIPaginatedResponse, RESTPaginationRequestParams} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-conduits
@@ -145,7 +145,7 @@ export interface APIConduitShard {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-conduit-shards
  */
-export interface APIGetConduitShardsParams {
+export interface RESTGetConduitShardsRequestParams extends RESTPaginationRequestParams {
     /**
      * The unique identifier for the conduit to retrieve shards for.
      */
@@ -154,13 +154,6 @@ export interface APIGetConduitShardsParams {
      * Status to filter by.
      */
     status?: APIConduitShardStatus;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @rmarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
 }
 
 /**

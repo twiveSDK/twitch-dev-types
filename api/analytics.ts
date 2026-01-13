@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse} from "./common";
+import type {APIPaginatedResponse, RESTPaginationRequestParams} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-extension-analytics
@@ -39,7 +39,7 @@ export interface APIBaseAnalytics {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-extension-analytics
  */
-export interface RESTBaseGetAnalyticsRequestParams {
+export interface RESTBaseGetAnalyticsRequestParams extends RESTPaginationRequestParams {
     /**
      * The type of analytics report to get.
      *
@@ -67,22 +67,6 @@ export interface RESTBaseGetAnalyticsRequestParams {
      * If not, the API ignores your end date and uses an end date that is today minus one to two days.
      */
     ended_at?: string;
-    /**
-     * The maximum number of report URLs to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 URL per page and the maximum is 100 URLs per page. The default is 20.
-     * While you may specify a maximum value of 100, the response will contain at most 20 URLs per page.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     *
-     * This parameter is ignored if *game_id* parameter is set.
-     */
-    after?: string;
 }
 
 /**

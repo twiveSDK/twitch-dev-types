@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse} from "../common";
+import type {APIPaginatedResponse, RESTPaginationRequestParams} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-moderators
@@ -21,7 +21,7 @@ export interface APIModerator {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-moderators
  */
-export interface RESTGetModeratorsRequestParams {
+export interface RESTGetModeratorsRequestParams extends RESTPaginationRequestParams {
     /**
      * The ID of the broadcaster whose list of moderators you want to get.
      *
@@ -37,19 +37,6 @@ export interface RESTGetModeratorsRequestParams {
      * The list is returned in the same order as you specified the IDs.
      */
     user_id?: string;
-    /**
-     * The maximum number of items to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 item per page and the maximum is 100 items per page. The default is 20.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
 }
 
 /**

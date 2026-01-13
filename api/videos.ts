@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, APIResponse} from "./common";
+import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-videos
@@ -145,7 +145,7 @@ export enum RESTGetVideosPeriodRequestParam {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-videos
  */
-export interface RESTGetVideosRequestParams {
+export interface RESTGetVideosRequestParams extends RESTPaginationRequestParams {
     /**
      * A list of IDs that identify the videos you want to get.
      *
@@ -193,27 +193,6 @@ export interface RESTGetVideosRequestParams {
      * Specify this parameter only if you specify the *game_id* or *user_id* query parameter.
      */
     type?: APIVideoType|"all";
-    /**
-     * The maximum number of items to return per page in the response.
-     *
-     * @remarks The minimum page size is 1 item per page and the maximum is 100. The default is 20.
-     * Specify this parameter only if you specify the game_id or user_id query parameter.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor's value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
-    /**
-     * The cursor used to get the previous page of results.
-     *
-     * @remarks The **Pagination** object in the response contains the cursor's value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    before?: string;
 }
 
 /**

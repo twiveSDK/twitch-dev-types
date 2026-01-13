@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, APIResponse} from "./common";
+import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-hype-train-events
@@ -120,26 +120,13 @@ export interface APIHypeTrainEvent {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-hype-train-events
  */
-export interface RESTGetHypeTrainEventsRequestParams {
+export interface RESTGetHypeTrainEventsRequestParams extends RESTPaginationRequestParams {
     /**
      * The ID of the broadcaster that’s running the Hype Train.
      * 
      * @remarks ID must match the **user_id** in the authentication token.
      */
     broadcaster_id: string;
-    /**
-     * The maximum number of items to return per page in the response.
-     * 
-     * @remarks The minimum page size is 1 item per page and the maximum is 100 items per page. The default is 1.
-     */
-    first?: number;
-    /**
-     * The cursor used to get the next page of results.
-     * 
-     * @remarks The **Pagination** object in the response contains the cursor’s value.
-     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
-     */
-    after?: string;
 }
 
 /**
