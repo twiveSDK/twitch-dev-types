@@ -164,6 +164,39 @@ export interface RESTGetConduitShardsResponse extends APIPaginatedResponse<APICo
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#update-conduit-shards
  */
+export interface RESTPatchConduitShardTransportRequestBodyParam {
+    /**
+     * The transport method
+     */
+    method?: APIConduitShardTransportMethod;
+    /**
+     * The callback URL where the notifications are sent.
+     *
+     * @remarks The URL must use the HTTPS protocol and port 443. See Processing an event.
+     * Specify this field only if method is set to webhook.
+     * Redirects are not followed.
+     */
+    callback?: string;
+    /**
+     * The secret used to verify the signature.
+     *
+     * @remarks The secret must be an ASCII string that’s a minimum of 10 characters long and a maximum of 100 characters long.
+     * For information about how the secret is used, see Verifying the event message.
+     * Specify this field only if method is set to webhook.
+     */
+    secret?: string;
+    /**
+     * An ID that identifies the WebSocket to send notifications to.
+     *
+     * @remarks When you connect to EventSub using WebSockets, the server returns the ID in the Welcome message.
+     * Specify this field only if method is set to websocket.
+     */
+    session_id?: string;
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/api/reference/#update-conduit-shards
+ */
 export interface RESTPatchConduitShardRequestBodyData {
     /**
      * The shard ID to update.
@@ -172,35 +205,7 @@ export interface RESTPatchConduitShardRequestBodyData {
     /**
      * The transport details that you want Twitch to use when sending you notifications.
      */
-    transport: {
-        /**
-         * The transport method
-         */
-        method?: APIConduitShardTransportMethod;
-        /**
-         * The callback URL where the notifications are sent.
-         *
-         * @remarks The URL must use the HTTPS protocol and port 443. See Processing an event.
-         * Specify this field only if method is set to webhook.
-         * Redirects are not followed.
-         */
-        callback?: string;
-        /**
-         * The secret used to verify the signature.
-         *
-         * @remarks The secret must be an ASCII string that’s a minimum of 10 characters long and a maximum of 100 characters long.
-         * For information about how the secret is used, see Verifying the event message.
-         * Specify this field only if method is set to webhook.
-         */
-        secret?: string;
-        /**
-         * An ID that identifies the WebSocket to send notifications to.
-         *
-         * @remarks When you connect to EventSub using WebSockets, the server returns the ID in the Welcome message.
-         * Specify this field only if method is set to websocket.
-         */
-        session_id?: string;
-    };
+    transport: RESTPatchConduitShardTransportRequestBodyParam;
 }
 
 /**
@@ -220,22 +225,27 @@ export interface RESTPatchConduitShardsRequestBody {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#update-conduit-shards
  */
+export interface APIUnsuccessfulConduitShardUpdateError {
+    /**
+     * The shard ID that failed to update.
+     */
+    id: string;
+    /**
+     * The error that occurred while updating the shard
+     */
+    message: string;
+    /**
+     * Error codes used to represent a specific error condition while attempting to update shards.
+     */
+    code: string;
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/api/reference/#update-conduit-shards
+ */
 export interface RESTPatchConduitShardsResponse extends APIResponse<APIConduitShard> {
     /**
      * List of unsuccessful updates.
      */
-    errors?: {
-        /**
-         * The shard ID that failed to update.
-         */
-        id: string;
-        /**
-         * The error that occurred while updating the shard
-         */
-        message: string;
-        /**
-         * Error codes used to represent a specific error condition while attempting to update shards.
-         */
-        code: string;
-    }[];
+    errors?: APIUnsuccessfulConduitShardUpdateError[];
 }
