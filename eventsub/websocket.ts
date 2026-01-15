@@ -118,7 +118,7 @@ export interface EventSubWebSocketMessage {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#events
  */
-export type EventSubWebsocketEvents = AutomodMessageHoldEvent
+export type EventSubWebsocketEvent = AutomodMessageHoldEvent
     | AutomodMessageHoldEventV2
     | AutomodMessageUpdateEvent
     | AutomodMessageUpdateEventV2
@@ -213,7 +213,7 @@ export interface EventSubWebsocketNotificationMessagePayload {
     /**
      * The event’s data.
      */
-    event: EventSubWebsocketEvents;
+    event: EventSubWebsocketEvent;
 }
 
 /**
