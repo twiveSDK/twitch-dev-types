@@ -4,3 +4,4 @@ export * from "./channelChatMessageDelete";
 export * from "./channelChatNotification";
 export * from "./channelChatUserMessageHold";
 export * from "./channelChatUserMessageUpdate";
+export * from "./common";

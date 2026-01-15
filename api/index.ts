@@ -27,5 +27,4 @@ export * from "./streams";
 export * from "./subscriptions";
 export * from "./teams";
 export * from "./videos";
-export * from "./moderation/vips";
 export * from "./whisper";
