@@ -7,7 +7,7 @@ export enum OAuth2AuthorizeResponseType {
 }
 
 /**
- * @see https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/
+ * @see https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#implicit-grant-flow
  */
 export interface OAuth2AuthorizeParams {
     /**
