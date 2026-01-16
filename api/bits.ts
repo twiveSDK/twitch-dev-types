@@ -70,10 +70,30 @@ export interface APIBitsLeaderboard {
  * @see https://dev.twitch.tv/docs/api/reference/#get-bits-leaderboard
  */
 export enum RESTGetBitsLeaderboardPeriodRequestParam {
+    /**
+     * A day spans from 00:00:00 on the day specified in *started_at* and runs through 00:00:00 of the next day.
+     */
     Day = "day",
+    /**
+     * A week spans from 00:00:00 on the Monday of the week specified in *started_at* and runs through 00:00:00
+     * of the next Monday.
+     */
     Week = "week",
+    /**
+     * A month spans from 00:00:00 on the first day of the month specified in *started_at* and runs through 00:00:00
+     * of the first day of the next month.
+     */
     Month = "month",
+    /**
+     * A year spans from 00:00:00 on the first day of the year specified in *started_at* and runs through 00:00:00
+     * of the first day of the next year.
+     */
     Year = "year",
+    /**
+     * Default.
+     *
+     * @remarks The lifetime of the broadcaster's channel.
+     */
     All = "all",
 }
 
@@ -138,10 +158,29 @@ export type APICheermotesTierLevel = "1"|"100"|"500"|"1000"|"5000"|"10000"|"1000
  * @see https://dev.twitch.tv/docs/api/reference/#get-cheermotes
  */
 export enum APICheermotesType {
+    /**
+     * A Twitch-defined Cheermote that is shown in the Bits card.
+     */
     GlobalFirstParty = "global_first_party",
+    /**
+     * A Twitch-defined Cheermote that is not shown in the Bits card.
+     */
     GlobalThirdParty = "global_third_party",
+    /**
+     * A broadcaster-defined Cheermote.
+     */
     ChannelCustom = "channel_custom",
+    /**
+     * Do not use; for internal use only.
+     */
     DisplayOnly = "display_only",
+    /**
+     * A sponsor-defined Cheermote.
+     *
+     * @remarks When used, the sponsor adds additional Bits to the amount that the user cheered.
+     * For example, if the user cheered Terminator100, the broadcaster might receive 110 Bits,
+     * which includes the sponsor's 10 Bits contribution.
+     */
     Sponsored = "sponsored",
 }
 

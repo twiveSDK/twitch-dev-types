@@ -67,16 +67,51 @@ export interface RESTDeleteConduitsRequestParams {
  * @see https://dev.twitch.tv/docs/api/reference/#get-conduit-shards
  */
 export enum APIConduitShardStatus {
+    /**
+     * The shard is enabled.
+     */
     Enabled = "enabled",
+    /**
+     * The shard is pending verification of the specified callback URL.
+     */
     WebhookCallbackVerificationPending = "webhook_callback_verification_pending",
+    /**
+     * The specified callback URL failed verification.
+     */
     WebhookCallbackVerificationFailed = "webhook_callback_verification_failed",
+    /**
+     * The notification delivery failure rate was too high.
+     */
     NotificationFailuresExceeded = "notification_failures_exceeded",
+    /**
+     * The client closed the connection.
+     */
     WebsocketDisconnected = "websocket_disconnected",
+    /**
+     * The client failed to respond to a ping message.
+     */
     WebsocketFailedPingPong = "websocket_failed_ping_pong",
+    /**
+     * The client sent a non-pong message.
+     *
+     * @remarks Clients may only send pong messages (and only in response to a ping message).
+     */
     WebsocketReceivedInboundTraffic = "websocket_received_inbound_traffic",
+    /**
+     * The Twitch WebSocket server experienced an unexpected error.
+     */
     WebsocketInternalError = "websocket_internal_error",
+    /**
+     * The Twitch WebSocket server timed out writing the message to the client.
+     */
     WebsocketNetworkTimeout = "websocket_network_timeout",
+    /**
+     * The Twitch WebSocket server experienced a network error writing the message to the client.
+     */
     WebsocketNetworkError = "websocket_network_error",
+    /**
+     * The client failed to reconnect to the Twitch WebSocket server within the required time after a Reconnect Message.
+     */
     WebsocketFailedToReconnect = "websocket_failed_to_reconnect",
 }
 

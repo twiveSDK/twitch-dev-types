@@ -4,7 +4,13 @@ import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} fro
  * @see https://dev.twitch.tv/docs/api/reference/#get-drops-entitlements
  */
 export enum APIDropsEntitlementFulfillmentStatus {
+    /**
+     *
+     */
     Claimed = "CLAIMED",
+    /**
+     * The developer granted the benefit that the user claimed.
+     */
     Fulfilled = "FULFILLED",
 }
 
@@ -78,10 +84,27 @@ export interface RESTGetDropsEntitlementsResponse extends APIPaginatedResponse<A
  * @see https://dev.twitch.tv/docs/api/reference/#update-drops-entitlements
  */
 export enum APIUpdatedDropsEntitlementStatus {
+    /**
+     * The entitlement IDs in the `ids` field are not valid.
+     */
     InvalidId = "INVALID_ID",
+    /**
+     * The entitlement IDs in the `ids` field were not found.
+     */
     NotFound = "NOT_FOUND",
+    /**
+     * The status of the entitlements in the `ids` field were successfully updated.
+     */
     Success = "SUCCESS",
+    /**
+     * The user or organization identified by the user access token is not authorized to update the entitlements.
+     */
     Unauthorized = "UNAUTHORIZED",
+    /**
+     * The update failed.
+     *
+     * @remarks These are considered transient errors and the request should be retried later.
+     */
     UpdateFailed = "UPDATE_FAILED",
 }
 
