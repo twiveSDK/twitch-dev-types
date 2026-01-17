@@ -27,4 +27,8 @@ eventsub/**/*.js.map
 *.js
 *.js.map
 
+# Environment variables
 .npmrc
+
+# Others
+tests/
