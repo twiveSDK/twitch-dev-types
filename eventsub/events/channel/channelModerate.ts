@@ -188,7 +188,7 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
      * Is not null when in a shared chat session, and the action happens in the channel of a participant other
      * than the broadcaster.
      */
-    source_broadcaster_user_name: string;
+    source_broadcaster_user_name: string|null;
     /**
      * The type of action.
      */
@@ -260,7 +260,7 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
      * but for an action that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
-    shared_chat_ban?: ChannelModerateBan;
+    shared_chat_ban?: ChannelModerateBan|null;
     /**
      * Information about the `shared_chat_unban` event.
      *
@@ -268,7 +268,7 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
      * but for an action that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
-    shared_chat_unban?: EventUserInfo;
+    shared_chat_unban?: EventUserInfo|null;
     /**
      * Information about the `shared_chat_timeout` event.
      *
@@ -276,7 +276,7 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
      * field but for an action that happened for a channel in a shared chat session other than the broadcaster in
      * the subscription condition.
      */
-    shared_chat_timeout?: ChannelModerateTimeout;
+    shared_chat_timeout?: ChannelModerateTimeout|null;
     /**
      * Information about the `shared_chat_untimeout` event.
      *
@@ -284,7 +284,7 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
      * field but for an action that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
-    shared_chat_untimeout?: EventUserInfo;
+    shared_chat_untimeout?: EventUserInfo|null;
     /**
      * Information about the `shared_chat_delete` event.
      *
@@ -292,5 +292,5 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
      * field but for an action that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
-    shared_chat_delete?: ChannelModerateDelete;
+    shared_chat_delete?: ChannelModerateDelete|null;
 }
