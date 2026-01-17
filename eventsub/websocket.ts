@@ -4,25 +4,25 @@ import type {
     AutomodSettingsUpdateEvent, AutomodTermsUpdateEvent, ChannelAdBreakBeginEvent, ChannelBanEvent, ChannelBitsUseEvent,
     ChannelChatClearEvent, ChannelChatClearUserMessagesEvent, ChannelChatMessageDeleteEvent, ChannelChatMessageEvent,
     ChannelChatNotificationEvent, ChannelChatSettingsUpdateEvent, ChannelChatUserMessageHoldEvent,
-    ChannelChatUserMessageUpdateEvent, ChannelCheerEvent, ChannelFollowEvent, ChannelGuestStarGuestUpdateEvent,
-    ChannelGuestStarSessionBeginEvent, ChannelGuestStarSessionEndEvent, ChannelGuestStarSettingsUpdateEvent,
-    ChannelModerateEvent, ChannelModerateEventV2, ChannelModeratorAddEvent, ChannelModeratorRemoveEvent,
-    ChannelPointsAutomaticRewardRedemptionAddEvent, ChannelPointsAutomaticRewardRedemptionAddEventV2,
-    ChannelPointsCustomRewardAddEvent, ChannelPointsCustomRewardRedemptionAddEvent,
-    ChannelPointsCustomRewardRedemptionUpdateEvent, ChannelPointsCustomRewardRemoveEvent,
-    ChannelPointsCustomRewardUpdateEvent, ChannelPollBeginEvent, ChannelPollEndEvent, ChannelPollProgressEvent,
-    ChannelPredictionBeginEvent, ChannelPredictionEndEvent, ChannelPredictionLockEvent, ChannelPredictionProgressEvent,
-    ChannelRaidEvent, ChannelSharedChatSessionBeginEvent, ChannelSharedChatSessionEndEvent,
-    ChannelSharedChatSessionUpdateEvent, ChannelShieldModeBeginEvent, ChannelShieldModeEndEvent,
-    ChannelShoutoutCreateEvent, ChannelShoutoutReceiveEvent, ChannelSubscribeEvent, ChannelSubscriptionEndEvent,
-    ChannelSubscriptionGiftEvent, ChannelSubscriptionMessageEvent, ChannelSuspiciousUserMessageEvent,
-    ChannelSuspiciousUserUpdateEvent, ChannelUnbanEvent, ChannelUnbanRequestCreateEvent, ChannelUnbanRequestResolveEvent,
-    ChannelUpdateEvent, ChannelVIPAddEvent, ChannelVIPRemoveEvent, ChannelWarningAcknowledgeEvent,
-    ChannelWarningSendEvent, CharityCampaignProgressEvent, CharityCampaignStartEvent, CharityCampaignStopEvent,
-    CharityDonationEvent, ConduitShardDisabledEvent, DropEntitlementGrantEvent, ExtensionBitsTransactionCreateEvent,
-    GoalsEvent, HypeTrainBeginEvent, HypeTrainBeginEventV2, HypeTrainEndEvent, HypeTrainEndEventV2,
-    HypeTrainProgressEvent, HypeTrainProgressEventV2, StreamOfflineEvent, StreamOnlineEvent,
-    UserAuthorizationGrantEvent, UserAuthorizationRevokeEvent, UserUpdateEvent, WhisperReceivedEvent
+    ChannelChatUserMessageUpdateEvent, ChannelCheerEvent, ChannelFollowEvent, ChannelGoalBeginEvent, ChannelGoalEndEvent,
+    ChannelGoalProgressEvent, ChannelGuestStarGuestUpdateEvent, ChannelGuestStarSessionBeginEvent,
+    ChannelGuestStarSessionEndEvent, ChannelGuestStarSettingsUpdateEvent, ChannelModerateEvent, ChannelModerateEventV2,
+    ChannelModeratorAddEvent, ChannelModeratorRemoveEvent, ChannelPointsAutomaticRewardRedemptionAddEvent,
+    ChannelPointsAutomaticRewardRedemptionAddEventV2, ChannelPointsCustomRewardAddEvent,
+    ChannelPointsCustomRewardRedemptionAddEvent, ChannelPointsCustomRewardRedemptionUpdateEvent,
+    ChannelPointsCustomRewardRemoveEvent, ChannelPointsCustomRewardUpdateEvent, ChannelPollBeginEvent,
+    ChannelPollEndEvent, ChannelPollProgressEvent, ChannelPredictionBeginEvent, ChannelPredictionEndEvent,
+    ChannelPredictionLockEvent, ChannelPredictionProgressEvent, ChannelRaidEvent, ChannelSharedChatSessionBeginEvent,
+    ChannelSharedChatSessionEndEvent, ChannelSharedChatSessionUpdateEvent, ChannelShieldModeBeginEvent,
+    ChannelShieldModeEndEvent, ChannelShoutoutCreateEvent, ChannelShoutoutReceiveEvent, ChannelSubscribeEvent,
+    ChannelSubscriptionEndEvent, ChannelSubscriptionGiftEvent, ChannelSubscriptionMessageEvent,
+    ChannelSuspiciousUserMessageEvent, ChannelSuspiciousUserUpdateEvent, ChannelUnbanEvent,
+    ChannelUnbanRequestCreateEvent, ChannelUnbanRequestResolveEvent, ChannelUpdateEvent, ChannelVIPAddEvent,
+    ChannelVIPRemoveEvent, ChannelWarningAcknowledgeEvent, ChannelWarningSendEvent, CharityCampaignProgressEvent,
+    CharityCampaignStartEvent, CharityCampaignStopEvent, CharityDonationEvent, ConduitShardDisabledEvent,
+    DropEntitlementGrantEvent, ExtensionBitsTransactionCreateEvent, HypeTrainBeginEvent, HypeTrainBeginEventV2,
+    HypeTrainEndEvent, HypeTrainEndEventV2, HypeTrainProgressEvent, HypeTrainProgressEventV2, StreamOfflineEvent,
+    StreamOnlineEvent, UserAuthorizationGrantEvent, UserAuthorizationRevokeEvent, UserUpdateEvent, WhisperReceivedEvent
 } from "./events";
 
 /**
@@ -137,6 +137,9 @@ export type EventSubWebsocketEvent = AutomodMessageHoldEvent
     | ChannelChatUserMessageUpdateEvent
     | ChannelCheerEvent
     | ChannelFollowEvent
+    | ChannelGoalBeginEvent
+    | ChannelGoalEndEvent
+    | ChannelGoalProgressEvent
     | ChannelGuestStarGuestUpdateEvent
     | ChannelGuestStarSessionBeginEvent
     | ChannelGuestStarSessionEndEvent
@@ -188,7 +191,6 @@ export type EventSubWebsocketEvent = AutomodMessageHoldEvent
     | ConduitShardDisabledEvent
     | DropEntitlementGrantEvent
     | ExtensionBitsTransactionCreateEvent
-    | GoalsEvent
     | HypeTrainBeginEvent
     | HypeTrainBeginEventV2
     | HypeTrainEndEvent

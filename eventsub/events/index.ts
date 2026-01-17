@@ -9,7 +9,6 @@ export * from "./common";
 export * from "./conduitShardDisabled";
 export * from "./dropEntitlementGrant";
 export * from "./extensionBitsTransactionCreate";
-export * from "./goals";
 export * from "./streamOffline";
 export * from "./streamOnline";
 export * from "./whisperReceived";

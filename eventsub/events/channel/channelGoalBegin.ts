@@ -1,9 +1,9 @@
-import type {EventBroadcasterInfo} from "./common";
+import type {EventBroadcasterInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#goals-event
  */
-export enum GoalType {
+export enum ChannelGoalType {
     /**
      * The goal is to increase followers.
      */
@@ -47,7 +47,7 @@ export enum GoalType {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#goals-event
  */
-export interface GoalsEvent extends EventBroadcasterInfo {
+export interface ChannelGoalBeginEvent extends EventBroadcasterInfo {
     /**
      * An ID that identifies this event.
      */
@@ -55,20 +55,13 @@ export interface GoalsEvent extends EventBroadcasterInfo {
     /**
      * The type of goal.
      */
-    type: GoalType;
+    type: ChannelGoalType;
     /**
      * A description of the goal, if specified.
      *
      * @remarks The description may contain a maximum of 40 characters.
      */
     description: string;
-    /**
-     * A Boolean value that indicates whether the broadcaster achieved their goal.
-     *
-     * @remarks Is **true** if the goal was achieved; otherwise, **false**.
-     * Only the **channel.goal.end** event includes this field.
-     */
-    is_achieved: boolean;
     /**
      * The goal’s current value.
      *
@@ -96,10 +89,4 @@ export interface GoalsEvent extends EventBroadcasterInfo {
      * The UTC timestamp in RFC3339 format, which indicates when the broadcaster created the goal.
      */
     started_at: string;
-    /**
-     * The UTC timestamp in RFC3339 format, which indicates when the broadcaster ended the goal.
-     *
-     * @remarks Only the **channel.goal.end** event includes this field.
-     */
-    ended_at?: string;
 }
