@@ -1,9 +1,9 @@
-import type {BaseBroadcasterInfo} from "../common";
+import type {EventBroadcasterInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#shoutout-received
  */
-export interface ChannelShoutoutReceiveEvent extends BaseBroadcasterInfo {
+export interface ChannelShoutoutReceiveEvent extends EventBroadcasterInfo {
     /**
      * An ID that identifies the broadcaster that sent the Shoutout.
      */

@@ -1,4 +1,4 @@
-import type {BaseUserInfo} from "../../../common";
+import type {EventUserInfo} from "../../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-message-event
@@ -95,7 +95,7 @@ export interface ChannelChatMessageFragment {
     /**
      * Metadata pertaining to the mention.
      */
-    mention?: BaseUserInfo;
+    mention?: EventUserInfo;
 }
 
 /**

@@ -1,5 +1,5 @@
 import type {ChannelSuspiciousUserLowTrustStatus} from "./channelSuspiciousUserUpdate";
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-suspicious-user-message-event
@@ -108,7 +108,7 @@ export interface ChannelSuspiciousUserMessage {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-suspicious-user-message-event
  */
-export interface ChannelSuspiciousUserMessageEvent extends BaseBroadcasterInfo, BaseUserInfo {
+export interface ChannelSuspiciousUserMessageEvent extends EventBroadcasterInfo, EventUserInfo {
     /**
      * The status set for the suspicious user.
      */

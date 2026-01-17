@@ -1,9 +1,9 @@
-import type {BaseBroadcasterInfo} from "../common";
+import type {EventBroadcasterInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-ad-break-begin-event
  */
-export interface ChannelAdBreakBeginEvent extends BaseBroadcasterInfo {
+export interface ChannelAdBreakBeginEvent extends EventBroadcasterInfo {
     /**
      * Length in seconds of the mid-roll ad break requested.
      */

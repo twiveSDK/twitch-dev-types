@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseModeratorInfo} from "../common";
+import type {EventBroadcasterInfo, EventModeratorInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#automod-terms-update-event
@@ -13,7 +13,7 @@ export enum AutomodTermsUpdateAction {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#automod-terms-update-event
  */
-export interface AutomodTermsUpdateEvent extends BaseBroadcasterInfo, BaseModeratorInfo {
+export interface AutomodTermsUpdateEvent extends EventBroadcasterInfo, EventModeratorInfo {
     /**
      * The status change applied to the terms.
      */
