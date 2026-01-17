@@ -1,4 +1,4 @@
-export interface RESTOAuth2ErrorResponse {
+export interface OAuth2ErrorResponse {
     /**
      * The http status code of the response.
      */
