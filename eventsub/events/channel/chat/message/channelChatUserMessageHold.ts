@@ -1,4 +1,5 @@
 import type {BaseBroadcasterInfo, BaseUserInfo} from "../../../common";
+import type {ChannelChatMessageFragmentCheermote} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-user-message-hold-event
@@ -17,29 +18,6 @@ export interface ChannelChatUserHoldMessageFragmentEmote {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-user-message-hold-event
  */
-export interface ChannelChatUserHoldMessageFragmentCheermote {
-    /**
-     * The name portion of the Cheermote string that you use in chat to cheer Bits.
-     * The full Cheermote string is the concatenation of {prefix} + {number of Bits}.
-     *
-     * @remarks For example, if the prefix is “Cheer” and you want to cheer 100 Bits, the full Cheermote string is Cheer100.
-     * When the Cheermote string is entered in chat, Twitch converts it to the image associated with the Bits tier that
-     * was cheered.
-     */
-    prefix: string;
-    /**
-     * The amount of Bits cheered.
-     */
-    bits: number;
-    /**
-     * The tier level of the cheermote.
-     */
-    tier: number;
-}
-
-/**
- * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-user-message-hold-event
- */
 export interface ChannelChatUserHoldMessageFragment {
     /**
      * Message text in a fragment.
@@ -52,7 +30,7 @@ export interface ChannelChatUserHoldMessageFragment {
     /**
      * Metadata pertaining to the cheermote.
      */
-    cheermote?: ChannelChatUserHoldMessageFragmentCheermote;
+    cheermote?: ChannelChatMessageFragmentCheermote;
 }
 
 /**

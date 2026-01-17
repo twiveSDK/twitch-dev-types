@@ -421,18 +421,18 @@ export interface ChannelChatNotificationEvent extends BaseBroadcasterInfo {
      */
     source_badges: ChannelChatBadge[]|null;
     /**
-     * Information about the shared_chat_sub event.
+     * Information about the `shared_chat_sub` event.
      *
-     * @reamrks Is null if notice_type is not shared_chat_sub. This field has the same information as the `sub` field
-     * but for a notice that happened for a channel in a shared chat session other than the broadcaster in the
+     * @reamrks Is null if `notice_type` is not `shared_chat_sub`. This field has the same information as the `sub`
+     * field but for a notice that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
     shared_chat_sub: ChannelChatNotificationSub|null;
     /**
      * Information about the `shared_chat_resub` event.
      *
-     * @remarks Is null if `notice_type` is not `shared_chat_resub`. This field has the same information as the `resub` field
-     * but for a notice that happened for a channel in a shared chat session other than the broadcaster in the
+     * @remarks Is null if `notice_type` is not `shared_chat_resub`. This field has the same information as the `resub`
+     * field but for a notice that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
     shared_chat_resub: ChannelChatNotificationResub|null;
@@ -447,49 +447,49 @@ export interface ChannelChatNotificationEvent extends BaseBroadcasterInfo {
     /**
      * Information about the `shared_chat_community_sub_gift` event.
      *
-     * @remakrs Is null if `notice_type` is not `shared_chat_community_sub_gift`. This field has the same information as
-     * the community_sub_gift field but for a notice that happened for a channel in a shared chat session other than the
-     * broadcaster in the subscription condition.
+     * @remakrs Is null if `notice_type` is not `shared_chat_community_sub_gift`. This field has the same information
+     * as the `community_sub_gift` field but for a notice that happened for a channel in a shared chat session other
+     * than the broadcaster in the subscription condition.
      */
     shared_chat_community_sub_gift: ChannelChatNotificationCommunitySubGift|null;
     /**
      * Information about the `shared_chat_gift_paid_upgrade` event.
      *
      * @remarks Is null if `notice_type` is not `shared_chat_gift_paid_upgrade`. This field has the same information as
-     * the `gift_paid_upgrade` field but for a notice that happened for a channel in a shared chat session other than the
-     * broadcaster in the subscription condition.
+     * the `gift_paid_upgrade` field but for a notice that happened for a channel in a shared chat session other than
+     * the broadcaster in the subscription condition.
      */
     shared_chat_gift_paid_upgrade: ChannelChatNotificationGiftPaidUpgrade|null;
     /**
      * Information about the `shared_chat_chat_prime_paid_upgrade` event.
      *
-     * @remarks Is null if `notice_type` is not `shared_chat_prime_paid_upgrade`. This field has the same information as
-     * the prime_paid_upgrade field but for a notice that happened for a channel in a shared chat session other than the
-     * broadcaster in the subscription condition.
+     * @remarks Is null if `notice_type` is not `shared_chat_prime_paid_upgrade`. This field has the same information
+     * as the `prime_paid_upgrade` field but for a notice that happened for a channel in a shared chat session other
+     * than the broadcaster in the subscription condition.
      */
     shared_chat_prime_paid_upgrade: ChannelChatNotificationPrimePaidUpgrade|null;
     /**
      * Information about the `shared_chat_pay_it_forward` event.
      *
-     * @remarks Is null if `notice_type` is not `shared_chat_pay_it_forward`. This field has the same information as the
-     * `pay_it_forward` field but for a notice that happened for a channel in a shared chat session other than the broadcaster
-     * in the subscription condition.
+     * @remarks Is null if `notice_type` is not `shared_chat_pay_it_forward`. This field has the same information
+     * as the `pay_it_forward` field but for a notice that happened for a channel in a shared chat session other than
+     * the broadcaster in the subscription condition.
      */
     shared_chat_pay_it_forward: ChannelChatNotificationPayItForward|null;
     /**
      * Information about the `shared_chat_raid` event.
      *
-     * @remarks Is null if `notice_type` is not `shared_chat_raid`. This field has the same information as the raid field
-     * but for a notice that happened for a channel in a shared chat session other than the broadcaster in the subscription
-     * condition.
+     * @remarks Is null if `notice_type` is not `shared_chat_raid`. This field has the same information as the raid
+     * field but for a notice that happened for a channel in a shared chat session other than the broadcaster in
+     * the subscription condition.
      */
     shared_chat_raid: ChannelChatNotificationRaid|null;
     /**
      * Information about the `shared_chat_announcement` event.
      *
      * @remarks Is null if `notice_type` is not `shared_chat_announcement`. This field has the same information as the
-     * announcement field but for a notice that happened for a channel in a shared chat session other than the broadcaster
-     * in the subscription condition.
+     * announcement field but for a notice that happened for a channel in a shared chat session other than the
+     * broadcaster in the subscription condition.
      */
     shared_chat_announcement: ChannelChatNotificationAnnouncement|null;
 }
