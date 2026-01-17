@@ -4,24 +4,25 @@ import type {
     ChannelChatClearCondition, ChannelChatClearUserMessagesCondition, ChannelChatMessageCondition,
     ChannelChatMessageDeleteCondition, ChannelChatNotificationCondition, ChannelChatSettingsUpdateCondition,
     ChannelChatUserMessageHoldCondition, ChannelChatUserMessageUpdateCondition, ChannelCheerCondition,
-    ChannelFollowCondition, ChannelGuestStarGuestUpdateCondition, ChannelGuestStarSessionBeginCondition,
-    ChannelGuestStarSessionEndCondition, ChannelGuestStarSettingsUpdateCondition, ChannelModerateCondition,
-    ChannelModeratorAddCondition, ChannelModeratorRemoveCondition, ChannelPointsAutomaticRewardRedemptionAddCondition,
-    ChannelPointsCustomRewardAddCondition, ChannelPointsCustomRewardRedemptionAddCondition,
-    ChannelPointsCustomRewardRedemptionUpdateCondition, ChannelPointsCustomRewardRemoveCondition,
-    ChannelPointsCustomRewardUpdateCondition, ChannelPollBeginCondition, ChannelPollEndCondition,
-    ChannelPollProgressCondition, ChannelPredictionBeginCondition, ChannelPredictionEndCondition,
-    ChannelPredictionLockCondition, ChannelPredictionProgressCondition, ChannelRaidCondition,
-    ChannelSharedChatSessionBeginCondition, ChannelSharedChatSessionEndCondition, ChannelSharedChatSessionUpdateCondition,
-    ChannelShieldModeBeginCondition, ChannelShieldModeEndCondition, ChannelShoutoutCreateCondition,
-    ChannelShoutoutReceiveCondition, ChannelSubscribeCondition, ChannelSubscriptionEndCondition,
-    ChannelSubscriptionGiftCondition, ChannelSubscriptionMessageCondition, ChannelSuspiciousUserMessageCondition,
-    ChannelSuspiciousUserUpdateCondition, ChannelUnbanCondition, ChannelUnbanRequestCreateCondition,
-    ChannelUnbanRequestResolveCondition, ChannelUpdateCondition, ChannelVIPAddCondition, ChannelVIPRemoveCondition,
-    ChannelWarningAcknowledgeCondition, ChannelWarningSendCondition, ConduitShardDisabledCondition,
-    DropEntitlementGrantCondition, ExtensionBitsTransactionCreateCondition, GoalsCondition, HypeTrainBeginCondition,
-    HypeTrainEndCondition, HypeTrainProgressCondition, StreamOfflineCondition, StreamOnlineCondition,
-    UserAuthorizationGrantCondition, UserAuthorizationRevokeCondition, UserUpdateCondition, WhisperReceivedCondition,
+    ChannelFollowCondition, ChannelGoalsCondition, ChannelGuestStarGuestUpdateCondition,
+    ChannelGuestStarSessionBeginCondition, ChannelGuestStarSessionEndCondition, ChannelGuestStarSettingsUpdateCondition,
+    ChannelModerateCondition, ChannelModeratorAddCondition, ChannelModeratorRemoveCondition,
+    ChannelPointsAutomaticRewardRedemptionAddCondition, ChannelPointsCustomRewardAddCondition,
+    ChannelPointsCustomRewardRedemptionAddCondition, ChannelPointsCustomRewardRedemptionUpdateCondition,
+    ChannelPointsCustomRewardRemoveCondition, ChannelPointsCustomRewardUpdateCondition, ChannelPollBeginCondition,
+    ChannelPollEndCondition, ChannelPollProgressCondition, ChannelPredictionBeginCondition,
+    ChannelPredictionEndCondition, ChannelPredictionLockCondition, ChannelPredictionProgressCondition,
+    ChannelRaidCondition, ChannelSharedChatSessionBeginCondition, ChannelSharedChatSessionEndCondition,
+    ChannelSharedChatSessionUpdateCondition, ChannelShieldModeBeginCondition, ChannelShieldModeEndCondition,
+    ChannelShoutoutCreateCondition, ChannelShoutoutReceiveCondition, ChannelSubscribeCondition,
+    ChannelSubscriptionEndCondition, ChannelSubscriptionGiftCondition, ChannelSubscriptionMessageCondition,
+    ChannelSuspiciousUserMessageCondition, ChannelSuspiciousUserUpdateCondition, ChannelUnbanCondition,
+    ChannelUnbanRequestCreateCondition, ChannelUnbanRequestResolveCondition, ChannelUpdateCondition,
+    ChannelVIPAddCondition, ChannelVIPRemoveCondition, ChannelWarningAcknowledgeCondition, ChannelWarningSendCondition,
+    ConduitShardDisabledCondition, DropEntitlementGrantCondition, ExtensionBitsTransactionCreateCondition,
+    HypeTrainBeginCondition, HypeTrainEndCondition, HypeTrainProgressCondition, StreamOfflineCondition,
+    StreamOnlineCondition, UserAuthorizationGrantCondition, UserAuthorizationRevokeCondition, UserUpdateCondition,
+    WhisperReceivedCondition,
 } from "./conditions";
 import type {EventSubTransportMethod} from "./transport";
 
@@ -608,6 +609,7 @@ export type EventSubSubscriptionCondition = AutomodMessageHoldCondition
     | ChannelModerateCondition
     | ChannelModeratorAddCondition
     | ChannelModeratorRemoveCondition
+    | ChannelGoalsCondition
     | ChannelGuestStarSessionBeginCondition
     | ChannelGuestStarSessionEndCondition
     | ChannelGuestStarGuestUpdateCondition
@@ -641,7 +643,6 @@ export type EventSubSubscriptionCondition = AutomodMessageHoldCondition
     | ConduitShardDisabledCondition
     | DropEntitlementGrantCondition
     | ExtensionBitsTransactionCreateCondition
-    | GoalsCondition
     | HypeTrainBeginCondition
     | HypeTrainProgressCondition
     | HypeTrainEndCondition
