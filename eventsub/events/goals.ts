@@ -80,8 +80,8 @@ export interface GoalsEvent extends BaseBroadcasterInfo {
      *   or decreased by 2, not 1.
      * - If `type` is subscription_count, this field is increased by 1 for each new subscription and decreased by 1
      *   for each user that unsubscribes.
-     * - If `type` is new_subscription, this field is increased by the points value associated with the subscription tier.
-     *   For example, if a tier-two subscription is worth 2 points, this field is increased by 2, not 1.
+     * - If `type` is new_subscription, this field is increased by the points value associated with the subscription
+     *   tier. For example, if a tier-two subscription is worth 2 points, this field is increased by 2, not 1.
      * - If `type` is new_subscription_count, this field is increased by 1 for each new subscription.
      */
     current_amount: number;

@@ -60,7 +60,8 @@ export enum EventSubSubscriptionType {
      */
     ChannelBitsUse = "channel.bits.use",
     /**
-     * A broadcaster updates their channel properties e.g., category, title, content classification labels, broadcast, or language.
+     * A broadcaster updates their channel properties e.g., category, title, content classification labels, broadcast,
+     * or language.
      *
      * @version 2
      */

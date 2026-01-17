@@ -47,7 +47,8 @@ export interface ChannelPointsCustomRewardAddEvent extends BaseBroadcasterInfo {
      */
     is_user_input_required: boolean;
     /**
-     * Should redemptions be set to `fulfilled status immediately when redeemed and skip the request queue instead of the normal `unfulfilled status.
+     * Should redemptions be set to `fulfilled status immediately when redeemed and skip the request queue instead of
+     * the normal `unfulfilled status.
      */
     should_redemptions_skip_request_queue: boolean;
     /**
@@ -85,7 +86,8 @@ export interface ChannelPointsCustomRewardAddEvent extends BaseBroadcasterInfo {
     /**
      * The number of redemptions redeemed during the current live stream.
      *
-     * @remarks Counts against the `max_per_stream` limit. `null` if the broadcasters stream isn’t live or `max_per_stream` isn’t enabled.
+     * @remarks Counts against the `max_per_stream` limit. `null` if the broadcasters stream isn’t live or
+     * `max_per_stream` isn’t enabled.
      */
     redemptions_redeemed_current_stream: number|null;
 }

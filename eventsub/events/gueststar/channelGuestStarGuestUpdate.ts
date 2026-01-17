@@ -8,7 +8,8 @@ export enum ChannelGuestStarGuestUpdateState {
     /**
      * The guest has transitioned to the invite queue.
      *
-     * @rrmarks This can take place when the guest was previously assigned a slot, but have been removed from the call and are sent back to the invite queue.
+     * @remarks This can take place when the guest was previously assigned a slot, but have been removed from the call
+     * and are sent back to the invite queue.
      */
     Invited = "invited",
     /**

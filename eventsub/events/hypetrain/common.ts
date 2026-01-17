@@ -30,7 +30,8 @@ export interface HypeTrainTopContribution extends BaseUserInfo {
      * The total amount contributed.
      *
      * @remarks If `type` is `bits`, `total` represents the amount of Bits used.
-     * If `type` is `subscription`, total is 500, 1000, or 2500 to represent tier 1, 2, or 3 subscriptions, respectively.
+     * If `type` is `subscription`, total is 500, 1000, or 2500 to represent tier 1, 2, or 3 subscriptions,
+     * respectively.
      */
     total: number;
 }
@@ -47,7 +48,8 @@ export interface HypeTrainLastContribution extends BaseUserInfo {
      * The total amount contributed.
      *
      * @remarks If `type` is `bits`, `total` represents the amount of Bits used.
-     * If `type` is `subscription`, total is 500, 1000, or 2500 to represent tier 1, 2, or 3 subscriptions, respectively.
+     * If `type` is `subscription`, total is 500, 1000, or 2500 to represent tier 1, 2, or 3 subscriptions,
+     * respectively.
      */
     total: number;
 }

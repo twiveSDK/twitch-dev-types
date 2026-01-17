@@ -288,8 +288,8 @@ export interface ChannelModerateEvent extends BaseBroadcasterInfo, BaseModerator
     /**
      * Information about the `shared_chat_delete` event.
      *
-     * @remarks Is null if `action` is not `shared_chat_delete`. This field has the same information as the `delete` field
-     * but for an action that happened for a channel in a shared chat session other than the broadcaster in the
+     * @remarks Is null if `action` is not `shared_chat_delete`. This field has the same information as the `delete`
+     * field but for an action that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
     shared_chat_delete?: ChannelModerateDelete;

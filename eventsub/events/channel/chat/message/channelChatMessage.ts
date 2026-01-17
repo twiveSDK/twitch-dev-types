@@ -92,7 +92,8 @@ export interface ChannelChatMessageEvent extends BaseBroadcasterInfo {
     /**
      * The color of the user’s name in the chat room.
      *
-     * @remarks This is a hexadecimal RGB color code in the form, `#&lt;RGB&gt;`. This tag may be empty if it is never set.
+     * @remarks This is a hexadecimal RGB color code in the form, `#&lt;RGB&gt;`. This tag may be empty if it is
+     * never set.
      */
     color: string;
     /**

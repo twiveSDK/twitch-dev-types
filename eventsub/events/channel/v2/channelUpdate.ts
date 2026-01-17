@@ -24,8 +24,8 @@ export interface ChannelUpdateEvent extends BaseBroadcasterInfo {
      * Array of content classification label IDs currently applied on the Channel.
      *
      * @remarks To retrieve a list of all possible IDs, use the
-     * {@link https://dev.twitch.tv/docs/api/reference/#get-content-classification-labels Get Content Classification Labels}
-     * API endpoint.
+     * {@link https://dev.twitch.tv/docs/api/reference/#get-content-classification-labels
+     * Get Content Classification Labels} API endpoint.
      */
     content_classification_labels: string[];
 }
