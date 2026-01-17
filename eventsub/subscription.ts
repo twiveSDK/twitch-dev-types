@@ -408,19 +408,19 @@ export enum EventSubSubscriptionType {
      *
      * @version 1
      */
-    GoalBegin = "channel.goal.begin",
+    ChannelGoalBegin = "channel.goal.begin",
     /**
      * Get notified when progress (either positive or negative) is made towards a broadcaster’s goal.
      *
      * @version 1
      */
-    GoalProgress = "channel.goal.progress",
+    ChannelGoalProgress = "channel.goal.progress",
     /**
      * Get notified when a broadcaster ends a goal.
      *
      * @version 1
      */
-    GoalEnd = "channel.goal.end",
+    ChannelGoalEnd = "channel.goal.end",
     /**
      * A Hype Train begins on the specified channel.
      *
@@ -444,25 +444,25 @@ export enum EventSubSubscriptionType {
      *
      * @version 1
      */
-    ShieldModeBegin = "channel.shield_mode.begin",
+    ChannelShieldModeBegin = "channel.shield_mode.begin",
     /**
      * Sends a notification when the broadcaster deactivates Shield Mode.
      *
      * @version 1
      */
-    ShieldModeEnd = "channel.shield_mode.end",
+    ChannelShieldModeEnd = "channel.shield_mode.end",
     /**
      * Sends a notification when the specified broadcaster sends a Shoutout.
      *
      * @version 1
      */
-    ShoutoutCreate = "channel.shoutout.create",
+    ChannelShoutoutCreate = "channel.shoutout.create",
     /**
      * Sends a notification when the specified broadcaster receives a Shoutout.
      *
      * @version 1
      */
-    ShoutoutReceive = "channel.shoutout.receive",
+    ChannelShoutoutReceive = "channel.shoutout.receive",
     /**
      * The specified broadcaster starts a stream.
      *
