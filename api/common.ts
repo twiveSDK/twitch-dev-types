@@ -44,7 +44,7 @@ export interface RESTPaginationRequestParams {
     first?: number;
 }
 
-export interface RESTApiErrorResponse {
+export interface APIErrorResponse {
     /**
      * A small description of the error that occurred.
      */
