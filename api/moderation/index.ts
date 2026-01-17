@@ -4,5 +4,6 @@ export * from "./chat";
 export * from "./moderatedChannel";
 export * from "./moderators";
 export * from "./shieldMode";
+export * from "./suspiciousUser";
 export * from "./terms";
 export * from "./vips";
