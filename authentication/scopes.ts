@@ -128,6 +128,10 @@ export enum AccessTokenScopes {
      */
     ClipsEdit = "clips:edit",
     /**
+     * Manage Clips as an editor.
+     */
+    ClipsEditAsEditor = "editor:manage:clips",
+    /**
      * View a channel’s moderation data including Moderators, Bans, Timeouts, and Automod settings.
      */
     ModerationRead = "moderation:read",
