@@ -101,7 +101,8 @@ export interface APIPoll {
     /**
      * A Boolean value that indicates whether viewers may cast additional votes using Channel Points.
      *
-     * @remarks For information about Channel Points, see {@link https://help.twitch.tv/s/article/channel-points-guide Channel Points Guide}.
+     * @remarks For information about Channel Points, see {@link https://help.twitch.tv/s/article/channel-points-guide
+     * Channel Points Guide}.
      */
     channel_points_voting_enabled: boolean;
     /**
@@ -198,9 +199,9 @@ export interface RESTPostPollRequestBody {
      * A Boolean value that indicates whether viewers may cast additional votes using Channel Points.
      *
      * @remarks If **true**, the viewer may cast more than one vote but each additional vote costs the number
-     * of Channel Points specified in `channel_points_per_vote`. The default is **false** (viewers may cast only one vote).
-     * For information about Channel Points,
-     * see {@link https://help.twitch.tv/s/article/channel-points-guide Channel Points Guide}.
+     * of Channel Points specified in `channel_points_per_vote`. The default is **false**
+     * (viewers may cast only one vote). For information about Channel Points, see
+     * {@link https://help.twitch.tv/s/article/channel-points-guide Channel Points Guide}.
      */
     channel_points_voting_enabled?: boolean;
     /**

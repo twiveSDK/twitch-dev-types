@@ -98,10 +98,10 @@ export interface RESTPostEventSubSubscriptionTransportRequestBodyParam {
     /**
      * The secret used to verify the signature.
      * 
-     * @remarks The secret must be an ASCII string that’s a minimum of 10 characters long and a maximum of 100 characters long.
-     * For information about how the secret is used, see
-     * {@link https://dev.twitch.tv/docs/eventsub/handling-webhook-events/#verifying-the-event-message Verifying the event message}.
-     * Specify this field only if `method` is set to **webhook**.
+     * @remarks The secret must be an ASCII string that’s a minimum of 10 characters long and a maximum of 100
+     * characters long. For information about how the secret is used, see
+     * {@link https://dev.twitch.tv/docs/eventsub/handling-webhook-events/#verifying-the-event-message
+     * Verifying the event message}. Specify this field only if `method` is set to **webhook**.
      */
     secret?: string;
     /**
@@ -188,8 +188,9 @@ export interface RESTGetEventSubSubscriptionsRequestParams extends RESTPaginatio
     /**
      * Filter subscriptions by user ID.
      *
-     * @remarks The response contains subscriptions where this ID matches a user ID that you specified in the Condition object
-     * when you {@link https://dev.twitch.tv/docs/api/reference/#create-eventsub-subscription created the subscription}.
+     * @remarks The response contains subscriptions where this ID matches a user ID that you specified in the Condition
+     * object when you {@link https://dev.twitch.tv/docs/api/reference/#create-eventsub-subscription created the
+     * subscription}.
      */
     user_id?: string;
     /**

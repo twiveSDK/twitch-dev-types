@@ -100,7 +100,8 @@ export interface RESTGetBroadcasterSubscriptionsResponse extends APIPaginatedRes
      * @remarks Points are based on the subscription tier of each user that subscribes to this broadcaster.
      * For example, a Tier 1 subscription is worth 1 point, Tier 2 is worth 2 points, and Tier 3 is worth 6 points.
      * The number of points determines the number of emote slots that are unlocked for the broadcaster
-     * (see {@link https://help.twitch.tv/s/article/subscriber-emote-guide?language=en_US#emoteslots Subscriber Emote Slots}).
+     * (see {@link https://help.twitch.tv/s/article/subscriber-emote-guide?language=en_US#emoteslots
+     * Subscriber Emote Slots}).
      */
     points: number;
     /**

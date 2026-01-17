@@ -61,8 +61,8 @@ export interface APIPredictionOutcome {
     /**
      * The color that visually identifies this outcome in the UX.
      *
-     * @remarks If the number of outcomes is two, the color is BLUE for the first outcome and PINK for the second outcome.
-     * If there are more than two outcomes, the color is BLUE for all outcomes.
+     * @remarks If the number of outcomes is two, the color is BLUE for the first outcome and PINK for the second
+     * outcome. If there are more than two outcomes, the color is BLUE for all outcomes.
      */
     color: APIPredictionOutcomeColor;
 }
@@ -227,7 +227,8 @@ export interface RESTPostPredictionResponse extends APIResponse<APIPrediction> {
  */
 export enum RESTPatchPredictionStatusRequestBodyParam {
     /**
-     * The winning outcome is determined and the Channel Points are distributed to the viewers who predicted the correct outcome.
+     * The winning outcome is determined and the Channel Points are distributed to the viewers who predicted the
+     * correct outcome.
      */
     Resolved = "RESOLVED",
     /**

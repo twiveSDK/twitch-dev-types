@@ -44,7 +44,8 @@ export interface APIExtensionBitsProduct {
      */
     expiration: string;
     /**
-     * A Boolean value that determines whether Bits product purchase events are broadcast to all instances of an extension on a channel.
+     * A Boolean value that determines whether Bits product purchase events are broadcast to all instances of an
+     * extension on a channel.
      * 
      * @remarks The events are broadcast via the **onTransactionComplete** helper callback.
      * Is **true** if the event is broadcast to all instances.
@@ -94,17 +95,20 @@ export interface RESTPutExtensionBitsProductRequestBody {
     /**
      * A Boolean value that indicates whether the product is in development.
      *
-     * @remarks Set to **true** if the product is in development and not available for public use. The default is **false**.
+     * @remarks Set to **true** if the product is in development and not available for public use.
+     * The default is **false**.
      */
     in_development?: boolean;
     /**
      * The date and time, in RFC3339 format, when the product expires.
      *
-     * @remarks If not set, the product does not expire. To disable the product, set the expiration date to a date in the past.
+     * @remarks If not set, the product does not expire. To disable the product, set the expiration date to a date in
+     * the past.
      */
     expiration?: string;
     /**
-     * A Boolean value that determines whether Bits product purchase events are broadcast to all instances of the extension on a channel.
+     * A Boolean value that determines whether Bits product purchase events are broadcast to all instances of the
+     * extension on a channel.
      *
      * @remarks The events are broadcast via the`onTransactionComplete` helper callback.
      * Set to **true** if the event is broadcast to all instances. The default is **false**.

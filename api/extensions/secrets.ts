@@ -58,8 +58,8 @@ export interface RESTPostExtensionSecretRequestParams {
     /**
      * The amount of time, in seconds, to delay activating the secret.
      *
-     * @remarks The delay should provide enough time for instances of the extension to gracefully switch over to the new secret.
-     * The minimum delay is 300 seconds (5 minutes). The default is 300 seconds.
+     * @remarks The delay should provide enough time for instances of the extension to gracefully switch over to the
+     * new secret. The minimum delay is 300 seconds (5 minutes). The default is 300 seconds.
      */
     delay?: number;
 }

@@ -54,8 +54,8 @@ export interface APIChannelStreamScheduleSegment {
     /**
      * Indicates whether the broadcaster canceled this segment of a recurring broadcast.
      *
-     * @remarks If the broadcaster canceled this segment, this field is set to the same value that’s in the `end_time` field;
-     * otherwise, it’s set to **null**.
+     * @remarks If the broadcaster canceled this segment, this field is set to the same value that’s in the `end_time`
+     * field; otherwise, it’s set to **null**.
      */
     canceled_until: string|null;
     /**
@@ -209,7 +209,8 @@ export interface RESTPostChannelStreamScheduleSegmentRequestBody {
     /**
      * A Boolean value that determines whether the broadcast recurs weekly.
      *
-     * @remraks Is **true** if the broadcast recurs weekly. Only partners and affiliates may add non-recurring broadcasts.
+     * @remraks Is **true** if the broadcast recurs weekly. Only partners and affiliates may add non-recurring
+     * broadcasts.
      */
     is_recurring?: boolean;
     /**
@@ -276,8 +277,8 @@ export interface RESTPatchChannelStreamScheduleSegmentRequestBody {
      * A Boolean value that indicates whether the broadcast is canceled.
      *
      * @remarks Set to **true** to cancel the segment. For recurring segments, the API cancels the first segment after
-     * the current UTC date and time and not the specified segment (unless the specified segment is the next segment after
-     * the current UTC date and time).
+     * the current UTC date and time and not the specified segment (unless the specified segment is the next segment
+     * after the current UTC date and time).
      */
     is_canceled?: boolean;
     /**

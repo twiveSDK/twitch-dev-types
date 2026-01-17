@@ -105,7 +105,8 @@ export interface APIChannelEmote extends APIBaseEmote {
     /**
      * The subscriber tier at which the emote is unlocked.
      *
-     * @remarks This field contains the tier information only if `emote_type` is set to `subscriptions`, otherwise, it's an empty string.
+     * @remarks This field contains the tier information only if `emote_type` is set to `subscriptions`,
+     * otherwise, it's an empty string.
      */
     tier: string;
     /**
@@ -137,8 +138,8 @@ export interface RESTGetChannelEmotesResponse extends APIResponse<APIChannelEmot
      *
      * @remarks Use the values from the id, format, scale, and theme_mode fields to replace
      * the like-named placeholder strings in the templated URL to create a CDN (Content Delivery Network)
-     * URL that you use to fetch the emote. For information about what the template looks like and how to use it to fetch emotes,
-     * see {@link https://dev.twitch.tv/docs/chat/send-receive-messages/#cdn-template Emote CDN URL format}.
+     * URL that you use to fetch the emote. For information about what the template looks like and how to use it to
+     * fetch emotes, see {@link https://dev.twitch.tv/docs/chat/send-receive-messages/#cdn-template Emote CDN URL format}.
      * You should use this template instead of using the URLs in the images object.
      */
     template: string;
@@ -166,8 +167,8 @@ export interface RESTGetGlobalEmotesResponse extends APIResponse<APIGlobalEmote>
      *
      * @remarks Use the values from the id, format, scale, and theme_mode fields to replace
      * the like-named placeholder strings in the templated URL to create a CDN (Content Delivery Network)
-     * URL that you use to fetch the emote. For information about what the template looks like and how to use it to fetch emotes,
-     * see {@link https://dev.twitch.tv/docs/chat/send-receive-messages/#cdn-template Emote CDN URL format}.
+     * URL that you use to fetch the emote. For information about what the template looks like and how to use it to
+     * fetch emotes, see {@link https://dev.twitch.tv/docs/chat/send-receive-messages/#cdn-template Emote CDN URL format}.
      * You should use this template instead of using the URLs in the images object.
      */
     template: string;
@@ -222,8 +223,8 @@ export interface RESTGetEmoteSetsResponse extends APIResponse<APIEmoteSet> {
      *
      * @remarks Use the values from the id, format, scale, and theme_mode fields to replace
      * the like-named placeholder strings in the templated URL to create a CDN (Content Delivery Network)
-     * URL that you use to fetch the emote. For information about what the template looks like and how to use it to fetch emotes,
-     * see {@link https://dev.twitch.tv/docs/chat/send-receive-messages/#cdn-template Emote CDN URL format}.
+     * URL that you use to fetch the emote. For information about what the template looks like and how to use it to
+     * fetch emotes, see {@link https://dev.twitch.tv/docs/chat/send-receive-messages/#cdn-template Emote CDN URL format}.
      * You should use this template instead of using the URLs in the images object.
      */
     template: string;
@@ -322,9 +323,9 @@ export interface RESTGetUserEmotesRequestParams extends RESTPaginationRequestPar
     /**
      * The User ID of a broadcaster you wish to get follower emotes of.
      *
-     * @remarks Using this query parameter will guarantee inclusion of the broadcaster’s follower emotes in the response body.
-     * If the user specified in `user_id` is subscribed to the broadcaster specified,
-     * their follower emotes will appear in the response body regardless if this query parameter is used.
+     * @remarks Using this query parameter will guarantee inclusion of the broadcaster’s follower emotes in the
+     * response body. If the user specified in `user_id` is subscribed to the broadcaster specified, their follower
+     * emotes will appear in the response body regardless if this query parameter is used.
      */
     broadcaster_id?: string;
 }
@@ -338,8 +339,8 @@ export interface RESTGetUserEmotesResponse extends APIPaginatedResponse<APIUserE
      *
      * @remarks Use the values from the id, format, scale, and theme_mode fields to replace
      * the like-named placeholder strings in the templated URL to create a CDN (Content Delivery Network)
-     * URL that you use to fetch the emote. For information about what the template looks like and how to use it to fetch emotes,
-     * see {@link https://dev.twitch.tv/docs/chat/send-receive-messages/#cdn-template Emote CDN URL format}.
+     * URL that you use to fetch the emote. For information about what the template looks like and how to use it to
+     * fetch emotes, see {@link https://dev.twitch.tv/docs/chat/send-receive-messages/#cdn-template Emote CDN URL format}.
      * You should use this template instead of using the URLs in the images object.
      */
     template: string;

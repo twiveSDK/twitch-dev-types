@@ -108,7 +108,8 @@ export interface RESTPatchChannelInformationRequestBody {
      */
     game_id?: string;
     /**
-     * The user’s preferred language. Set the value to an ISO 639-1 two-letter language code (for example, en for English).
+     * The user’s preferred language. Set the value to an ISO 639-1 two-letter language code
+     * (for example, en for English).
      *
      * @remarks Set to “other” if the user’s preferred language is not a Twitch supported language.
      * The language isn’t updated if the language code isn’t a Twitch supported language.
@@ -123,18 +124,19 @@ export interface RESTPatchChannelInformationRequestBody {
     /**
      * The number of seconds you want your broadcast buffered before streaming it live.
      *
-     * @remarks The delay helps ensure fairness during competitive play. Only users with Partner status may set this field.
-     * The maximum delay is 900 seconds (15 minutes).
+     * @remarks The delay helps ensure fairness during competitive play. Only users with Partner status may set this
+     * field. The maximum delay is 900 seconds (15 minutes).
      */
     delay?: number;
     /**
      * A list of channel-defined tags to apply to the channel.
      *
      * @remarks To remove all tags from the channel, set tags to an empty array.
-     * Tags help identify the content that the channel streams. {@link https://help.twitch.tv/s/article/guide-to-tags Learn More}
-     * A channel may specify a maximum of 10 tags.
-     * Each tag is limited to a maximum of 25 characters and may not be an empty string or contain spaces or special characters.
-     * Tags are case-insensitive. For readability, consider using camelCasing or PascalCasing.
+     * Tags help identify the content that the channel streams.
+     * {@link https://help.twitch.tv/s/article/guide-to-tags Learn More}
+     * A channel may specify a maximum of 10 tags. Each tag is limited to a maximum of 25 characters and may not be an
+     * empty string or contain spaces or special characters. Tags are case-insensitive. For readability, consider using
+     * camelCasing or PascalCasing.
      */
     tags?: string[];
     /**
@@ -284,7 +286,8 @@ export interface RESTGetChannelFollowersResponse extends APIPaginatedResponse<AP
     /**
      * The total number of users that follow this broadcaster.
      *
-     * @remarks As someone pages through the list, the number of users may change as users follow or unfollow the broadcaster.
+     * @remarks As someone pages through the list, the number of users may change as users follow or unfollow the
+     * broadcaster.
      */
     total: number;
 }

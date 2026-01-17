@@ -101,8 +101,9 @@ export interface RESTGetUserActiveExtensionsRequestParams {
     /**
      * The ID of the broadcaster whose active extensions you want to get.
      *
-     * @remarks This parameter is required if you specify an app access token and is optional if you specify a user access token.
-     * If you specify a user access token and don’t specify this parameter, the API uses the user ID from the access token.
+     * @remarks This parameter is required if you specify an app access token and is optional if you specify a user
+     * access token. If you specify a user access token and don’t specify this parameter, the API uses the user ID from
+     * the access token.
      */
     user_id?: string;
 }

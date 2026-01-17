@@ -78,7 +78,8 @@ export interface APIHypeTrainEventData {
     /**
      * The top contributors for each contribution type.
      * 
-     * @remarks For example, the top contributor using BITS (by aggregate) and the top contributor using SUBS (by count).
+     * @remarks For example, the top contributor using BITS (by aggregate) and the top contributor using SUBS
+     * (by count).
      */
     top_contributions: APIHypeTrainEventContribution[];
     /**

@@ -28,11 +28,13 @@ export interface RESTPostClipRequestParams {
      */
     broadcaster_id: string;
     /**
-     * A Boolean value that determines whether the API captures the clip at the moment the viewer requests it or after a delay.
+     * A Boolean value that determines whether the API captures the clip at the moment the viewer requests it or after
+     * a delay.
      * 
      * @remarks If **false** (default), Twitch captures the clip at the moment the viewer requests it
      * (this is the same clip experience as the Twitch UX).
-     * If **true**, Twitch adds a delay before capturing the clip (this basically shifts the capture window to the right slightly).
+     * If **true**, Twitch adds a delay before capturing the clip (this basically shifts the capture window to the
+     * right slightly).
      */
     has_delay?: boolean;
 }
@@ -116,8 +118,8 @@ export interface APIClip {
     /**
      * The zero-based offset, in seconds, to where the clip starts in the video (VOD).
      *
-     * @remarks Is **null** if the video is not available or hasn’t been created yet from the live stream (see `video_id`).
-     * There’s a delay between when a clip is created during a broadcast and when the offset is set.
+     * @remarks Is **null** if the video is not available or hasn’t been created yet from the live stream
+     * (see `video_id`). There’s a delay between when a clip is created during a broadcast and when the offset is set.
      * During the delay period, `vod_offset` is **null**. The delay is indeterminant but is typically minutes long.
      */
     vod_offset: number|null;
@@ -249,8 +251,9 @@ export interface RESTCreateClipFromVODRequestParams {
     /**
      * Offset in the VOD to create the clip.
      *
-     * @remarks `vod_offset` indicates where the clip will end. In other words, the clip will start at (`vod_offset` - `duration`)
-     * and end at `vod_offset`. This means that the value of `vod_offset` must greater than or equal to the value of `duration`.
+     * @remarks `vod_offset` indicates where the clip will end. In other words, the clip will start at
+     * (`vod_offset` - `duration`) and end at `vod_offset`. This means that the value of `vod_offset` must greater than
+     * or equal to the value of `duration`.
      */
     vod_offset: number;
     /**

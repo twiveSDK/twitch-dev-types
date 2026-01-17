@@ -82,7 +82,8 @@ export interface APIExtensionPanelView {
  */
 export interface APIExtensionVideoOverlayView {
     /**
-     * The HTML file that is shown to viewers on the channel page when the extension is activated on the Video - Overlay slot.
+     * The HTML file that is shown to viewers on the channel page when the extension is activated on the Video -
+     * Overlay slot.
      */
     viewer_url: string;
     /**
@@ -96,7 +97,8 @@ export interface APIExtensionVideoOverlayView {
  */
 export interface APIExtensionComponentView {
     /**
-     * The HTML file that is shown to viewers on the channel page when the extension is activated in a Video - Component slot.
+     * The HTML file that is shown to viewers on the channel page when the extension is activated in a Video -
+     * Component slot.
      */
     viewer_url: string;
     /**
@@ -112,9 +114,10 @@ export interface APIExtensionComponentView {
     /**
      * A Boolean value that determines whether to apply CSS zoom.
      *
-     * @remakrs If **true**, a CSS zoom is applied such that the size of the extension is variable but the inner dimensions
-     * are fixed based on Scale Pixels. This allows your extension to render as if it is of fixed width and height.
-     * If **false**, the inner dimensions of the extension iframe are variable, meaning your extension must implement responsiveness.
+     * @remakrs If **true**, a CSS zoom is applied such that the size of the extension is variable but the inner
+     * dimensions are fixed based on Scale Pixels. This allows your extension to render as if it is of fixed width
+     * and height. If **false**, the inner dimensions of the extension iframe are variable, meaning your extension must
+     * implement responsiveness.
      */
     autoscale: boolean;
     /**
@@ -168,7 +171,8 @@ export interface APIExtensionViews {
      */
     component: APIExtensionComponentView;
     /**
-     * Describes the view that is shown to broadcasters while they are configuring your extension within the Extension Manager.
+     * Describes the view that is shown to broadcasters while they are configuring your extension within the Extension
+     * Manager.
      */
     config: APIExtensionConfigView;
 }
@@ -193,7 +197,8 @@ export interface APIExtension {
      * @remarks Is **true** if a user can install the extension.
      * Typically, this is set to **false** if the extension is currently in testing mode
      * and requires users to be allowlisted (the allowlist is configured on Twitch’s
-     * {@link https://dev.twitch.tv/console/extensions developer site} under the Extensions -> Extension -> Version -> Access).
+     * {@link https://dev.twitch.tv/console/extensions developer site} under the Extensions -> Extension -> Version ->
+     * Access).
      */
     can_install: boolean;
     /**

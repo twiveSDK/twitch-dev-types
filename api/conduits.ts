@@ -215,8 +215,8 @@ export interface RESTPatchConduitShardTransportRequestBodyParam {
     /**
      * The secret used to verify the signature.
      *
-     * @remarks The secret must be an ASCII string that’s a minimum of 10 characters long and a maximum of 100 characters long.
-     * For information about how the secret is used, see Verifying the event message.
+     * @remarks The secret must be an ASCII string that’s a minimum of 10 characters long and a maximum of 100
+     * characters long. For information about how the secret is used, see Verifying the event message.
      * Specify this field only if method is set to webhook.
      */
     secret?: string;

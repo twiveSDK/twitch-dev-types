@@ -32,7 +32,8 @@ export interface APIGuestStarSettings {
      */
     is_moderator_send_live_enabled: boolean;
     /**
-     * Number of slots the Guest Star call interface will allow the host to add to a call. Required to be between 1 and 6.
+     * Number of slots the Guest Star call interface will allow the host to add to a call. Required to be between 1
+     * and 6.
      */
     slot_count: number;
     /**
@@ -89,7 +90,8 @@ export interface RESTPutChannelGuestStarSettingsRequestBody {
      */
     is_moderator_send_live_enabled?: boolean;
     /**
-     * Number of slots the Guest Star call interface will allow the host to add to a call. Required to be between 1 and 6.
+     * Number of slots the Guest Star call interface will allow the host to add to a call. Required to be between 1
+     * and 6.
      */
     slot_count?: number;
     /**
@@ -101,8 +103,9 @@ export interface RESTPutChannelGuestStarSettingsRequestBody {
      */
     group_layout?: APIGuestStarGroupLayout;
     /**
-     * Flag determining if Guest Star should regenerate the authentication token associated with the channel’s browser sources.
-     * Providing a true value for this will immediately invalidate all browser sources previously configured in your streaming software.
+     * Flag determining if Guest Star should regenerate the authentication token associated with the channel’s browser
+     * sources. Providing a true value for this will immediately invalidate all browser sources previously configured
+     * in your streaming software.
      */
     regenerate_browser_sources: boolean;
 }

@@ -91,8 +91,8 @@ export interface APIStream {
     /**
      * A URL to an image of a frame from the last 5 minutes of the stream.
      *
-     * @remarks Replace the width and height placeholders in the URL (`{width}x{height}`) with the size of the image you want,
-     * in pixels.
+     * @remarks Replace the width and height placeholders in the URL (`{width}x{height}`) with the size of the image
+     * you want, in pixels.
      */
     thumbnail_url: string;
     /**
@@ -113,14 +113,16 @@ export interface RESTGetStreamsRequestParams extends RESTPaginationRequestParams
      * A user ID used to filter the list of streams.
      *
      * @remarks Returns only the streams of those users that are broadcasting. You may specify a maximum of 100 IDs.
-     * To specify multiple IDs, include the *user_id* parameter for each user. For example, `&user_id=1234&user_id=5678`.
+     * To specify multiple IDs, include the *user_id* parameter for each user.
+     * For example, `&user_id=1234&user_id=5678`.
      */
     user_id?: string;
     /**
      * A user login name used to filter the list of streams.
      *
-     * @remarks Returns only the streams of those users that are broadcasting. You may specify a maximum of 100 login names.
-     * To specify multiple names, include the *user_login* parameter for each user. For example, `&user_login=foo&user_login=bar`.
+     * @remarks Returns only the streams of those users that are broadcasting. You may specify a maximum of 100 login
+     * names. To specify multiple names, include the *user_login* parameter for each user.
+     * For example, `&user_login=foo&user_login=bar`.
      */
     user_login?: string;
     /**
@@ -299,8 +301,8 @@ export interface RESTGetStreamMarkersRequestParams extends RESTPaginationRequest
      * A video on demand (VOD)/video ID.
      *
      * @remarks The request returns the markers from this VOD/video. The user in the access token must own the video
-     * or the user must be one of the broadcaster’s editors. This parameter and the *user_id* query parameter are mutually
-     * exclusive.
+     * or the user must be one of the broadcaster’s editors. This parameter and the *user_id* query parameter are
+     * mutually exclusive.
      */
     video_id: string;
 }

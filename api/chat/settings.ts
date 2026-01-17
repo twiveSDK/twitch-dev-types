@@ -23,7 +23,8 @@ export interface APIChatSettings {
      */
     follower_mode: boolean;
     /**
-     * The length of time, in minutes, that users must follow the broadcaster before being able to participate in the chat room. 
+     * The length of time, in minutes, that users must follow the broadcaster before being able to participate in the
+     * chat room.
      * 
      * @remarks Is **null** if `follower_mode` is **false**.
      */
@@ -57,7 +58,8 @@ export interface APIChatSettings {
      */
     non_moderator_chat_delay_duration: number|null;
     /**
-     * A Boolean value that determines whether the broadcaster limits how often users in the chat room are allowed to send messages.
+     * A Boolean value that determines whether the broadcaster limits how often users in the chat room are allowed to
+     * send messages.
      * 
      * @remarks Is **true** if the broadcaster applies a delay; otherwise, **false**.
      * See the ´slow_mode_wait_time` field for the delay.
@@ -70,13 +72,15 @@ export interface APIChatSettings {
      */
     slow_mode_wait_time: number|null;
     /**
-     * A Boolean value that determines whether only users that subscribe to the broadcaster’s channel may talk in the chat room.
+     * A Boolean value that determines whether only users that subscribe to the broadcaster’s channel may talk in the
+     * chat room.
      *
      * @remarks Is **true** if the broadcaster restricts the chat room to subscribers only; otherwise, **false**.
      */
     subscriber_mode: boolean;
     /**
-     * A Boolean value that determines whether the broadcaster requires users to post only unique messages in the chat room.
+     * A Boolean value that determines whether the broadcaster requires users to post only unique messages in the
+     * chat room.
      *
      * @remarks Is **true** if the broadcaster requires unique messages only; otherwise, **false**.
      */
@@ -145,7 +149,8 @@ export interface RESTPatchChatSettingsRequestBody {
      * The length of time, in minutes, that users must follow the broadcaster
      * before being able to participate in the chat room.
      *
-     * @remarks Set only if `follower_mode` is **true**. Possible values are: 0 (no restriction) through 129600 (3 months).
+     * @remarks Set only if `follower_mode` is **true**. Possible values are: 0 (no restriction) through
+     * 129600 (3 months).
      * The default is 0.
      */
     follower_mode_duration?: number;
@@ -183,16 +188,19 @@ export interface RESTPatchChatSettingsRequestBody {
      */
     slow_mode_wait_time?: number;
     /**
-     * A Boolean value that determines whether only users that subscribe to the broadcaster’s channel may talk in the chat room.
+     * A Boolean value that determines whether only users that subscribe to the broadcaster’s channel may talk in the
+     * chat room.
      *
      * @remarks Set to **true** if the broadcaster restricts the chat room to subscribers only; otherwise, **false**.
      * The default is **false**.
      */
     subscriber_mode?: boolean;
     /**
-     * A Boolean value that determines whether the broadcaster requires users to post only unique messages in the chat room.
+     * A Boolean value that determines whether the broadcaster requires users to post only unique messages in the
+     * chat room.
      *
-     * @remarks Set to **true** if the broadcaster allows only unique messages; otherwise, **false** The default is **false**.
+     * @remarks Set to **true** if the broadcaster allows only unique messages; otherwise, **false**.
+     * The default is **false**.
      */
     unique_chat_mode?: boolean;
 }

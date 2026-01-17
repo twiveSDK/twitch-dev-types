@@ -110,13 +110,15 @@ export interface RESTGetTeamsRequestParams {
     /**
      * The name of the team to get.
      *
-     * @remarks This parameter and the *id* parameter are mutually exclusive; you must specify the team’s name or ID but not both.
+     * @remarks This parameter and the *id* parameter are mutually exclusive; you must specify the team’s name or ID
+     * but not both.
      */
     name: string;
     /**
      * The ID of the team to get.
      *
-     * @remarks This parameter and the *name* parameter are mutually exclusive; you must specify the team’s name or ID but not both.
+     * @remarks This parameter and the *name* parameter are mutually exclusive; you must specify the team’s name or ID
+     * but not both.
      */
     id: string;
 }

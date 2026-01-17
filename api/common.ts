@@ -68,8 +68,8 @@ export enum APIEndpoint {
      */
     StartCommercial = "https://api.twitch.tv/helix/start_commercial",
     /**
-     * Gets the ad schedule related information, including snooze, when the last ad was run, when the next ad is scheduled,
-     * and if the channel is currently in pre-roll free time.
+     * Gets the ad schedule related information, including snooze, when the last ad was run, when the next ad is
+     * scheduled, and if the channel is currently in pre-roll free time.
      *
      * @httpMethod GET
      * @see https://dev.twitch.tv/docs/api/reference/#get-ad-schedule

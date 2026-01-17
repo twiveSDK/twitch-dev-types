@@ -47,7 +47,8 @@ export interface APIBitsLeaderboard {
     /**
      * The list of leaderboard leaders.
      *
-     * @remarks The leaders are returned in rank order by how much they’ve cheered. The array is empty if nobody has cheered bits.
+     * @remarks The leaders are returned in rank order by how much they’ve cheered. The array is empty if nobody has
+     * cheered bits.
      */
     data: APIBitsLeaderboardUser[];
     /**
@@ -130,9 +131,10 @@ export interface RESTGetBitsLeaderboardRequestParams {
      * The start date is ignored if period is all.
      * If your start date uses the ‘+’ offset operator (for example, 2022-01-01T00:00:00.0+05:00),
      * you must URL encode the start date.
-     * The date is converted to PST before being used, so if you set the start time to `2022-01-01T00:00:00.0Z` and period to month,
-     * the actual reporting period is December 2021, not January 2022.
-     * If you want the reporting period to be January 2022, you must set the start time to `2022-01-01T08:00:00.0Z` or `2022-01-01T00:00:00.0-08:00`.
+     * The date is converted to PST before being used, so if you set the start time to `2022-01-01T00:00:00.0Z`
+     * and period to month, the actual reporting period is December 2021, not January 2022.
+     * If you want the reporting period to be January 2022, you must set the start time to `2022-01-01T08:00:00.0Z`
+     * or `2022-01-01T00:00:00.0-08:00`.
      */
     started_at?: string;
     /**
@@ -290,7 +292,8 @@ export interface APICheermote {
      */
     last_updated: string;
     /**
-     * A Boolean value that indicates whether this Cheermote provides a charitable contribution match during charity campaigns.
+     * A Boolean value that indicates whether this Cheermote provides a charitable contribution match during charity
+     * campaigns.
      */
     is_charitable: boolean;
 }

@@ -80,7 +80,8 @@ export interface APIVideo {
      * A URL to a thumbnail image of the video.
      *
      * @remarks Before using the URL, you must replace the `%{width}` and `%{height}` placeholders with the width
-     * and height of the thumbnail you want returned. Due to current limitations, `${width}` must be 320 and `${height}` must be 180.
+     * and height of the thumbnail you want returned. Due to current limitations, `${width}` must be 320 and `${height}`
+     * must be 180.
      */
     thumbnail_url: string;
     /**
@@ -97,7 +98,8 @@ export interface APIVideo {
      * The ISO 639-1 two-letter language code that the video was broadcast in.
      * For example, the language code is DE if the video was broadcast in German.
      *
-     * @remarks The language value is "other" if the video was broadcast in a language not in the list of supported languages.
+     * @remarks The language value is "other" if the video was broadcast in a language not in the list of supported
+     * languages.
      */
     language: string;
     /**

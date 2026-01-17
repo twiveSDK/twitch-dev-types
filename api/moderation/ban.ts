@@ -17,7 +17,8 @@ export interface APIBannedUser {
      */
     user_name: string;
     /**
-     * The UTC date and time (in RFC3339 format) of when the timeout expires, or an empty string if the user is permanently banned.
+     * The UTC date and time (in RFC3339 format) of when the timeout expires, or an empty string if the user is
+     * permanently banned.
      */
     expires_at: string;
     /**

@@ -53,15 +53,15 @@ export interface RESTBaseGetAnalyticsRequestParams extends RESTPaginationRequest
      * If you specify a start date, you must specify an end date.
      * The start date must be within one year of today’s date.
      * If you specify an earlier date, the API ignores it and uses a date that’s one year prior to today’s date.
-     * If you don’t specify a start and end date, the report includes all available data for the last 365 days from today.
-     * The report contains one row of data for each day in the reporting window.
+     * If you don’t specify a start and end date, the report includes all available data for the last 365 days from
+     * today. The report contains one row of data for each day in the reporting window.
      */
     started_at?: string;
     /**
      * The reporting window’s end date, in RFC3339 format.
      *
-     * @remark Set the time portion to zeroes (for example, 2021-10-22T00:00:00Z). The report is inclusive of the end date.
-     * Specify an end date only if you provide a start date.
+     * @remark Set the time portion to zeroes (for example, 2021-10-22T00:00:00Z). The report is inclusive of the end
+     * date. Specify an end date only if you provide a start date.
      * Because it can take up to two days for the data to be available, you must specify an end date that’s earlier
      * than today minus one to two days.
      * If not, the API ignores your end date and uses an end date that is today minus one to two days.

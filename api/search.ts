@@ -107,7 +107,8 @@ export interface RESTGetChannelsRequestParams extends RESTPaginationRequestParam
     /**
      * A Boolean value that determines whether the response includes only channels that are currently streaming live.
      *
-     * @remarks Set to **true** to get only channels that are streaming live; otherwise, false to get live and offline channels.
+     * @remarks Set to **true** to get only channels that are streaming live; otherwise, false to get live and offline
+     * channels.
      * The default is **false**.
      */
     live_only?: boolean;
