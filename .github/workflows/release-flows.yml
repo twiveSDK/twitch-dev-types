@@ -20,7 +20,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.repository_owner == 'twiveSDK' && !startsWith(github.event.head_commit.message, 'chore(release)')
+    if: github.repository_owner == 'twiveSDK' && github.event_name == 'release' && github.event.release.prerelease == true
 
     steps:
       - name: Checkout repository
@@ -55,8 +55,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.repository_owner == 'twiveSDK' && startsWith(github.event.head_commit.message, 'chore(release)')
-      && !contains(github.event.head_commit.message, '[skip ci]')
+    if: github.repository_owner == 'twiveSDK' && github.event_name == 'release' && github.event.release.prerelease == false
 
     steps:
       - name: Checkout repository
