@@ -5,7 +5,7 @@ import type {HypeTrainTopContribution} from "./common";
  * @deprecated
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-end-event
  */
-export interface HypeTrainEndEvent extends EventBroadcasterInfo{
+export interface HypeTrainEndEvent extends EventBroadcasterInfo {
     /**
      * The Hype Train ID.
      */
