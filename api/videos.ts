@@ -21,7 +21,7 @@ export enum APIVideoType {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-videos
  */
-export interface VideoMutedSegment {
+export interface APIVideoMutedSegment {
     /**
      * The duration of the muted segment, in seconds.
      */
@@ -113,7 +113,7 @@ export interface APIVideo {
     /**
      * The segments that Twitch Audio Recognition muted; otherwise, **null**.
      */
-    muted_segments: VideoMutedSegment[]|null;
+    muted_segments: APIVideoMutedSegment[]|null;
 }
 
 /**
