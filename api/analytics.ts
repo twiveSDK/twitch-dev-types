@@ -10,6 +10,20 @@ export enum APIAnalyticsType {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-extension-analytics
  */
+export interface APIAnalyticsDateRange {
+    /**
+     * The reporting window’s start date.
+     */
+    started_at: string;
+    /**
+     * The reporting window’s end date.
+     */
+    ended_at: string;
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/api/reference/#get-extension-analytics
+ */
 export interface APIBaseAnalytics {
     /**
      * The URL that you use to download the report. The URL is valid for 5 minutes.
@@ -24,16 +38,7 @@ export interface APIBaseAnalytics {
     /**
      * The reporting window’s start and end dates, in RFC3339 format.
      */
-    date_range: {
-        /**
-         * The reporting window’s start date.
-         */
-        started_at: string;
-        /**
-         * The reporting window’s end date.
-         */
-        ended_at: string;
-    };
+    date_range: APIAnalyticsDateRange;
 }
 
 /**

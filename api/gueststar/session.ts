@@ -4,8 +4,17 @@ import type {APIResponse} from "../common";
  * @see https://dev.twitch.tv/docs/api/reference/#get-guest-star-session
  */
 export interface APIGuestStarMediaSettings {
+    /**
+     * Flag determining whether the host is allowing this media type.
+     */
     is_host_enabled: boolean;
+    /**
+     * Flag determining whether the guest has enabled this media type.
+     */
     is_guest_enabled: boolean;
+    /**
+     * Flag determining whether this media type is available for use by the guest.
+     */
     is_available: boolean;
 }
 

@@ -3,7 +3,7 @@ import type {APIResponse} from "../common";
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#check-automod-status
  */
-export interface APIAutoModStatus {
+export interface APIAutomodStatus {
     /**
      * The caller-defined ID passed in the request.
      */
@@ -21,7 +21,7 @@ export interface APIAutoModStatus {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#check-automod-status
  */
-export interface RESTPostAutoModStatusRequestParams {
+export interface RESTPostAutomodStatusRequestParams {
     /**
      * The ID of the broadcaster whose AutoMod settings and list of blocked terms are used to check the message.
      *
@@ -33,7 +33,7 @@ export interface RESTPostAutoModStatusRequestParams {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#check-automod-status
  */
-export interface RESTPostAutoModStatusRequestBodyData {
+export interface RESTPostAutomodStatusRequestBodyData {
     /**
      * A caller-defined ID used to correlate this message with the same message in the response.
      */
@@ -47,24 +47,24 @@ export interface RESTPostAutoModStatusRequestBodyData {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#check-automod-status
  */
-export interface CheckAutoModStatusRequestBody {
+export interface RESTPostAutomodStatusRequestBody {
     /**
      * The list of messages to check.
      *
      * @remarks The list must contain at least one message and may contain up to a maximum of 100 messages.
      */
-    data: RESTPostAutoModStatusRequestBodyData[];
+    data: RESTPostAutomodStatusRequestBodyData[];
 }
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#check-automod-status
  */
-export interface RESTPostAutoModStatusResponse extends APIResponse<APIAutoModStatus> {}
+export interface RESTPostAutomodStatusResponse extends APIResponse<APIAutomodStatus> {}
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#manage-held-automod-messages
  */
-export enum APIAutoModHeldMessageAction {
+export enum RESTPostAutomodMessageHeldActionRequestBodyParam {
     Allow = "ALLOW",
     Deny = "DENY",
 }
@@ -72,7 +72,7 @@ export enum APIAutoModHeldMessageAction {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#manage-held-automod-messages
  */
-export interface RESTPostHeldAutoModMessagesRequestBody {
+export interface RESTPostAutomodMessagesHeldRequestBody {
     /**
      * The moderator who is approving or denying the held message.
      *
@@ -86,13 +86,13 @@ export interface RESTPostHeldAutoModMessagesRequestBody {
     /**
      * The action to take for the message.
      */
-    action: APIAutoModHeldMessageAction;
+    action: RESTPostAutomodMessageHeldActionRequestBodyParam;
 }
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-automod-settings
  */
-export interface APIAutoModSettings {
+export interface APIAutomodSettings {
     /**
      * The broadcaster’s ID.
      */
@@ -144,7 +144,7 @@ export interface APIAutoModSettings {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-automod-settings
  */
-export interface RESTGetAutoModSettingsRequestParams {
+export interface RESTGetAutomodSettingsRequestParams {
     /**
      * The ID of the broadcaster whose AutoMod settings you want to get.
      */
@@ -160,12 +160,12 @@ export interface RESTGetAutoModSettingsRequestParams {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-automod-settings
  */
-export interface RESTGetAutoModSettingsResponse extends APIResponse<APIAutoModSettings> {}
+export interface RESTGetAutomodSettingsResponse extends APIResponse<APIAutomodSettings> {}
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#update-automod-settings
  */
-export interface RESTPutAutoModSettingsRequestParams {
+export interface RESTPutAutomodSettingsRequestParams {
     /**
      * The ID of the broadcaster whose AutoMod settings you want to update.
      */
@@ -181,7 +181,7 @@ export interface RESTPutAutoModSettingsRequestParams {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#update-automod-settings
  */
-export interface RESTPutAutoModSettingsRequestBody {
+export interface RESTPutAutomodSettingsRequestBody {
     /**
      * The Automod level for hostility involving aggression.
      */
@@ -223,4 +223,4 @@ export interface RESTPutAutoModSettingsRequestBody {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#update-automod-settings
  */
-export interface RESTPutAutoModSettingsResponse extends APIResponse<APIAutoModSettings> {}
+export interface RESTPutAutomodSettingsResponse extends APIResponse<APIAutomodSettings> {}

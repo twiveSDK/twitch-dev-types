@@ -158,7 +158,7 @@ export interface RESTGetPollsResponse extends APIPaginatedResponse<APIPoll> {}
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#create-poll
  */
-export interface RESTPostPollChoiceData {
+export interface RESTPostPollChoiceRequestBodyParam {
     /**
      * One of the choices the viewer may select.
      *
@@ -188,7 +188,7 @@ export interface RESTPostPollRequestBody {
      *
      * @remarks The list must contain a minimum of 2 choices and up to a maximum of 5 choices.
      */
-    choices: RESTPostPollChoiceData[];
+    choices: RESTPostPollChoiceRequestBodyParam[];
     /**
      * The length of time (in seconds) that the poll will run for.
      *

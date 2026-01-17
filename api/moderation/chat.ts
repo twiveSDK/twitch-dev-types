@@ -32,9 +32,21 @@ export interface RESTDeleteChatMessagesRequestParams {
  * @see https://dev.twitch.tv/docs/api/reference/#warn-chat-user
  */
 export interface APIWarnedChatUserInfo {
+    /**
+     * The ID of the channel in which the warning will take effect.
+     */
     broadcaster_id: string;
+    /**
+     * The ID of the warned user.
+     */
     user_id: string;
+    /**
+     * The ID of the user who applied the warning.
+     */
     moderator_id: string;
+    /**
+     * The reason provided for warning.
+     */
     reason: string;
 }
 

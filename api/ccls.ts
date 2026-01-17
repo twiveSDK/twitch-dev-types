@@ -51,7 +51,25 @@ export enum APIContentClassificationLabelId {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-content-classification-labels
  */
-export enum APICCLsLocales {
+export interface APIContentClassificationLabel {
+    /**
+     * Unique identifier for the CCL.
+     */
+    id: APIContentClassificationLabelId;
+    /**
+     * Localized description of the CCL.
+     */
+    description: string;
+    /**
+     * Localized name of the CCL.
+     */
+    name: string;
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/api/reference/#get-content-classification-labels
+ */
+export enum RESTGetContentClassificationLabelsLocaleRequestParam {
     /**
      * Bulgaria
      */
@@ -173,26 +191,8 @@ export enum APICCLsLocales {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-content-classification-labels
  */
-export interface APIContentClassificationLabel {
-    /**
-     * Unique identifier for the CCL.
-     */
-    id: APIContentClassificationLabelId;
-    /**
-     * Localized description of the CCL.
-     */
-    description: string;
-    /**
-     * Localized name of the CCL.
-     */
-    name: string;
-}
-
-/**
- * @see https://dev.twitch.tv/docs/api/reference/#get-content-classification-labels
- */
 export interface RESTGetContentClassificationLabelsRequestParams {
-    locale?: APICCLsLocales;
+    locale?: RESTGetContentClassificationLabelsLocaleRequestParam;
 }
 
 /**

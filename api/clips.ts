@@ -234,7 +234,7 @@ export interface RESTGetClipDownloadResponse extends APIResponse<APIClipDownload
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#create-clip-from-vod
  */
-export interface RESTCreateClipFromVODRequestParams {
+export interface RESTPostClipFromVODRequestParams {
     /**
      * The user ID of the editor for the channel you want to create a clip for. If using the broadcaster’s auth token,
      * this is the same as broadcaster_id. This must match the user_id in the user access token.
@@ -269,4 +269,4 @@ export interface RESTCreateClipFromVODRequestParams {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#create-clip-from-vod
  */
-export interface RESTCreateClipFromVODResponse extends APIResponse<APICreatedClipInfo> {}
+export interface RESTPostClipFromVODResponse extends APIResponse<APICreatedClipInfo> {}

@@ -178,7 +178,7 @@ export interface RESTGetPredictionsResponse extends APIPaginatedResponse<APIPred
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#create-prediction
  */
-export interface RESTPostPredictionOutcome {
+export interface RESTPostPredictionOutcomeRequestBodyParam {
     /**
      * The text of one of the outcomes that the viewer may select.
      *
@@ -208,7 +208,7 @@ export interface RESTPostPredictionRequestBody {
      *
      * @remarks The list must contain a minimum of 2 choices and up to a maximum of 10 choices.
      */
-    outcomes: RESTPostPredictionOutcome[];
+    outcomes: RESTPostPredictionOutcomeRequestBodyParam[];
     /**
      * The length of time (in seconds) that the prediction will run for.
      *

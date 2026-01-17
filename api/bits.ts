@@ -149,7 +149,7 @@ export interface RESTGetBitsLeaderboardRequestParams {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-bits-leaderboard
  */
-export interface RESTGetBitsLeaderboardResponse extends APIBitsLeaderboardUser {}
+export interface RESTGetBitsLeaderboardResponse extends APIBitsLeaderboard {}
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-cheermotes
