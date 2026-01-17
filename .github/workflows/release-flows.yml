@@ -55,7 +55,8 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.repository_owner == 'twiveSDK' && startsWith(github.event.head_commit.message, 'chore(release)') && !contains(github.event.head_commit.message, '[skip ci]')
+    if: github.repository_owner == 'twiveSDK' && startsWith(github.event.head_commit.message, 'chore(release)')
+      && !contains(github.event.head_commit.message, '[skip ci]')
 
     steps:
       - name: Checkout repository
