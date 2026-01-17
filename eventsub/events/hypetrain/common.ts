@@ -1,4 +1,4 @@
-import type {BaseUserInfo} from "../common";
+import type {EventUserInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#top-contributions
@@ -21,7 +21,7 @@ export enum HypeTrainContributionType {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#top-contributions
  */
-export interface HypeTrainTopContribution extends BaseUserInfo {
+export interface HypeTrainTopContribution extends EventUserInfo {
     /**
      * The contribution method used.
      */
@@ -39,7 +39,7 @@ export interface HypeTrainTopContribution extends BaseUserInfo {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#last-contribution
  */
-export interface HypeTrainLastContribution extends BaseUserInfo {
+export interface HypeTrainLastContribution extends EventUserInfo {
     /**
      * The contribution method used.
      */

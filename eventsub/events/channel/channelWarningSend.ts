@@ -1,9 +1,9 @@
-import type {BaseBroadcasterInfo, BaseModeratorInfo, BaseUserInfo} from "../common";
+import type {EventBroadcasterInfo, EventModeratorInfo, EventUserInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-warning-send-event
  */
-export interface ChannelWarningSendEvent extends BaseBroadcasterInfo, BaseModeratorInfo, BaseUserInfo {
+export interface ChannelWarningSendEvent extends EventBroadcasterInfo, EventModeratorInfo, EventUserInfo {
     /**
      * The reason given for the warning.
      */

@@ -1,6 +1,6 @@
 import type {ChannelChatBadge, ChannelChatMessage} from "./common";
 import type {ChannelSubscriptionTier} from "../../sub";
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../../../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../../../common";
 import type {CharityAmountData} from "../../../charity";
 
 /**
@@ -223,7 +223,7 @@ export interface ChannelChatNotificationPayItForward {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-notification-event
  */
-export interface ChannelChatNotificationRaid extends BaseUserInfo {
+export interface ChannelChatNotificationRaid extends EventUserInfo {
     /**
      * The number of viewers raiding this channel from the broadcaster’s channel.
      */
@@ -273,7 +273,7 @@ export interface ChannelChatNotificationCharityDonation {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-notification-event
  */
-export interface ChannelChatNotificationEvent extends BaseBroadcasterInfo {
+export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
     /**
      * The user ID of the user that sent the message.
      */

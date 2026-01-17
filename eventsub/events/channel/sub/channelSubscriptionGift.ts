@@ -1,10 +1,10 @@
-import type {BaseBroadcasterInfo} from "../../common";
+import type {EventBroadcasterInfo} from "../../common";
 import type {ChannelSubscriptionTier} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-subscription-gift-event
  */
-export interface ChannelSubscriptionGiftEvent extends BaseBroadcasterInfo {
+export interface ChannelSubscriptionGiftEvent extends EventBroadcasterInfo {
     /**
      * The user ID of the user who sent the subscription gift.
      *

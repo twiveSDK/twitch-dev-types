@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../../common";
 import type {AutomodMessageBlockedTerm, AutomodMessageBoundary, AutomodMessageV2} from "../common";
 
 /**
@@ -30,7 +30,7 @@ export interface AutomodMessageHoldAutomod {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#automod-message-hold-event-v2
  */
-export interface AutomodMessageHoldEventV2 extends BaseBroadcasterInfo, BaseUserInfo {
+export interface AutomodMessageHoldEventV2 extends EventBroadcasterInfo, EventUserInfo {
     /**
      * The ID of the message that was flagged by automod.
      */

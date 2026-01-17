@@ -1,9 +1,9 @@
-import type {BaseBroadcasterInfo} from "../../common";
+import type {EventBroadcasterInfo} from "../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-update-event
  */
-export interface ChannelUpdateEvent extends BaseBroadcasterInfo {
+export interface ChannelUpdateEvent extends EventBroadcasterInfo {
     /**
      * The channel’s stream title.
      */

@@ -1,10 +1,10 @@
 import type {CharityAmountData} from "./common";
-import type {BaseBroadcasterInfo} from "../common";
+import type {EventBroadcasterInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#charity-campaign-progress-event
  */
-export interface CharityCampaignProgressEvent extends BaseBroadcasterInfo {
+export interface CharityCampaignProgressEvent extends EventBroadcasterInfo {
     /**
      * An ID that identifies the charity campaign.
      */

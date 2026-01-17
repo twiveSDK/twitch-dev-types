@@ -1,4 +1,4 @@
-export interface BaseBroadcasterInfo {
+export interface EventBroadcasterInfo {
     /**
      * The ID of the broadcaster.
      */
@@ -13,7 +13,7 @@ export interface BaseBroadcasterInfo {
     broadcaster_user_name: string;
 }
 
-export interface BaseUserInfo {
+export interface EventUserInfo {
     /**
      * The ID of the user.
      */
@@ -28,7 +28,7 @@ export interface BaseUserInfo {
     user_name: string;
 }
 
-export interface BaseModeratorInfo {
+export interface EventModeratorInfo {
     /**
      * The user ID of the moderator.
      */

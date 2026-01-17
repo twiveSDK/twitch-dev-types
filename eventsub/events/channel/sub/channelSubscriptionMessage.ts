@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../../common";
 import type {ChannelSubscriptionTier} from "./common";
 
 /**
@@ -36,7 +36,7 @@ export interface ChannelSubscriptionMessage {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-subscription-message-event
  */
-export interface ChannelSubscriptionMessageEvent extends BaseUserInfo, BaseBroadcasterInfo {
+export interface ChannelSubscriptionMessageEvent extends EventUserInfo, EventBroadcasterInfo {
     /**
      * The tier of the user’s subscription.
      */

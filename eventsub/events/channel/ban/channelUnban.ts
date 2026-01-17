@@ -1,6 +1,6 @@
-import type {BaseBroadcasterInfo, BaseModeratorInfo, BaseUserInfo} from "../../common";
+import type {EventBroadcasterInfo, EventModeratorInfo, EventUserInfo} from "../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-unban-event
  */
-export interface ChannelUnbanEvent extends BaseUserInfo, BaseBroadcasterInfo, BaseModeratorInfo {}
+export interface ChannelUnbanEvent extends EventUserInfo, EventBroadcasterInfo, EventModeratorInfo {}

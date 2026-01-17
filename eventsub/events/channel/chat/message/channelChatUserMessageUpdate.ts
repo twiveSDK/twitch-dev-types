@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../../../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../../../common";
 import type {ChannelChatMessageFragmentCheermote} from "./common";
 
 /**
@@ -59,7 +59,7 @@ export enum ChannelChatUserMessageUpdateStatus {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-user-message-update-event
  */
-export interface ChannelChatUserMessageUpdateEvent extends BaseBroadcasterInfo, BaseUserInfo {
+export interface ChannelChatUserMessageUpdateEvent extends EventBroadcasterInfo, EventUserInfo {
     /**
      * The message’s status.
      */

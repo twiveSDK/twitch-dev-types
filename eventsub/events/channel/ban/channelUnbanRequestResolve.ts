@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-unban-request-resolve-event
@@ -12,7 +12,7 @@ export enum ChannelUnbanRequestResolveStatus {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-unban-request-resolve-event
  */
-export interface ChannelUnbanRequestResolveEvent extends BaseBroadcasterInfo, BaseUserInfo {
+export interface ChannelUnbanRequestResolveEvent extends EventBroadcasterInfo, EventUserInfo {
     /**
      * The ID of the unban request.
      */

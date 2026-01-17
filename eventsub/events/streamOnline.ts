@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo} from "./common";
+import type {EventBroadcasterInfo} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#stream-online-event
@@ -14,7 +14,7 @@ export enum StreamOnlineType {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#stream-online-event
  */
-export interface StreamOnlineEvent extends BaseBroadcasterInfo {
+export interface StreamOnlineEvent extends EventBroadcasterInfo {
     /**
      * The id of the stream.
      */

@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../../../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../../../common";
 import type {ChannelChatMessageFragmentCheermote} from "./common";
 
 /**
@@ -50,7 +50,7 @@ export interface ChannelChatUserHoldMessage {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-user-message-hold-event
  */
-export interface ChannelChatUserMessageHoldEvent extends BaseBroadcasterInfo, BaseUserInfo {
+export interface ChannelChatUserMessageHoldEvent extends EventBroadcasterInfo, EventUserInfo {
     /**
      * The ID of the message that was flagged by automod.
      */

@@ -1,6 +1,6 @@
-import type {BaseBroadcasterInfo} from "../../common";
+import type {EventBroadcasterInfo} from "../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-clear-event
  */
-export interface ChannelChatClearEvent extends BaseBroadcasterInfo {}
+export interface ChannelChatClearEvent extends EventBroadcasterInfo {}

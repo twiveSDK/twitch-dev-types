@@ -1,10 +1,10 @@
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../common";
 import type {CharityAmountData} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#charity-donation-event
  */
-export interface CharityDonationEvent extends BaseBroadcasterInfo, BaseUserInfo {
+export interface CharityDonationEvent extends EventBroadcasterInfo, EventUserInfo {
     /**
      * An ID that identifies the donation.
      *

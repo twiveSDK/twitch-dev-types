@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseModeratorInfo, BaseUserInfo} from "../common";
+import type {EventBroadcasterInfo, EventModeratorInfo, EventUserInfo} from "../common";
 import type {AutomodMessage} from "./common";
 
 /**
@@ -13,7 +13,7 @@ export enum AutomodMessageUpdateStatus {
 /**
  * @sse https://dev.twitch.tv/docs/eventsub/eventsub-reference/#automod-message-update-event
  */
-export interface AutomodMessageUpdateEvent extends BaseBroadcasterInfo, BaseUserInfo, BaseModeratorInfo {
+export interface AutomodMessageUpdateEvent extends EventBroadcasterInfo, EventUserInfo, EventModeratorInfo {
     /**
      * The ID of the message that was flagged by automod.
      */

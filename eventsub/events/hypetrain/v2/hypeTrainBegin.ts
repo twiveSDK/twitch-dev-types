@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo} from "../../common";
+import type {EventBroadcasterInfo} from "../../common";
 import type {HypeTrainTopContribution} from "../common";
 
 /**
@@ -13,7 +13,7 @@ export enum HypeTrainType {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-begin-v2-event
  */
-export interface HypeTrainBeginEventV2 extends BaseBroadcasterInfo {
+export interface HypeTrainBeginEventV2 extends EventBroadcasterInfo {
     /**
      * The Hype Train ID.
      */
@@ -49,7 +49,7 @@ export interface HypeTrainBeginEventV2 extends BaseBroadcasterInfo {
     /**
      * Contains the list of broadcasters in the shared Hype Train.
      */
-    shared_train_participants?: BaseBroadcasterInfo[];
+    shared_train_participants?: EventBroadcasterInfo[];
     /**
      * The time when the Hype Train started.
      */

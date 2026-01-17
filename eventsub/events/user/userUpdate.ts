@@ -1,9 +1,9 @@
-import type {BaseUserInfo} from "../common";
+import type {EventUserInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#user-update-event
  */
-export interface UserUpdateEvent extends BaseUserInfo {
+export interface UserUpdateEvent extends EventUserInfo {
     /**
      * The user’s email address.
      *

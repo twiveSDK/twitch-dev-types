@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseModeratorInfo, BaseUserInfo} from "../common";
+import type {EventBroadcasterInfo, EventModeratorInfo, EventUserInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-moderate-event
@@ -63,12 +63,12 @@ export interface ChannelModerateSlow {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-moderate-event
  */
-export interface ChannelModerateVIP extends BaseUserInfo {}
+export interface ChannelModerateVIP extends EventUserInfo {}
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-moderate-event
  */
-export interface ChannelModerateBan extends BaseUserInfo {
+export interface ChannelModerateBan extends EventUserInfo {
     /**
      * Reason given for the ban.
      */
@@ -78,7 +78,7 @@ export interface ChannelModerateBan extends BaseUserInfo {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-moderate-event
  */
-export interface ChannelModerateTimeout extends BaseUserInfo{
+export interface ChannelModerateTimeout extends EventUserInfo{
     /**
      * The reason given for the timeout.
      */
@@ -92,7 +92,7 @@ export interface ChannelModerateTimeout extends BaseUserInfo{
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-moderate-event
  */
-export interface ChannelModerateRaid extends BaseUserInfo {
+export interface ChannelModerateRaid extends EventUserInfo {
     /**
      * The viewer count.
      */
@@ -102,7 +102,7 @@ export interface ChannelModerateRaid extends BaseUserInfo {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-moderate-event
  */
-export interface ChannelModerateDelete extends BaseUserInfo {
+export interface ChannelModerateDelete extends EventUserInfo {
     /**
      * The ID of the message being deleted.
      */
@@ -154,7 +154,7 @@ export interface ChannelModerateAutomodTerms {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-moderate-event
  */
-export interface ChannelModerateUnbanRequest extends BaseUserInfo {
+export interface ChannelModerateUnbanRequest extends EventUserInfo {
     /**
      * Whether the unban request was approved or denied.
      */
@@ -168,7 +168,7 @@ export interface ChannelModerateUnbanRequest extends BaseUserInfo {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-moderate-event
  */
-export interface ChannelModerateEvent extends BaseBroadcasterInfo, BaseModeratorInfo {
+export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModeratorInfo {
     /**
      * The channel in which the action originally occurred.
      *
@@ -204,19 +204,19 @@ export interface ChannelModerateEvent extends BaseBroadcasterInfo, BaseModerator
     /**
      * Metadata associated with the vip command.
      */
-    vip?: BaseUserInfo;
+    vip?: EventUserInfo;
     /**
      * Metadata associated with the unvip command.
      */
-    unvip?: BaseUserInfo;
+    unvip?: EventUserInfo;
     /**
      * Metadata associated with the mod command.
      */
-    mod?: BaseUserInfo;
+    mod?: EventUserInfo;
     /**
      * Metadata associated with the unmod command.
      */
-    unmod?: BaseUserInfo;
+    unmod?: EventUserInfo;
     /**
      * Metadata associated with the ban command.
      */
@@ -224,7 +224,7 @@ export interface ChannelModerateEvent extends BaseBroadcasterInfo, BaseModerator
     /**
      * Metadata associated with the unban command.
      */
-    unban?: BaseUserInfo;
+    unban?: EventUserInfo;
     /**
      * Metadata associated with the timeout command.
      */
@@ -232,7 +232,7 @@ export interface ChannelModerateEvent extends BaseBroadcasterInfo, BaseModerator
     /**
      * Metadata associated with the untimeout command.
      */
-    untimeout?: BaseUserInfo;
+    untimeout?: EventUserInfo;
     /**
      * Metadata associated with the raid command.
      */
@@ -240,7 +240,7 @@ export interface ChannelModerateEvent extends BaseBroadcasterInfo, BaseModerator
     /**
      * Metadata associated with the unraid command.
      */
-    unraid?: BaseUserInfo;
+    unraid?: EventUserInfo;
     /**
      * Metadata associated with the delete command.
      */
@@ -268,7 +268,7 @@ export interface ChannelModerateEvent extends BaseBroadcasterInfo, BaseModerator
      * but for an action that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
-    shared_chat_unban?: BaseUserInfo;
+    shared_chat_unban?: EventUserInfo;
     /**
      * Information about the `shared_chat_timeout` event.
      *
@@ -284,7 +284,7 @@ export interface ChannelModerateEvent extends BaseBroadcasterInfo, BaseModerator
      * field but for an action that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
-    shared_chat_untimeout?: BaseUserInfo;
+    shared_chat_untimeout?: EventUserInfo;
     /**
      * Information about the `shared_chat_delete` event.
      *

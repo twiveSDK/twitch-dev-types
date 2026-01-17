@@ -1,9 +1,9 @@
-import type {BaseBroadcasterInfo, BaseModeratorInfo} from "../common";
+import type {EventBroadcasterInfo, EventModeratorInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#automod-settings-update-event
  */
-export interface AutomodSettingsUpdateEvent extends BaseBroadcasterInfo, BaseModeratorInfo {
+export interface AutomodSettingsUpdateEvent extends EventBroadcasterInfo, EventModeratorInfo {
     /**
      * The Automod level for hostility involving name-calling or insults.
      */

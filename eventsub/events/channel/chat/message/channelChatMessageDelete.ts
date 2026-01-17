@@ -1,9 +1,9 @@
-import type {BaseBroadcasterInfo} from "../../../common";
+import type {EventBroadcasterInfo} from "../../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-message-delete-event
  */
-export interface ChannelChatMessageDeleteEvent extends BaseBroadcasterInfo {
+export interface ChannelChatMessageDeleteEvent extends EventBroadcasterInfo {
     /**
      * The ID of the user whose message was deleted.
      */

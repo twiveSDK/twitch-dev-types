@@ -1,10 +1,10 @@
 import type {ChannelPointsCustomRewardRedemption, ChannelPointsCustomRewardRedemptionStatus} from "./common";
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-points-custom-reward-redemption-add-event
  */
-export interface ChannelPointsCustomRewardRedemptionAddEvent extends BaseBroadcasterInfo, BaseUserInfo {
+export interface ChannelPointsCustomRewardRedemptionAddEvent extends EventBroadcasterInfo, EventUserInfo {
     /**
      * The redemption identifier.
      */

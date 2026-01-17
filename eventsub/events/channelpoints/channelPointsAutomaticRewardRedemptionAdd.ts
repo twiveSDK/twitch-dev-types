@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-points-automatic-reward-redemption-add-event
@@ -81,7 +81,7 @@ export interface ChannelPointsAutomaticRewardRedemptionMessage {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-points-automatic-reward-redemption-add-event
  */
-export interface ChannelPointsAutomaticRewardRedemptionAddEvent extends BaseBroadcasterInfo, BaseUserInfo {
+export interface ChannelPointsAutomaticRewardRedemptionAddEvent extends EventBroadcasterInfo, EventUserInfo {
     /**
      * The ID of the Redemption.
      */

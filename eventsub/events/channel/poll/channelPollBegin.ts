@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo} from "../../common";
+import type {EventBroadcasterInfo} from "../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#choices
@@ -58,7 +58,7 @@ export interface ChannelPollChannelPointsVoting {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-poll-begin-event
  */
-export interface ChannelPollBeginEvent extends BaseBroadcasterInfo {
+export interface ChannelPollBeginEvent extends EventBroadcasterInfo {
     /**
      * ID of the poll.
      */

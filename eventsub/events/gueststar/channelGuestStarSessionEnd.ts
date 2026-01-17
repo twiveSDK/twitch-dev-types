@@ -1,10 +1,10 @@
-import type {BaseBroadcasterInfo} from "../common";
+import type {EventBroadcasterInfo} from "../common";
 import type {ChannelGuestStarHost} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-guest-star-session-end-event
  */
-export interface ChannelGuestStarSessionEndEvent extends BaseBroadcasterInfo, ChannelGuestStarHost {
+export interface ChannelGuestStarSessionEndEvent extends EventBroadcasterInfo, ChannelGuestStarHost {
     /**
      * ID representing the unique session that was started.
      */

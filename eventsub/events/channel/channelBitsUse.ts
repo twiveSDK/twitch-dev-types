@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-bits-use-event
@@ -159,7 +159,7 @@ export interface ChannelBitsUsePowerUp {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-bits-use-event
  */
-export interface ChannelBitsUseEvent extends BaseBroadcasterInfo, BaseUserInfo {
+export interface ChannelBitsUseEvent extends EventBroadcasterInfo, EventUserInfo {
     /**
      * The number of Bits used.
      */

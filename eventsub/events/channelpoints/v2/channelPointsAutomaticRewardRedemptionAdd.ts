@@ -1,7 +1,7 @@
 import type {
     ChannelPointsAutomaticRewardRedemptionEmote, ChannelPointsAutomaticRewardRedemptionType
 } from "../channelPointsAutomaticRewardRedemptionAdd";
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-points-automatic-reward-redemption-add-v2-event
@@ -64,7 +64,7 @@ export interface ChannelPointsAutomaticRewardRedemptionMessageV2 {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-points-automatic-reward-redemption-add-v2-event
  */
-export interface ChannelPointsAutomaticRewardRedemptionAddEventV2 extends BaseBroadcasterInfo, BaseUserInfo {
+export interface ChannelPointsAutomaticRewardRedemptionAddEventV2 extends EventBroadcasterInfo, EventUserInfo {
     /**
      * The ID of the Redemption.
      */

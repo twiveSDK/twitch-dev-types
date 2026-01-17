@@ -1,9 +1,9 @@
-import type {BaseUserInfo} from "./common";
+import type {EventUserInfo} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#drop-entitlement-grant-event
  */
-export interface DropEntitlement extends BaseUserInfo {
+export interface DropEntitlement extends EventUserInfo {
     /**
      * The ID of the organization that owns the game that has Drops enabled.
      */

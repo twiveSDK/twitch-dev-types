@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseUserInfo} from "../../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#outcomes
@@ -11,7 +11,7 @@ export enum ChannelPredictionOutcomeColor {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#top-predictors
  */
-export interface ChannelPredictionOutcomeTopPredictor extends BaseUserInfo {
+export interface ChannelPredictionOutcomeTopPredictor extends EventUserInfo {
     /**
      * The number of Channel Points won.
      *
@@ -58,7 +58,7 @@ export interface ChannelPredictionOutcome {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-prediction-begin-event
  */
-export interface ChannelPredictionBeginEvent extends BaseBroadcasterInfo{
+export interface ChannelPredictionBeginEvent extends EventBroadcasterInfo{
     /**
      * Channel Points Prediction ID.
      */

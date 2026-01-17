@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo, BaseUserInfo} from "./common";
+import type {EventBroadcasterInfo, EventUserInfo} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#product
@@ -27,7 +27,7 @@ export interface ExtensionBitsTransactionCreateProduct {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#extension-bits-transaction-create-event
  */
-export interface ExtensionBitsTransactionCreateEvent extends BaseBroadcasterInfo, BaseUserInfo {
+export interface ExtensionBitsTransactionCreateEvent extends EventBroadcasterInfo, EventUserInfo {
     /**
      * Client ID of the extension.
      */

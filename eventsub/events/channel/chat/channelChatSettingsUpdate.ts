@@ -1,9 +1,9 @@
-import type {BaseBroadcasterInfo} from "../../common";
+import type {EventBroadcasterInfo} from "../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-settings-update-event
  */
-export interface ChannelChatSettingsUpdateEvent extends BaseBroadcasterInfo {
+export interface ChannelChatSettingsUpdateEvent extends EventBroadcasterInfo {
     /**
      * A Boolean value that determines whether chat messages must contain only emotes.
      *

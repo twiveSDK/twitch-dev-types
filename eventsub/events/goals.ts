@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo} from "./common";
+import type {EventBroadcasterInfo} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#goals-event
@@ -47,7 +47,7 @@ export enum GoalType {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#goals-event
  */
-export interface GoalsEvent extends BaseBroadcasterInfo {
+export interface GoalsEvent extends EventBroadcasterInfo {
     /**
      * An ID that identifies this event.
      */

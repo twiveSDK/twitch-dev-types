@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo} from "../common";
+import type {EventBroadcasterInfo} from "../common";
 import type {
     ChannelPointsCustomRewardGlobalCooldown, ChannelPointsCustomRewardImage, ChannelPointsCustomRewardMaxPerStream,
     ChannelPointsCustomRewardMaxPerUserPerStream
@@ -7,7 +7,7 @@ import type {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-points-custom-reward-add-event
  */
-export interface ChannelPointsCustomRewardAddEvent extends BaseBroadcasterInfo {
+export interface ChannelPointsCustomRewardAddEvent extends EventBroadcasterInfo {
     /**
      * The reward identifier.
      */

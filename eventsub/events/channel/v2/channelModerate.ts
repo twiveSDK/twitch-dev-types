@@ -1,5 +1,5 @@
 import type {ChannelModerateEvent} from "../channelModerate";
-import type {BaseUserInfo} from "../../common";
+import type {EventUserInfo} from "../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-moderate-event-v2
@@ -44,7 +44,7 @@ export enum ChannelModerateActionV2 {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-moderate-event-v2
  */
-export interface ChannelModerateWarn extends BaseUserInfo {
+export interface ChannelModerateWarn extends EventUserInfo {
     /**
      * Reason given for the warning.
      */

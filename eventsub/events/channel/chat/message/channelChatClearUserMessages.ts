@@ -1,9 +1,9 @@
-import type {BaseBroadcasterInfo} from "../../../common";
+import type {EventBroadcasterInfo} from "../../../common";
 
 /**
  * https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-clear-user-messages-event
  */
-export interface ChannelChatClearUserMessagesEvent extends BaseBroadcasterInfo {
+export interface ChannelChatClearUserMessagesEvent extends EventBroadcasterInfo {
     /**
      * The ID of the user that was banned or put in a timeout. All of their messages are deleted.
      */

@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo} from "../common";
+import type {EventBroadcasterInfo} from "../common";
 import type {ChannelGuestStar, ChannelGuestStarHost} from "./common";
 
 /**
@@ -37,7 +37,7 @@ export enum ChannelGuestStarGuestUpdateState {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-guest-star-guest-update-event
  */
-export interface ChannelGuestStarGuestUpdateEvent extends BaseBroadcasterInfo, ChannelGuestStar, ChannelGuestStarHost {
+export interface ChannelGuestStarGuestUpdateEvent extends EventBroadcasterInfo, ChannelGuestStar, ChannelGuestStarHost {
     /**
      * ID representing the unique session that was started.
      */

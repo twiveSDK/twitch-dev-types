@@ -1,11 +1,11 @@
-import type {BaseBroadcasterInfo} from "../common";
+import type {EventBroadcasterInfo} from "../common";
 import type {HypeTrainLastContribution, HypeTrainTopContribution} from "./common";
 
 /**
  * @deprecated
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-begin-event
  */
-export interface HypeTrainBeginEvent extends BaseBroadcasterInfo {
+export interface HypeTrainBeginEvent extends EventBroadcasterInfo {
     /**
      * The Hype Train ID.
      */

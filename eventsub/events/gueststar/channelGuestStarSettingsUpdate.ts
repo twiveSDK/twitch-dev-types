@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo} from "../common";
+import type {EventBroadcasterInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-guest-star-settings-update-event
@@ -35,7 +35,7 @@ export enum ChannelGuestStarSettingsGroupLayout {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-guest-star-settings-update-event
  */
-export interface ChannelGuestStarSettingsUpdateEvent extends BaseBroadcasterInfo {
+export interface ChannelGuestStarSettingsUpdateEvent extends EventBroadcasterInfo {
     /**
      * Flag determining if Guest Star moderators have access to control whether a guest is live once assigned to a slot.
      */

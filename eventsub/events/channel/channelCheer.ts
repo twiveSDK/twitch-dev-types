@@ -1,9 +1,9 @@
-import type {BaseBroadcasterInfo} from "../common";
+import type {EventBroadcasterInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-cheer-event
  */
-export interface ChannelCheerEvent extends BaseBroadcasterInfo {
+export interface ChannelCheerEvent extends EventBroadcasterInfo {
     /**
      * Whether the user cheered anonymously or not.
      */

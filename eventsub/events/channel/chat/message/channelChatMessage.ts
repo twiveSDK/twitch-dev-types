@@ -1,4 +1,4 @@
-import type {BaseBroadcasterInfo} from "../../../common";
+import type {EventBroadcasterInfo} from "../../../common";
 import type {ChannelChatBadge, ChannelChatMessage, ChannelChatMessageType} from "./common";
 
 /**
@@ -56,7 +56,7 @@ export interface ChannelChatMessageReply {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-message-event
  */
-export interface ChannelChatMessageEvent extends BaseBroadcasterInfo {
+export interface ChannelChatMessageEvent extends EventBroadcasterInfo {
     /**
      * The user ID of the user that sent the message.
      */
