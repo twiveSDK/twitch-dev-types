@@ -413,7 +413,7 @@ export interface ExtensionBitsTransactionCreateCondition {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#goals-condition
  */
-export interface GoalsCondition extends BaseBroadcasterCondition {}
+export interface ChannelGoalsCondition extends BaseBroadcasterCondition {}
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-begin-condition
