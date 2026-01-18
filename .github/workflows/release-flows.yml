@@ -76,15 +76,13 @@ jobs:
         run: npm run build:node
 
       - name: Check if version exists on npm
+        id: npm_check
         run: |
-          PKG_NAME=$(node -p "require('./package.json').name")
-          PKG_VER=$(node -p "require('./package.json').version")
-          echo "name=$PKG_NAME" >> $GITHUB_OUTPUT
-          echo "ver=$PKG_VER" >> $GITHUB_OUTPUT
-          if npm view "$PKG_NAME@$PKG_VER" version >/dev/null 2>&1; then
-            echo "exists=true" >> $GITHUB_OUTPUT
-          else
-            echo "exists=false" >> $GITHUB_OUTPUT
+          PKG_NAME="${{ steps.npm_check.outputs.name }}"
+          PKG_VER="${{ steps.npm_check.outputs.ver }}"
+          EXISTS="${{ steps.npm_check.outputs.exists }}"
+          
+          echo "npm version exists = $EXISTS"
           fi
 
       - name: Publish new @latest version
