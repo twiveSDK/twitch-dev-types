@@ -78,12 +78,24 @@ jobs:
       - name: Check if version exists on npm
         id: npm_check
         run: |
-          PKG_NAME="${{ steps.npm_check.outputs.name }}"
-          PKG_VER="${{ steps.npm_check.outputs.ver }}"
-          EXISTS="${{ steps.npm_check.outputs.exists }}"
+          # read package name and version
+          PKG_NAME=$(jq -r .name package.json)
+          PKG_VER=$(jq -r .version package.json)
           
-          echo "npm version exists = $EXISTS"
+          # check if that exact version exists on npm
+          if npm view "$PKG_NAME@$PKG_VER" version >/dev/null 2>&1; then
+            EXISTS=true
+          else
+            EXISTS=false
           fi
+          
+          # export outputs for GitHub Actions
+          echo "name=$PKG_NAME" >> $GITHUB_OUTPUT
+          echo "ver=$PKG_VER" >> $GITHUB_OUTPUT
+          echo "exists=$EXISTS" >> $GITHUB_OUTPUT
+          
+          # debug print (will no longer be empty)
+          echo "npm version exists = $EXISTS"
 
       - name: Publish new @latest version
         env:
