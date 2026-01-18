@@ -75,6 +75,18 @@ jobs:
       - name: Build package
         run: npm run build:node
 
+      - name: Check if version exists on npm
+        run: |
+          PKG_NAME=$(node -p "require('./package.json').name")
+          PKG_VER=$(node -p "require('./package.json').version")
+          echo "name=$PKG_NAME" >> $GITHUB_OUTPUT
+          echo "ver=$PKG_VER" >> $GITHUB_OUTPUT
+          if npm view "$PKG_NAME@$PKG_VER" version >/dev/null 2>&1; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Publish new @latest version
         env:
             NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
