@@ -79,4 +79,12 @@ jobs:
         env:
             NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-            npm publish --access public --tag latest
+          PKG_NAME="${{ steps.npm_check.outputs.name }}"
+          PKG_VER="${{ steps.npm_check.outputs.ver }}"
+          EXISTS="${{ steps.npm_check.outputs.exists }}"
+      
+          if [ "$EXISTS" = "true" ]; then
+          npm dist-tag add "$PKG_NAME@$PKG_VER" latest
+          else
+          npm publish --access public --tag latest
+          fi
