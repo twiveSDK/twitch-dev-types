@@ -1040,6 +1040,13 @@ export enum APIEndpoint {
      */
     UpdateUser = "https://api.twitch.tv/helix/users",
     /**
+     * Gets the authorization scopes that the specified user has granted the application.
+     *
+     * @httpMethod GET
+     * @see https://dev.twitch.tv/docs/api/reference/#get-authorization-by-user
+     */
+    GetAuthorizationByUser = "https://api.twitch.tv/helix/authorization/users",
+    /**
      * Gets the list of users that the broadcaster has blocked.
      *
      * @httpMethod GET
