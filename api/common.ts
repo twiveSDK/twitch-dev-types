@@ -823,6 +823,20 @@ export enum APIEndpoint {
      */
     WarnChatUser = "https://api.twitch.tv/helix/moderation/warnings",
     /**
+     * Adds a suspicious user status to a chatter on the broadcaster’s channel.
+     *
+     * @httpMethod POST
+     * @see https://dev.twitch.tv/docs/api/reference/#add-suspicious-status-to-chat-user
+     */
+    AddSuspiciousStatusToChatUser = "https://api.twitch.tv/helix/moderation/suspicious_users",
+    /**
+     * Remove a suspicious user status from a chatter on broadcaster’s channel.
+     *
+     * @httpMethod DELETE
+     * @see https://dev.twitch.tv/docs/api/reference/#remove-suspicious-status-from-chat-user
+     */
+    RemoveSuspiciousStatusFromChatUser = "https://api.twitch.tv/helix/moderation/suspicious_users",
+    /**
      * Gets a list of polls that the broadcaster created.
      *
      * @httpMethod GET
