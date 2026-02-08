@@ -322,6 +322,13 @@ export enum APIEndpoint {
      */
     CreateClip = "https://api.twitch.tv/helix/clips",
     /**
+     * Creates a clip from the broadcaster’s VOD.
+     *
+     * @httpMethod POST
+     * @see https://dev.twitch.tv/docs/api/reference/#create-clip-from-vod
+     */
+    CreateClipFromVOD = "https://api.twitch.tv/helix/videos/clips",
+    /**
      * Gets one or more video clips that were captured from streams.
      *
      * @httpMethod GET
