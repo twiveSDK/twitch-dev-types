@@ -322,6 +322,13 @@ export enum APIEndpoint {
      */
     CreateClip = "https://api.twitch.tv/helix/clips",
     /**
+     * Creates a clip from the broadcaster’s VOD.
+     *
+     * @httpMethod POST
+     * @see https://dev.twitch.tv/docs/api/reference/#create-clip-from-vod
+     */
+    CreateClipFromVOD = "https://api.twitch.tv/helix/videos/clips",
+    /**
      * Gets one or more video clips that were captured from streams.
      *
      * @httpMethod GET
@@ -334,7 +341,7 @@ export enum APIEndpoint {
      * @httpMethod GET
      * @see https://dev.twitch.tv/docs/api/reference#get-clips-download
      */
-    GetClipsDownloadLink = "https://api.twitch.tv/helix/clips/downloads",
+    GetClipsDownload = "https://api.twitch.tv/helix/clips/downloads",
     /**
      * Gets the conduits for a client ID.
      *
@@ -809,6 +816,20 @@ export enum APIEndpoint {
      */
     WarnChatUser = "https://api.twitch.tv/helix/moderation/warnings",
     /**
+     * Adds a suspicious user status to a chatter on the broadcaster’s channel.
+     *
+     * @httpMethod POST
+     * @see https://dev.twitch.tv/docs/api/reference/#add-suspicious-status-to-chat-user
+     */
+    AddSuspiciousStatusToChatUser = "https://api.twitch.tv/helix/moderation/suspicious_users",
+    /**
+     * Remove a suspicious user status from a chatter on broadcaster’s channel.
+     *
+     * @httpMethod DELETE
+     * @see https://dev.twitch.tv/docs/api/reference/#remove-suspicious-status-from-chat-user
+     */
+    RemoveSuspiciousStatusFromChatUser = "https://api.twitch.tv/helix/moderation/suspicious_users",
+    /**
      * Gets a list of polls that the broadcaster created.
      *
      * @httpMethod GET
@@ -1011,6 +1032,13 @@ export enum APIEndpoint {
      * @see https://dev.twitch.tv/docs/api/reference/#update-user
      */
     UpdateUser = "https://api.twitch.tv/helix/users",
+    /**
+     * Gets the authorization scopes that the specified user has granted the application.
+     *
+     * @httpMethod GET
+     * @see https://dev.twitch.tv/docs/api/reference/#get-authorization-by-user
+     */
+    GetAuthorizationByUser = "https://api.twitch.tv/helix/authorization/users",
     /**
      * Gets the list of users that the broadcaster has blocked.
      *
