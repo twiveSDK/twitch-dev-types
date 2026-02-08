@@ -640,13 +640,6 @@ export enum APIEndpoint {
      */
     UpdateGuestStarSlotSettings = "https://api.twitch.tv/helix/guest_star/slot_settings",
     /**
-     * Gets information about the broadcaster’s current or most recent Hype Train event.
-     *
-     * @httpMethod GET
-     * @see https://dev.twitch.tv/docs/api/reference/#get-hype-train-events
-     */
-    GetHypeTrainEvents = "https://api.twitch.tv/helix/hypetrain/events",
-    /**
      * Get the status of a Hype Train for the specified broadcaster.
      *
      * @httpMethod GET
