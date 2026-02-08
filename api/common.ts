@@ -341,7 +341,7 @@ export enum APIEndpoint {
      * @httpMethod GET
      * @see https://dev.twitch.tv/docs/api/reference#get-clips-download
      */
-    GetClipsDownloadLink = "https://api.twitch.tv/helix/clips/downloads",
+    GetClipsDownload = "https://api.twitch.tv/helix/clips/downloads",
     /**
      * Gets the conduits for a client ID.
      *
