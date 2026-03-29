@@ -2,7 +2,7 @@ import type {EventBroadcasterInfo} from "../common";
 import type {HypeTrainTopContribution} from "./common";
 
 /**
- * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-begin-v2-event
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-begin-event
  */
 export enum HypeTrainType {
     Treasure = "treasure",
@@ -11,7 +11,7 @@ export enum HypeTrainType {
 }
 
 /**
- * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-begin-v2-event
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-begin-event
  */
 export interface HypeTrainBeginEvent extends EventBroadcasterInfo {
     /**

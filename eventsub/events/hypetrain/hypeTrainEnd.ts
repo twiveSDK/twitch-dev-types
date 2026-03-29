@@ -3,7 +3,7 @@ import type {HypeTrainTopContribution} from "./common";
 import type {HypeTrainType} from "./hypeTrainBegin";
 
 /**
- * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-end-v2-event
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-end-event
  */
 export interface HypeTrainEndEvent extends EventBroadcasterInfo {
     /**
