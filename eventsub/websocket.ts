@@ -20,9 +20,9 @@ import type {
     ChannelUnbanRequestCreateEvent, ChannelUnbanRequestResolveEvent, ChannelUpdateEvent, ChannelVIPAddEvent,
     ChannelVIPRemoveEvent, ChannelWarningAcknowledgeEvent, ChannelWarningSendEvent, CharityCampaignProgressEvent,
     CharityCampaignStartEvent, CharityCampaignStopEvent, CharityDonationEvent, ConduitShardDisabledEvent,
-    DropEntitlementGrantEvent, ExtensionBitsTransactionCreateEvent, HypeTrainBeginEvent, HypeTrainBeginEventV2,
-    HypeTrainEndEvent, HypeTrainEndEventV2, HypeTrainProgressEvent, HypeTrainProgressEventV2, StreamOfflineEvent,
-    StreamOnlineEvent, UserAuthorizationGrantEvent, UserAuthorizationRevokeEvent, UserUpdateEvent, WhisperReceivedEvent
+    DropEntitlementGrantEvent, ExtensionBitsTransactionCreateEvent, HypeTrainBeginEvent, HypeTrainEndEvent,
+    HypeTrainProgressEvent, StreamOfflineEvent, StreamOnlineEvent, UserAuthorizationGrantEvent,
+    UserAuthorizationRevokeEvent, UserUpdateEvent, WhisperReceivedEvent
 } from "./events";
 
 /**
@@ -192,11 +192,11 @@ export type EventSubWebsocketEvent = AutomodMessageHoldEvent
     | DropEntitlementGrantEvent
     | ExtensionBitsTransactionCreateEvent
     | HypeTrainBeginEvent
-    | HypeTrainBeginEventV2
+    | HypeTrainBeginEvent
     | HypeTrainEndEvent
-    | HypeTrainEndEventV2
+    | HypeTrainEndEvent
     | HypeTrainProgressEvent
-    | HypeTrainProgressEventV2
+    | HypeTrainProgressEvent
     | StreamOfflineEvent
     | StreamOnlineEvent
     | UserAuthorizationGrantEvent
