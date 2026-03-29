@@ -192,10 +192,7 @@ export type EventSubWebsocketEvent = AutomodMessageHoldEvent
     | DropEntitlementGrantEvent
     | ExtensionBitsTransactionCreateEvent
     | HypeTrainBeginEvent
-    | HypeTrainBeginEvent
     | HypeTrainEndEvent
-    | HypeTrainEndEvent
-    | HypeTrainProgressEvent
     | HypeTrainProgressEvent
     | StreamOfflineEvent
     | StreamOnlineEvent
