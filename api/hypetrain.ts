@@ -3,7 +3,7 @@ import type {APIResponse} from "./common";
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-hype-train-status
  */
-export enum APICurrentHypeTrainContributionType {
+export enum APIHypeTrainContributionType {
     /**
      * Cheering with Bits.
      */
@@ -21,7 +21,7 @@ export enum APICurrentHypeTrainContributionType {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-hype-train-status
  */
-export enum APICurrentHypeTrainType {
+export enum APIHypeTrainType {
     Treasure = "treasure",
     GoldenKappa = "golden_kappa",
     Regular = "regular",
@@ -30,7 +30,7 @@ export enum APICurrentHypeTrainType {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-hype-train-status
  */
-export interface APICurrentHypeTrainSharedTrainParticipant {
+export interface APIHypeTrainSharedTrainParticipant {
     /**
      * The broadcaster ID.
      */
@@ -48,7 +48,7 @@ export interface APICurrentHypeTrainSharedTrainParticipant {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-hype-train-status
  */
-export interface APICurrentHypeTrainContribution {
+export interface APIHypeTrainContribution {
     /**
      * The ID of the user that made the contribution.
      */
@@ -64,7 +64,7 @@ export interface APICurrentHypeTrainContribution {
     /**
      * The contribution method used.
      */
-    type: APICurrentHypeTrainContributionType;
+    type: APIHypeTrainContributionType;
     /**
      * The total number of points contributed for the type.
      */
@@ -110,13 +110,13 @@ export interface APICurrentHypeTrain {
     /**
      * The contributors with the most points contributed.
      */
-    top_contributions: APICurrentHypeTrainContribution[];
+    top_contributions: APIHypeTrainContribution[];
     /**
      * A list containing the broadcasters participating in the shared Hype Train.
      *
      * @remarks Null if the Hype Train is not shared.
      */
-    shared_train_participants: APICurrentHypeTrainSharedTrainParticipant[]|null;
+    shared_train_participants: APIHypeTrainSharedTrainParticipant[]|null;
     /**
      * The time when the Hype Train started.
      */
@@ -131,7 +131,7 @@ export interface APICurrentHypeTrain {
      * The type of the Hype Train.
      * {@link https://help.twitch.tv/s/article/hype-train-guide#special Learn More}
      */
-    type: APICurrentHypeTrainType;
+    type: APIHypeTrainType;
     /**
      * Indicates if the Hype Train is shared.
      *
@@ -143,7 +143,7 @@ export interface APICurrentHypeTrain {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-hype-train-status
  */
-export interface APIHypeTrainStatusAllTimeHigh {
+export interface APIHypeTrainAllTimeHigh {
     /**
      * The level of the record Hype Train.
      */
@@ -173,13 +173,13 @@ export interface APIHypeTrainStatus {
      *
      * @remarks **Null** if a Hype Train has not occurred.
      */
-    all_time_high: APIHypeTrainStatusAllTimeHigh|null;
+    all_time_high: APIHypeTrainAllTimeHigh|null;
     /**
      * An object with information about the channel’s shared Hype Train records.
      *
      * @remarks **Null** if a Hype Train has not occurred.
      */
-    shared_all_time_high: APIHypeTrainStatusAllTimeHigh|null;
+    shared_all_time_high: APIHypeTrainAllTimeHigh|null;
 }
 
 /**

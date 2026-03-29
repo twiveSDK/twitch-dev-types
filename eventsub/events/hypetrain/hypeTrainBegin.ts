@@ -1,9 +1,17 @@
 import type {EventBroadcasterInfo} from "../common";
-import type {HypeTrainLastContribution, HypeTrainTopContribution} from "./common";
+import type {HypeTrainTopContribution} from "./common";
 
 /**
- * @deprecated
- * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-begin-event
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-begin-v2-event
+ */
+export enum HypeTrainType {
+    Treasure = "treasure",
+    GoldenKappa = "golden_kappa",
+    Regular = "regular",
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-begin-v2-event
  */
 export interface HypeTrainBeginEvent extends EventBroadcasterInfo {
     /**
@@ -27,13 +35,21 @@ export interface HypeTrainBeginEvent extends EventBroadcasterInfo {
      */
     top_contributions: HypeTrainTopContribution[];
     /**
-     * The most recent contribution.
-     */
-    last_contribution: HypeTrainLastContribution;
-    /**
-     * The starting level of the Hype Train.
+     * The current level of the Hype Train.
      */
     level: number;
+    /**
+     * The all-time high level this type of Hype Train has reached for this broadcaster.
+     */
+    all_time_high_level: number;
+    /**
+     * The all-time high total this type of Hype Train has reached for this broadcaster.
+     */
+    all_time_high_total: number;
+    /**
+     * Contains the list of broadcasters in the shared Hype Train.
+     */
+    shared_train_participants?: EventBroadcasterInfo[];
     /**
      * The time when the Hype Train started.
      */
@@ -45,7 +61,13 @@ export interface HypeTrainBeginEvent extends EventBroadcasterInfo {
      */
     expires_at: string;
     /**
-     * Indicates if the Hype Train is a Golden Kappa Train.
+     * The type of the Hype Train.
      */
-    is_golden_kappa_train: boolean;
+    type: HypeTrainType;
+    /**
+     * Indicates if the Hype Train is shared.
+     *
+     * @remarks When true, `shared_train_participants` will contain the list of broadcasters the train is shared with.
+     */
+    is_shared_train: boolean;
 }
