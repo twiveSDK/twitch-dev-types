@@ -442,6 +442,12 @@ export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
      */
     source_badges: ChannelChatBadge[]|null;
     /**
+     * Whether the notification is only sent to the source channel.
+     *
+     * @remarks Is `null` if the notification is not in a shared chat session.
+     */
+    is_source_only?: boolean|null;
+    /**
      * Information about the `shared_chat_sub` event.
      *
      * @reamrks Is null if `notice_type` is not `shared_chat_sub`. This field has the same information as the `sub`
