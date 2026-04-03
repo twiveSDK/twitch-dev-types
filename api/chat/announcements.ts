@@ -46,4 +46,14 @@ export interface RESTPostChatAnnouncementRequestBody {
      * **Channel and Videos**, and **Brand**).
      */
     color?: APIChatAnnouncementColor;
+    /**
+     * Determines if the chat announcement is sent only to the source channel (defined by broadcaster_id) during a
+     * shared chat session. This has no effect if the announcement is not sent during a shared chat session.
+     *
+     * @remarks This parameter can only be set when utilizing an App Access Token. It cannot be specified when a
+     * User Access Token is used, and will instead result in an HTTP 400 error.
+     * The default value when using an App Access Token is `true`. If you prefer to send an announcement to all channels
+     * in a shared chat session, set this parameter to `false`.
+     */
+    for_source_only?: boolean;
 }
