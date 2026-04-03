@@ -5,7 +5,8 @@ import type {EventBroadcasterInfo, EventUserInfo} from "../common";
  */
 export enum ChannelBitsUseType {
     Cheer = "cheer",
-    PowerUp = "powerup",
+    PowerUp = "power_up",
+    CustomPowerUp = "custom_power_up",
 }
 
 /**
@@ -159,6 +160,20 @@ export interface ChannelBitsUsePowerUp {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-bits-use-event
  */
+export interface ChannelBitsUseCustomPowerUp {
+    /**
+     * The title of the custom Power-up.
+     */
+    title: string;
+    /**
+     * The ID of the custom Power-up.
+     */
+    reward_id: string;
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-bits-use-event
+ */
 export interface ChannelBitsUseEvent extends EventBroadcasterInfo, EventUserInfo {
     /**
      * The number of Bits used.
@@ -173,7 +188,11 @@ export interface ChannelBitsUseEvent extends EventBroadcasterInfo, EventUserInfo
      */
     message?: ChannelBitsUseMessage;
     /**
-     * Data about Power-up.
+     * Data about a default (i.e. built-in) Power-up.
      */
     power_up?: ChannelBitsUsePowerUp;
+    /**
+     * Data about a custom Power-up.
+     */
+    custom_power_up?: ChannelBitsUseCustomPowerUp;
 }
