@@ -19,6 +19,7 @@ export enum ChannelChatNotificationNoticeType {
     Announcement = "announcement",
     BitsBadgeTier = "bits_badge_tier",
     CharityDonation = "charity_donation",
+    WatchStreak = "watch_streak",
     SharedChatSub = "shared_chat_sub",
     SharedChatResub = "shared_chat_resub",
     SharedChatSubGift = "shared_chat_sub_gift",
@@ -273,6 +274,20 @@ export interface ChannelChatNotificationCharityDonation {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-notification-event
  */
+export interface ChannelChatNotificationWatchStreak {
+    /**
+     * The number of consecutive broadcasts for which the user has been watching.
+     */
+    streak_count: number;
+    /**
+     * The number of channel points awarded for the Watch Streak milestone.
+     */
+    channel_points_awarded: number;
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-notification-event
+ */
 export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
     /**
      * The user ID of the user that sent the message.
@@ -380,6 +395,12 @@ export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
      * @remarks Null if `notice_type` is not `charity_donation`.
      */
     charity_donation: ChannelChatNotificationCharityDonation|null;
+    /**
+     * Information about the Watch Streak event.
+     *
+     * @remarks Null if `notice_type` is not `watch_streak`.
+     */
+    watch_streak: ChannelChatNotificationWatchStreak|null;
     /**
      * The broadcaster user ID of the channel the message was sent from.
      *
