@@ -142,6 +142,20 @@ export interface RESTPostEventSubSubscriptionRequestBody {
      * The transport details that you want Twitch to use when sending you notifications.
      */
     transport: RESTPostEventSubSubscriptionTransportRequestBodyParam;
+    /**
+     * An ID that identifies the WebSocket to send notifications to.
+     *
+     * @remarks When you connect to EventSub using WebSockets, the server returns the ID in the Welcome message.
+     * Specify this field only if `method` is set to **websocket**.
+     */
+    session_id?: string;
+    /**
+     * An ID that identifies the conduit to send notifications to.
+     *
+     * @remarks When you create a conduit, the server returns the conduit ID. Specify this field only if `method` is set
+     * to **conduit**.
+     */
+    conduit_id?: string;
 }
 
 /**
