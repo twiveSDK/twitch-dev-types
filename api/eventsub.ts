@@ -198,6 +198,10 @@ export interface RESTGetEventSubSubscriptionsRequestParams extends RESTPaginatio
      * or an empty array if there is no matching subscription.
      */
     subscription_id?: string;
+    /**
+     * Filter subscriptions by conduit ID.
+     */
+    conduit_id?: string;
 }
 
 /**
