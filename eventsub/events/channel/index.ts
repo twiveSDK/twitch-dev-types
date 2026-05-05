@@ -7,6 +7,7 @@ export * from "./v2";
 export * from "./channelAdBreakBegin";
 export * from "./channelBitsUse";
 export * from "./channelCheer";
+export * from "./channelCustomPowerUpRedemptionAdd";
 export * from "./channelGoalBegin";
 export * from "./channelGoalEnd";
 export * from "./channelGoalProgress";

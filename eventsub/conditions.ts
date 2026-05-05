@@ -265,6 +265,16 @@ export interface ChannelPointsCustomRewardRedemptionUpdateCondition extends Base
 }
 
 /**
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-custom-power-up-redemption-add-condition
+ */
+export interface ChannelCustomPowerUpRedemptionAddCondition extends BaseBroadcasterCondition {
+    /**
+     * Specify a reward id to only receive notifications for a specific custom Power-up.
+     */
+    reward_id?: string;
+}
+
+/**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-poll-begin-condition
  */
 export interface ChannelPollBeginCondition extends BaseBroadcasterCondition {}
