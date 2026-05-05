@@ -111,6 +111,13 @@ export enum APIEndpoint {
      */
     GetCheermotes = "https://api.twitch.tv/helix/bits/cheermotes",
     /**
+     * Gets a list of custom Power-ups that the specified broadcaster created.
+     *
+     * @httpMethod GET
+     * @see https://dev.twitch.tv/docs/api/reference/#get-custom-power-up
+     */
+    GetCustomPowerUp = "https://api.twitch.tv/helix/bits/custom_power_ups",
+    /**
      * Gets an extension’s list of transactions.
      *
      * @httpMethod GET
