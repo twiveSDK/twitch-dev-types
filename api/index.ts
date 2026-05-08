@@ -14,6 +14,7 @@ export * from "./clips";
 export * from "./common";
 export * from "./conduits";
 export * from "./creatorGoals";
+export * from "./customPowerUp";
 export * from "./entitlements";
 export * from "./eventsub";
 export * from "./games";
