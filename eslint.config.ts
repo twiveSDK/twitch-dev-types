@@ -24,24 +24,7 @@ export default defineConfig(
             },
         },
         rules: {
-            "@typescript-eslint/no-unused-vars": [
-                "warn",
-                {
-                    varsIgnorePattern: "^_",
-                    argsIgnorePattern: "^_"
-                },
-            ],
-            "import/extensions": "off",
-            "no-undef": "off",
-            "no-empty-interface": "off",
-            "@typescript-eslint/consistent-type-imports": [
-                "warn",
-                {
-                    prefer: "type-imports",
-                    disallowTypeAnnotations: false,
-                    fixStyle: "separate-type-imports"
-                },
-            ],
+            "@typescript-eslint/consistent-type-imports": "error",
             "@typescript-eslint/consistent-type-definitions": [
                 "error",
                 "interface"
@@ -56,6 +39,13 @@ export default defineConfig(
                 },
             ],
             "@typescript-eslint/no-duplicate-enum-values": "off",
+            "@typescript-eslint/no-unused-vars": [
+                "error",
+                {
+                    varsIgnorePattern: "^_",
+                    argsIgnorePattern: "^_"
+                },
+            ],
             "@typescript-eslint/naming-convention": [
                 "error",
                 {
@@ -71,6 +61,9 @@ export default defineConfig(
                     format: ["PascalCase"]
                 },
             ],
+            "import/extensions": "off",
+            "no-undef": "off",
+            "no-empty-interface": "off",
             "quotes": [
                 "error",
                 "double",
@@ -83,6 +76,15 @@ export default defineConfig(
                 {
                     case: "camelCase"
                 },
+            ],
+            "no-multi-spaces": "error",
+            "comma-dangle": [
+                "error",
+                "always-multiline"
+            ],
+            "object-curly-spacing": [
+                "error",
+                "always"
             ],
             "no-restricted-syntax": [
                 "error",
