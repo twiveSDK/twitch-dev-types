@@ -1,5 +1,5 @@
-import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
-import type {APIContentClassificationLabelId, APIContentClassificationLabelSettings} from "./ccls";
+import type { APIPaginatedResponse, APIResponse, RESTPaginationRequestParams } from "./common";
+import type { APIContentClassificationLabelId, APIContentClassificationLabelSettings } from "./ccls";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-channel-information

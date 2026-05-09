@@ -1,5 +1,5 @@
-import type {ChannelModerateEvent} from "../channelModerate";
-import type {EventUserInfo} from "../../common";
+import type { ChannelModerateEvent } from "../channelModerate";
+import type { EventUserInfo } from "../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-moderate-event-v2

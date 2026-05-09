@@ -1,4 +1,4 @@
-import type {CharityCampaignProgressEvent} from "./charityCampaignProgress";
+import type { CharityCampaignProgressEvent } from "./charityCampaignProgress";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#charity-campaign-start-event

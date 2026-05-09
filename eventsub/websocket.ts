@@ -1,4 +1,4 @@
-import type {EventSubSubscription, EventSubSubscriptionWebsocketTransport} from "./subscription";
+import type { EventSubSubscription, EventSubSubscriptionWebsocketTransport } from "./subscription";
 import type {
     AutomodMessageHoldEvent, AutomodMessageHoldEventV2, AutomodMessageUpdateEvent, AutomodMessageUpdateEventV2,
     AutomodSettingsUpdateEvent, AutomodTermsUpdateEvent, ChannelAdBreakBeginEvent, ChannelBanEvent, ChannelBitsUseEvent,

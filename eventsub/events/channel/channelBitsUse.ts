@@ -1,4 +1,4 @@
-import type {EventBroadcasterInfo, EventUserInfo} from "../common";
+import type { EventBroadcasterInfo, EventUserInfo } from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-bits-use-event

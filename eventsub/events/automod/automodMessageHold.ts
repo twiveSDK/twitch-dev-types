@@ -1,5 +1,5 @@
-import type {AutomodMessage} from "./common";
-import type {EventBroadcasterInfo, EventUserInfo} from "../common";
+import type { AutomodMessage } from "./common";
+import type { EventBroadcasterInfo, EventUserInfo } from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#automod-message-hold-event

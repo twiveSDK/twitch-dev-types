@@ -1,4 +1,4 @@
-import type {EventBroadcasterInfo, EventModeratorInfo} from "../common";
+import type { EventBroadcasterInfo, EventModeratorInfo } from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#automod-terms-update-event

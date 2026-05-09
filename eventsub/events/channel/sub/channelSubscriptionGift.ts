@@ -1,5 +1,5 @@
-import type {EventBroadcasterInfo} from "../../common";
-import type {ChannelSubscriptionTier} from "./common";
+import type { EventBroadcasterInfo } from "../../common";
+import type { ChannelSubscriptionTier } from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-subscription-gift-event

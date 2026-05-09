@@ -1,4 +1,4 @@
-import type {ChannelPointsCustomRewardAddEvent} from "./channelPointsCustomRewardAdd";
+import type { ChannelPointsCustomRewardAddEvent } from "./channelPointsCustomRewardAdd";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-points-custom-reward-remove-event

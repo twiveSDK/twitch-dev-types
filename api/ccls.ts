@@ -1,4 +1,4 @@
-import type {APIResponse} from "./common";
+import type { APIResponse } from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#modify-channel-information
