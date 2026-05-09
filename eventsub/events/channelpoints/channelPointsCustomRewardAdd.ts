@@ -1,7 +1,7 @@
-import type {EventBroadcasterInfo} from "../common";
+import type { EventBroadcasterInfo } from "../common";
 import type {
     ChannelPointsCustomRewardGlobalCooldown, ChannelPointsCustomRewardImage, ChannelPointsCustomRewardMaxPerStream,
-    ChannelPointsCustomRewardMaxPerUserPerStream
+    ChannelPointsCustomRewardMaxPerUserPerStream,
 } from "./common";
 
 /**

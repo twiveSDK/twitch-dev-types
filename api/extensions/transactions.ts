@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, RESTPaginationRequestParams} from "../common";
+import type { APIPaginatedResponse, RESTPaginationRequestParams } from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-extension-transactions

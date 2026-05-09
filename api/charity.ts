@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
+import type { APIPaginatedResponse, APIResponse, RESTPaginationRequestParams } from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-charity-campaign

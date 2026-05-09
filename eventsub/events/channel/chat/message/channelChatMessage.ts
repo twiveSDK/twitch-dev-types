@@ -1,5 +1,5 @@
-import type {EventBroadcasterInfo} from "../../../common";
-import type {ChannelChatBadge, ChannelChatMessage, ChannelChatMessageType} from "./common";
+import type { EventBroadcasterInfo } from "../../../common";
+import type { ChannelChatBadge, ChannelChatMessage, ChannelChatMessageType } from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-message-event

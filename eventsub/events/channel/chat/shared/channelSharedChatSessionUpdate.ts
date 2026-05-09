@@ -1,4 +1,4 @@
-import type {ChannelSharedChatSessionBeginEvent} from "./channelSharedChatSessionBegin";
+import type { ChannelSharedChatSessionBeginEvent } from "./channelSharedChatSessionBegin";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-shared-chat-session-update-event

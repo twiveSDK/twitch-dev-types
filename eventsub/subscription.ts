@@ -24,7 +24,7 @@ import type {
     HypeTrainEndCondition, HypeTrainProgressCondition, StreamOfflineCondition, StreamOnlineCondition,
     UserAuthorizationGrantCondition, UserAuthorizationRevokeCondition, UserUpdateCondition, WhisperReceivedCondition,
 } from "./conditions";
-import type {EventSubTransportMethod} from "./transport";
+import type { EventSubTransportMethod } from "./transport";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-subscription-types/
