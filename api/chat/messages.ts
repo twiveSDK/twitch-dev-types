@@ -68,6 +68,14 @@ export interface RESTPostChatMessageRequestBody {
      * when a User Access Token is used, and will instead result in an HTTP 400 error.
      */
     for_source_only?: boolean;
+    /**
+     * If true, the message will be sent and immediately pinned. Default: false.
+     *
+     * @remarks Cannot be combined with `reply_parent_message_id` or `for_source_only`. When pin is true, additionally
+     * requires the `moderator:manage:chat_messages` scope and the sender must be the broadcaster or a moderator.
+     * Messages pinned via this endpoint are always pinned for 20 minutes. If the pin fails, the message is not sent.
+     */
+    pin?: boolean;
 }
 
 /**
