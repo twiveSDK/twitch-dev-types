@@ -25,7 +25,7 @@ export interface ChannelCustomPowerUp {
     /**
      * The cost of the Custom Power-up to redeem.
      */
-    bits_cost: number;
+    bits: number;
     /**
      * The creator-provided description for this Power-up.
      */
