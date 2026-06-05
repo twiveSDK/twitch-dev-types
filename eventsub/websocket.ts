@@ -1,29 +1,5 @@
-import type { EventSubSubscription, EventSubSubscriptionWebsocketTransport } from "./subscription";
-import type {
-    AutomodMessageHoldEvent, AutomodMessageHoldEventV2, AutomodMessageUpdateEvent, AutomodMessageUpdateEventV2,
-    AutomodSettingsUpdateEvent, AutomodTermsUpdateEvent, ChannelAdBreakBeginEvent, ChannelBanEvent, ChannelBitsUseEvent,
-    ChannelChatClearEvent, ChannelChatClearUserMessagesEvent, ChannelChatMessageDeleteEvent, ChannelChatMessageEvent,
-    ChannelChatNotificationEvent, ChannelChatSettingsUpdateEvent, ChannelChatUserMessageHoldEvent,
-    ChannelChatUserMessageUpdateEvent, ChannelCheerEvent, ChannelCustomPowerUpRedemptionAddEvent, ChannelFollowEvent,
-    ChannelGoalBeginEvent, ChannelGoalEndEvent, ChannelGoalProgressEvent, ChannelGuestStarGuestUpdateEvent,
-    ChannelGuestStarSessionBeginEvent, ChannelGuestStarSessionEndEvent, ChannelGuestStarSettingsUpdateEvent,
-    ChannelModerateEvent, ChannelModerateEventV2, ChannelModeratorAddEvent, ChannelModeratorRemoveEvent,
-    ChannelPointsAutomaticRewardRedemptionAddEvent, ChannelPointsAutomaticRewardRedemptionAddEventV2,
-    ChannelPointsCustomRewardAddEvent, ChannelPointsCustomRewardRedemptionAddEvent,
-    ChannelPointsCustomRewardRedemptionUpdateEvent, ChannelPointsCustomRewardRemoveEvent,
-    ChannelPointsCustomRewardUpdateEvent, ChannelPollBeginEvent, ChannelPollEndEvent, ChannelPollProgressEvent,
-    ChannelPredictionBeginEvent, ChannelPredictionEndEvent, ChannelPredictionLockEvent, ChannelPredictionProgressEvent,
-    ChannelRaidEvent, ChannelSharedChatSessionBeginEvent, ChannelSharedChatSessionEndEvent,
-    ChannelSharedChatSessionUpdateEvent, ChannelShieldModeBeginEvent, ChannelShieldModeEndEvent,
-    ChannelShoutoutCreateEvent, ChannelShoutoutReceiveEvent, ChannelSubscribeEvent, ChannelSubscriptionEndEvent,
-    ChannelSubscriptionGiftEvent, ChannelSubscriptionMessageEvent, ChannelSuspiciousUserMessageEvent,
-    ChannelSuspiciousUserUpdateEvent, ChannelUnbanEvent, ChannelUnbanRequestCreateEvent, ChannelUnbanRequestResolveEvent,
-    ChannelUpdateEvent, ChannelVIPAddEvent, ChannelVIPRemoveEvent, ChannelWarningAcknowledgeEvent,
-    ChannelWarningSendEvent, CharityCampaignProgressEvent, CharityCampaignStartEvent, CharityCampaignStopEvent,
-    CharityDonationEvent, ConduitShardDisabledEvent, DropEntitlementGrantEvent, ExtensionBitsTransactionCreateEvent,
-    HypeTrainBeginEvent, HypeTrainEndEvent, HypeTrainProgressEvent, StreamOfflineEvent, StreamOnlineEvent,
-    UserAuthorizationGrantEvent, UserAuthorizationRevokeEvent, UserUpdateEvent, WhisperReceivedEvent,
-} from "./events";
+import type { EventSubSubscription } from "./subscription";
+import type { EventSubEventPayload, EventSubTransportMethod } from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/websocket-reference/
@@ -42,28 +18,6 @@ export enum EventSubWebSocketMessageType {
 export enum EventSubWebSocketSessionStatus {
     Connected = "connected",
     Reconnecting = "reconnecting",
-}
-
-/**
- * @see https://dev.twitch.tv/docs/eventsub/websocket-reference/
- */
-export interface EventSubWebSocketMessageMetadata {
-    /**
-     * An ID that uniquely identifies the message.
-     *
-     * @remarks Twitch sends messages at least once, but if Twitch is unsure of whether you received a notification,
-     * it’ll resend the message. This means you may receive a notification twice. If Twitch resends the message,
-     * the message ID will be the same.
-     */
-    message_id: string;
-    /**
-     * The type of message.
-     */
-    message_type: EventSubWebSocketMessageType;
-    /**
-     * The UTC date and time that the message was sent.
-     */
-    message_timestamp: string;
 }
 
 /**
@@ -96,111 +50,38 @@ export interface EventSubWebSocketSession {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/websocket-reference/
  */
-export type EventSubWebSocketMessagePayload = EventSubWebsocketNotificationMessagePayload
-    | EventSubWebsocketWelcomeMessagePayload
-    | EventSubWebsocketReconnectMessagePayload
-    | EventSubWebsocketRevocationMessagePayload;
-
-/**
- * @see https://dev.twitch.tv/docs/eventsub/websocket-reference/
- */
-export interface EventSubWebSocketMessage {
+export interface EventSubWebSocketMessageMetadata {
     /**
-     * An object that identifies the message.
+     * An ID that uniquely identifies the message.
+     *
+     * @remarks Twitch sends messages at least once, but if Twitch is unsure of whether you received a notification,
+     * it’ll resend the message. This means you may receive a notification twice. If Twitch resends the message,
+     * the message ID will be the same.
      */
-    metadata: EventSubWebSocketMessageMetadata;
+    message_id: string;
     /**
-     * An object that contains the message.
+     * The type of message.
      */
-    payload: EventSubWebSocketMessagePayload;
+    message_type: EventSubWebSocketMessageType;
+    /**
+     * The UTC date and time that the message was sent.
+     */
+    message_timestamp: string;
 }
 
 /**
- * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#events
+ * @see https://dev.twitch.tv/docs/eventsub/websocket-reference/#notification-message
  */
-export type EventSubWebsocketEvent = AutomodMessageHoldEvent
-    | AutomodMessageHoldEventV2
-    | AutomodMessageUpdateEvent
-    | AutomodMessageUpdateEventV2
-    | AutomodSettingsUpdateEvent
-    | AutomodTermsUpdateEvent
-    | ChannelAdBreakBeginEvent
-    | ChannelBanEvent
-    | ChannelBitsUseEvent
-    | ChannelChatClearEvent
-    | ChannelChatClearUserMessagesEvent
-    | ChannelChatMessageEvent
-    | ChannelChatMessageDeleteEvent
-    | ChannelChatNotificationEvent
-    | ChannelChatSettingsUpdateEvent
-    | ChannelChatUserMessageHoldEvent
-    | ChannelChatUserMessageUpdateEvent
-    | ChannelCheerEvent
-    | ChannelFollowEvent
-    | ChannelGoalBeginEvent
-    | ChannelGoalEndEvent
-    | ChannelGoalProgressEvent
-    | ChannelGuestStarGuestUpdateEvent
-    | ChannelGuestStarSessionBeginEvent
-    | ChannelGuestStarSessionEndEvent
-    | ChannelGuestStarSettingsUpdateEvent
-    | ChannelModerateEvent
-    | ChannelModerateEventV2
-    | ChannelModeratorAddEvent
-    | ChannelModeratorRemoveEvent
-    | ChannelPointsAutomaticRewardRedemptionAddEvent
-    | ChannelPointsAutomaticRewardRedemptionAddEventV2
-    | ChannelPointsCustomRewardAddEvent
-    | ChannelPointsCustomRewardRedemptionAddEvent
-    | ChannelPointsCustomRewardRedemptionUpdateEvent
-    | ChannelPointsCustomRewardRemoveEvent
-    | ChannelPointsCustomRewardUpdateEvent
-    | ChannelCustomPowerUpRedemptionAddEvent
-    | ChannelPollBeginEvent
-    | ChannelPollEndEvent
-    | ChannelPollProgressEvent
-    | ChannelPredictionBeginEvent
-    | ChannelPredictionEndEvent
-    | ChannelPredictionLockEvent
-    | ChannelPredictionProgressEvent
-    | ChannelRaidEvent
-    | ChannelSharedChatSessionBeginEvent
-    | ChannelSharedChatSessionEndEvent
-    | ChannelSharedChatSessionUpdateEvent
-    | ChannelShieldModeBeginEvent
-    | ChannelShieldModeEndEvent
-    | ChannelShoutoutCreateEvent
-    | ChannelShoutoutReceiveEvent
-    | ChannelSubscribeEvent
-    | ChannelSubscriptionEndEvent
-    | ChannelSubscriptionGiftEvent
-    | ChannelSubscriptionMessageEvent
-    | ChannelSuspiciousUserMessageEvent
-    | ChannelSuspiciousUserUpdateEvent
-    | ChannelUnbanEvent
-    | ChannelUnbanRequestCreateEvent
-    | ChannelUnbanRequestResolveEvent
-    | ChannelUpdateEvent
-    | ChannelVIPAddEvent
-    | ChannelVIPRemoveEvent
-    | ChannelWarningAcknowledgeEvent
-    | ChannelWarningSendEvent
-    | CharityCampaignProgressEvent
-    | CharityCampaignStartEvent
-    | CharityCampaignStopEvent
-    | CharityDonationEvent
-    | ConduitShardDisabledEvent
-    | DropEntitlementGrantEvent
-    | ExtensionBitsTransactionCreateEvent
-    | HypeTrainBeginEvent
-    | HypeTrainEndEvent
-    | HypeTrainProgressEvent
-    | StreamOfflineEvent
-    | StreamOnlineEvent
-    | UserAuthorizationGrantEvent
-    | UserAuthorizationRevokeEvent
-    | UserUpdateEvent
-    | WhisperReceivedEvent;
+export interface EventSubWebsocketSubscriptionTransport {
+    /**
+     * The transport method.
+     */
+    method: EventSubTransportMethod.Websocket;
+    /**
+     * An ID that uniquely identifies the WebSocket connection.
+     */
+    session_id: string;
+}
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/websocket-reference/#notification-message
@@ -209,11 +90,11 @@ export interface EventSubWebsocketNotificationMessagePayload {
     /**
      * An object that contains information about your subscription.
      */
-    subscription: EventSubSubscription & EventSubSubscriptionWebsocketTransport;
+    subscription: EventSubSubscription & EventSubWebsocketSubscriptionTransport;
     /**
      * The event’s data.
      */
-    event: EventSubWebsocketEvent;
+    event: EventSubEventPayload;
 }
 
 /**
@@ -244,4 +125,50 @@ export interface EventSubWebsocketRevocationMessagePayload {
      * An object that contains information about your subscription.
      */
     subscription: EventSubSubscription;
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/eventsub/websocket-reference/
+ */
+export type EventSubWebSocketMessagePayload = EventSubWebsocketNotificationMessagePayload
+    | EventSubWebsocketWelcomeMessagePayload
+    | EventSubWebsocketReconnectMessagePayload
+    | EventSubWebsocketRevocationMessagePayload;
+
+/**
+ * @see https://dev.twitch.tv/docs/eventsub/websocket-reference/
+ */
+export interface EventSubWebSocketMessage {
+    /**
+     * An object that identifies the message.
+     */
+    metadata: EventSubWebSocketMessageMetadata;
+    /**
+     * An object that contains the message.
+     */
+    payload: EventSubWebSocketMessagePayload;
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#transport
+ */
+export interface EventSubWebsocketTransport {
+    /**
+     * The transport method.
+     */
+    method: EventSubTransportMethod.Websocket;
+    /**
+     * An ID that identifies the WebSocket to send notifications to.
+     *
+     * @remarks When you connect to EventSub using WebSockets, the server returns the ID in the Welcome message.
+     */
+    session_id: string;
+    /**
+     * The UTC date and time that the WebSocket connection was established.
+     */
+    connected_at: string;
+    /**
+     * The UTC date and time that the WebSocket connection was lost.
+     */
+    disconnected_at: string|null;
 }
