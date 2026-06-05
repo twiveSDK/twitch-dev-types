@@ -37,7 +37,7 @@ for individual EventSub event payloads.
 - Each event is organized into its own file, named according to the event it represents 
 (e.g., `channelBan.ts`, `streamOnline.ts`).
 
-- If an event has a version **2**, these are grouped together in a separate subdirectory named `v2`.
+- If an event has a version **1** and **2**, the v2 events are grouped together in a separate subdirectory named `v2`.
 
 ### `common.ts` Files
 - Some directory contain a `common.ts` file that includes shared types and interfaces used across multiple files 
@@ -61,8 +61,8 @@ The exported types and interfaces are separated into four main parts:
     - EventSub event payloads does not have this prefix, because their generally follow this structure: 
         `<EventName>Event` where `<EventName>` indicates the specific event.
         - For example: `ChannelBanEvent` or `StreamOnlineEvent`
-        - **NOTE**: EventSub event payloads are versioned, so if an event has a version 2, it will be indicated at the 
-        end of the type name. For example: `HypeTrainBeginEventV2` or `AutomodMessageHoldEventV2`
+        - **NOTE**: EventSub event payloads are versioned, so if an event has a version 1 and 2, it will indicate the v2 event 
+        at the end of the type name. For example: `ChannelModerateEventV2` or `AutomodMessageHoldEventV2`
 
 - Everything exported with the `REST` prefix represents a payload that is related to the **Twitch REST API**.
     - The following represents the structure: 
