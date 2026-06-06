@@ -31,6 +31,7 @@ export enum EventSubWebhookRequestHeader {
     TwitchEventSubMessageSignature = "twitch-eventsub-message-signature",
     TwitchEventSubMessageTimestamp = "twitch-eventsub-message-timestamp",
     TwitchEventSubSubscriptionType = "twitch-eventsub-subscription-type",
+    TwitchEventSubSubscriptionIsBatchingEnabled = "twitch-eventsub-subscription-is-batching-enabled",
     TwitchEventSubSubscriptionVersion = "twitch-eventsub-subscription-version",
 }
 
