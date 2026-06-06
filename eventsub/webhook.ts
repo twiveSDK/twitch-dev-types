@@ -25,13 +25,39 @@ export enum EventSubWebhookNotificationType {
  * @see https://dev.twitch.tv/docs/eventsub/handling-webhook-events/#list-of-request-headers
  */
 export enum EventSubWebhookRequestHeader {
+    /**
+     * An ID that uniquely identifies this message.
+     *
+     * @remarks This is an opaque ID, and is not required to be in any particular format.
+     */
     TwitchEventSubMessageId = "twitch-eventsub-message-id",
+    /**
+     * Twitch sends you a notification at least once. If Twitch is unsure of whether you received a notification,
+     * it’ll resend the event, which means you may receive a notification twice.
+     */
     TwitchEventSubMessageRetry = "twitch-eventsub-message-retry",
+    /**
+     * The type of notification.
+     */
     TwitchEventSubMessageType = "twitch-eventsub-message-type",
+    /**
+     * The HMAC signature that you use to verify that Twitch sent the message.
+     */
     TwitchEventSubMessageSignature = "twitch-eventsub-message-signature",
+    /**
+     * The UTC date and time (in RFC3339 format) that Twitch sent the notification.
+     */
     TwitchEventSubMessageTimestamp = "twitch-eventsub-message-timestamp",
+    /**
+     * The subscription type you subscribed to.
+     */
     TwitchEventSubSubscriptionType = "twitch-eventsub-subscription-type",
     TwitchEventSubSubscriptionIsBatchingEnabled = "twitch-eventsub-subscription-is-batching-enabled",
+    /**
+     * The version number that identifies the definition of the subscription request.
+     *
+     * @remarks This version matches the version number that you specified in your subscription request.
+     */
     TwitchEventSubSubscriptionVersion = "twitch-eventsub-subscription-version",
 }
 
