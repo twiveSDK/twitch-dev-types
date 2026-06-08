@@ -1,0 +1,44 @@
+name: Bug report
+description: Report incorrect behavior, unexpected behavior or mistyped types of twitch-dev-types.
+labels: [bug]
+
+body:
+  - type: markdown
+    attributes:
+    value: |
+      Thanks for taking the time to report a bug in twitch-dev-types! Please fill out the following information as best as you can. The more information you provide, the easier it will be for us to understand and fix the problem.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please describe the problem in as much detail as possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: codesample
+    attributes:
+      label: Code sample
+      description: Include a reproducible, minimal code sample. This will be automatically formatted into code, so no need for backticks.
+      render: typescript
+
+  - type: input
+    id: types-version
+    attributes:
+      label: Package version
+      description: Which version of the package are you using? Run `npm list twitch-dev-types` in your project directory and paste the output.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority this issue
+      description: Please be realistic. If you need to elaborate on your reasoning, please use the Issue description field above.
+      options:
+        - Low (slightly annoying)
+        - Medium (should be fixed soon)
+        - High (immediate attention needed)
+    validations:
+      required: true
