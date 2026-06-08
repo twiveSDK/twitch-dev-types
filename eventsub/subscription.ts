@@ -24,7 +24,6 @@ import type {
     HypeTrainEndCondition, HypeTrainProgressCondition, StreamOfflineCondition, StreamOnlineCondition,
     UserAuthorizationGrantCondition, UserAuthorizationRevokeCondition, UserUpdateCondition, WhisperReceivedCondition,
 } from "./conditions";
-import type { EventSubTransportMethod } from "./transport";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-subscription-types/
@@ -285,7 +284,7 @@ export enum EventSubSubscriptionType {
     /**
      * A viewer has redeemed a custom Power-up on the specified channel.
      *
-     * @version beta
+     * @version 1
      */
     ChannelCustomPowerUpsRedemptionAdd = "channel.custom_power_up_redemption.add",
     /**
@@ -431,19 +430,19 @@ export enum EventSubSubscriptionType {
     /**
      * A Hype Train begins on the specified channel.
      *
-     * @version 1 | 2
+     * @version 2
      */
     HypeTrainBegin = "channel.hype_train.begin",
     /**
      * A Hype Train makes progress on the specified channel.
      *
-     * @version 1 | 2
+     * @version 2
      */
     HypeTrainProgress = "channel.hype_train.progress",
     /**
      * A Hype Train ends on the specified channel.
      *
-     * @version 1 | 2
+     * @version 2
      */
     HypeTrainEnd = "channel.hype_train.end",
     /**
@@ -659,17 +658,6 @@ export type EventSubSubscriptionCondition = AutomodMessageHoldCondition
     | UserAuthorizationRevokeCondition
     | UserUpdateCondition
     | WhisperReceivedCondition;
-
-export interface EventSubSubscriptionWebsocketTransport {
-    /**
-     * The transport method.
-     */
-    method: EventSubTransportMethod.Websocket;
-    /**
-     * An ID that uniquely identifies the WebSocket connection.
-     */
-    session_id: string;
-}
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#subscription
