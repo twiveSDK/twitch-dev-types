@@ -4,7 +4,7 @@ import type { EventSubSubscription } from "./subscription";
 /**
  * @see https://dev.twitch.tv/docs/eventsub/handling-webhook-events/
  */
-export enum EventSubWebhookNotificationType {
+export enum EventSubWebhookMessageType {
     /**
      * Contains the event’s data.
      */
