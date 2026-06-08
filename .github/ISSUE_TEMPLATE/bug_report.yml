@@ -5,8 +5,8 @@ labels: [bug]
 body:
   - type: markdown
     attributes:
-    value: |
-      Thanks for taking the time to report a bug in twitch-dev-types! Please fill out the following information as best as you can. The more information you provide, the easier it will be for us to understand and fix the problem.
+      value: |
+        Thanks for taking the time to report a bug in twitch-dev-types! Please fill out the following information as best as you can. The more information you provide, the easier it will be for us to understand and fix the problem.
 
   - type: textarea
     id: description
