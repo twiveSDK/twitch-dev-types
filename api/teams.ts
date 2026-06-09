@@ -6,12 +6,16 @@ import type { APIResponse } from "./common";
 export interface APIBaseTeam {
     /**
      * A URL to the team’s background image.
+     *
+     * @remarks This field is **null** if the team does not have a background image set.
      */
-    background_image_url: string;
+    background_image_url: string|null;
     /**
      * A URL to the team’s banner.
+     *
+     * @remarks This field is **null** if the team does not have a banner image set.
      */
-    banner: string;
+    banner: string|null;
     /**
      * 	The UTC date and time (in RFC3339 format) of when the team was created.
      */
