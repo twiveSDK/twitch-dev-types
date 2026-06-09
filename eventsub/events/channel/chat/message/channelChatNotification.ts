@@ -29,6 +29,7 @@ export enum ChannelChatNotificationNoticeType {
     SharedChatRaid = "shared_chat_raid",
     SharedChatPayItForward = "shared_chat_pay_it_forward",
     SharedChatAnnouncement = "shared_chat_announcement",
+    Unknown = "unknown",
 }
 
 /**
