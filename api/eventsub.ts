@@ -10,7 +10,7 @@ export interface APIEventSubSubscriptionTransport {
     /**
      * The transport method.
      */
-    method: EventSubTransportMethod;
+    method: EventSubTransportMethod|"conduit";
     /**
      * The callback URL where the notifications are sent.
      * 
@@ -35,6 +35,12 @@ export interface APIEventSubSubscriptionTransport {
      * @remarks Included only if `method` is set to **websocket**.
      */
     disconnected_at: string;
+    /**
+     * An ID that identifies the conduit to send notifications to.
+     *
+     * @remarks Included only if `method` is set to **conduit**.
+     */
+    conduit_id?: string;
 }
 
 /**
@@ -104,6 +110,20 @@ export interface RESTPostEventSubSubscriptionTransportRequestBodyParam {
      * Verifying the event message}. Specify this field only if `method` is set to **webhook**.
      */
     secret?: string;
+    /**
+     * An ID that identifies the WebSocket to send notifications to.
+     *
+     * @remarks When you connect to EventSub using WebSockets, the server returns the ID in the Welcome message.
+     * Specify this field only if `method` is set to **websocket**.
+     */
+    session_id?: string;
+    /**
+     * An ID that identifies the conduit to send notifications to.
+     *
+     * @remarks When you create a conduit, the server returns the conduit ID. Specify this field only if `method` is set
+     * to **conduit**.
+     */
+    conduit_id?: string;
 }
 
 /**
@@ -128,20 +148,6 @@ export interface RESTPostEventSubSubscriptionRequestBody {
      * The transport details that you want Twitch to use when sending you notifications.
      */
     transport: RESTPostEventSubSubscriptionTransportRequestBodyParam;
-    /**
-     * An ID that identifies the WebSocket to send notifications to.
-     *
-     * @remarks When you connect to EventSub using WebSockets, the server returns the ID in the Welcome message.
-     * Specify this field only if `method` is set to **websocket**.
-     */
-    session_id?: string;
-    /**
-     * An ID that identifies the conduit to send notifications to.
-     *
-     * @remarks When you create a conduit, the server returns the conduit ID. Specify this field only if `method` is set
-     * to **conduit**.
-     */
-    conduit_id?: string;
 }
 
 /**
@@ -184,7 +190,7 @@ export interface RESTGetEventSubSubscriptionsRequestParams extends RESTPaginatio
     /**
      * Filter subscriptions by subscription type
      */
-    type?: string;
+    type?: EventSubSubscriptionType;
     /**
      * Filter subscriptions by user ID.
      *
