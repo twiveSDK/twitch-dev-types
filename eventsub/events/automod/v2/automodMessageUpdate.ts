@@ -45,5 +45,5 @@ export interface AutomodMessageUpdateEventV2 extends EventBroadcasterInfo, Event
     /**
      * If the message was caught due to a blocked term, this will be populated.
      */
-    blocked_term?: AutomodMessageBlockedTerm;
+    blocked_term: AutomodMessageBlockedTerm|null;
 }

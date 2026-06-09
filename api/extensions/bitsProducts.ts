@@ -110,7 +110,7 @@ export interface RESTPutExtensionBitsProductRequestBody {
      * A Boolean value that determines whether Bits product purchase events are broadcast to all instances of the
      * extension on a channel.
      *
-     * @remarks The events are broadcast via the`onTransactionComplete` helper callback.
+     * @remarks The events are broadcast via the `onTransactionComplete` helper callback.
      * Set to **true** if the event is broadcast to all instances. The default is **false**.
      */
     is_broadcast?: boolean;

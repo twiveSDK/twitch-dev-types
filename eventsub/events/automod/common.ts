@@ -46,11 +46,11 @@ export interface AutomodMessageFragment {
     /**
      * Metadata pertaining to the emote.
      */
-    emote?: AutomodMessageFragmentEmote;
+    emote: AutomodMessageFragmentEmote|null;
     /**
      * Metadata pertaining to the emote.
      */
-    cheermote?: AutomodMessageFragmentCheermote;
+    cheermote: AutomodMessageFragmentCheermote|null;
 }
 
 /**

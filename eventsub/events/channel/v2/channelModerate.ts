@@ -48,11 +48,11 @@ export interface ChannelModerateWarn extends EventUserInfo {
     /**
      * Reason given for the warning.
      */
-    reason?: string;
+    reason: string|null;
     /**
      * Chat rules cited for the warning.
      */
-    chat_rules_cited?: string[];
+    chat_rules_cited: string[]|null;
 }
 
 /**
@@ -66,5 +66,5 @@ export interface ChannelModerateEventV2 extends Omit<ChannelModerateEvent, "acti
     /**
      * Metadata associated with the warn command.
      */
-    warn?: ChannelModerateWarn;
+    warn: ChannelModerateWarn|null;
 }

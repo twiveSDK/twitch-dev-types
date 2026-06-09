@@ -20,19 +20,19 @@ export interface ChannelUnbanRequestResolveEvent extends EventBroadcasterInfo, E
     /**
      * User ID of moderator who approved/denied the request.
      */
-    moderator_id?: string;
+    moderator_id: string|null;
     /**
      * The moderator’s login name.
      */
-    moderator_login?: string;
+    moderator_login: string|null;
     /**
      * The moderator’s display name.
      */
-    moderator_name?: string;
+    moderator_name: string|null;
     /**
      * Resolution text supplied by the mod/broadcaster upon approval/denial of the request.
      */
-    resolution_text?: string;
+    resolution_text: string|null;
     /**
      * Dictates whether the unban request was approved or denied.
      */

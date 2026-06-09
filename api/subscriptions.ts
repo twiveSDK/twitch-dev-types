@@ -30,19 +30,19 @@ export interface APIBroadcasterSubscription {
      *
      * @remarks Is an empty string if `is_gift` is **false**.
      */
-    gifter_id?: string;
+    gifter_id: string;
     /**
      * The gifter’s login name.
      *
      * @remarks Is an empty string if `is_gift` is **false**.
      */
-    gifter_login?: string;
+    gifter_login: string;
     /**
      * The gifter’s display name.
      *
      * @remarks Is an empty string if `is_gift` is **false**.
      */
-    gifter_name?: string;
+    gifter_name: string;
     /**
      * A Boolean value that determines whether the subscription is a gift subscription.
      *
@@ -131,19 +131,19 @@ export interface APIUserSubscription {
      *
      * @remarks The object includes this field only if `is_gift` is **false**.
      */
-    gifter_id?: string;
+    gifter_id: string;
     /**
      * The gifter’s login name.
      *
      * @remarks The object includes this field only if `is_gift` is **false**.
      */
-    gifter_login?: string;
+    gifter_login: string;
     /**
      * The gifter’s display name.
      *
      * @remarks The object includes this field only if `is_gift` is **false**.
      */
-    gifter_name?: string;
+    gifter_name: string;
     /**
      * A Boolean value that determines whether the subscription is a gift subscription.
      *

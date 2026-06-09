@@ -7,9 +7,9 @@ export interface ChannelWarningSendEvent extends EventBroadcasterInfo, EventMode
     /**
      * The reason given for the warning.
      */
-    reason?: string;
+    reason: string|null;
     /**
      * The chat rules cited for the warning.
      */
-    chat_rules_cited?: string[];
+    chat_rules_cited: string[]|null;
 }

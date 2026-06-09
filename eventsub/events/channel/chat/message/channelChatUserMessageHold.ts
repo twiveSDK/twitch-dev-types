@@ -26,11 +26,11 @@ export interface ChannelChatUserHoldMessageFragment {
     /**
      * Metadata pertaining to the emote.
      */
-    emote?: ChannelChatUserHoldMessageFragmentEmote;
+    emote: ChannelChatUserHoldMessageFragmentEmote|null;
     /**
      * Metadata pertaining to the cheermote.
      */
-    cheermote?: ChannelChatMessageFragmentCheermote;
+    cheermote: ChannelChatMessageFragmentCheermote|null;
 }
 
 /**

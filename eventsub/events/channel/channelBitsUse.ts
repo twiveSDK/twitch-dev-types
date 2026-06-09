@@ -95,11 +95,11 @@ export interface ChannelBitsUseMessageFragment {
     /**
      * The metadata pertaining to the emote.
      */
-    emote?: ChannelBitsUseMessageFragmentEmote;
+    emote: ChannelBitsUseMessageFragmentEmote|null;
     /**
      * The metadata pertaining to the cheermote.
      */
-    cheermote?: ChannelBitsUseMessageFragmentCheermote;
+    cheermote: ChannelBitsUseMessageFragmentCheermote|null;
 }
 
 /**
@@ -150,11 +150,11 @@ export interface ChannelBitsUsePowerUp {
     /**
      * Emote associated with the reward.
      */
-    emote?: ChannelBitsUsePowerUpEmote;
+    emote: ChannelBitsUsePowerUpEmote|null;
     /**
      * The ID of the message effect.
      */
-    message_effect_id?: string;
+    message_effect_id: string|null;
 }
 
 /**
@@ -186,13 +186,13 @@ export interface ChannelBitsUseEvent extends EventBroadcasterInfo, EventUserInfo
     /**
      * An object that contains the user message and emote information needed to recreate the message.
      */
-    message?: ChannelBitsUseMessage;
+    message: ChannelBitsUseMessage|null;
     /**
      * Data about a default (i.e. built-in) Power-up.
      */
-    power_up?: ChannelBitsUsePowerUp;
+    power_up: ChannelBitsUsePowerUp|null;
     /**
      * Data about a custom Power-up.
      */
-    custom_power_up?: ChannelBitsUseCustomPowerUp;
+    custom_power_up: ChannelBitsUseCustomPowerUp|null;
 }

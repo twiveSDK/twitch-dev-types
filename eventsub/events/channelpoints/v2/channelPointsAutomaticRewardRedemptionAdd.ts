@@ -18,7 +18,7 @@ export interface ChannelPointsAutomaticRewardRedemptionV2 {
     /**
      * Emote associated with the reward.
      */
-    emote?: ChannelPointsAutomaticRewardRedemptionEmote;
+    emote: ChannelPointsAutomaticRewardRedemptionEmote|null;
 }
 
 /**
@@ -44,7 +44,7 @@ export interface ChannelPointsAutomaticRewardRedemptionMessageFragment {
     /**
      * The metadata pertaining to the emote.
      */
-    emote?: Omit<ChannelPointsAutomaticRewardRedemptionEmote, "name">
+    emote: Omit<ChannelPointsAutomaticRewardRedemptionEmote, "name">|null;
 }
 
 /**
@@ -76,7 +76,7 @@ export interface ChannelPointsAutomaticRewardRedemptionAddEventV2 extends EventB
     /**
      * An object that contains the user message and emote information needed to recreate the message.
      */
-    message?: ChannelPointsAutomaticRewardRedemptionMessageV2;
+    message: ChannelPointsAutomaticRewardRedemptionMessageV2|null;
     /**
      * The UTC date and time (in RFC3339 format) of when the reward was redeemed.
      */

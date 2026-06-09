@@ -88,7 +88,7 @@ export interface ChannelChatMessageEvent extends EventBroadcasterInfo {
     /**
      * Metadata if this message is a cheer.
      */
-    cheer?: ChannelChatMessageCheer;
+    cheer: ChannelChatMessageCheer|null;
     /**
      * The color of the user’s name in the chat room.
      *
@@ -99,11 +99,11 @@ export interface ChannelChatMessageEvent extends EventBroadcasterInfo {
     /**
      * Metadata if this message is a reply.
      */
-    reply?: ChannelChatMessageReply;
+    reply: ChannelChatMessageReply|null;
     /**
      * The ID of a channel points custom reward that was redeemed.
      */
-    channel_points_custom_reward_id?: string;
+    channel_points_custom_reward_id: string|null;
     /**
      * The broadcaster user ID of the channel the message was sent from.
      *
@@ -149,5 +149,5 @@ export interface ChannelChatMessageEvent extends EventBroadcasterInfo {
      *
      * @remarks Has no effect if the message is not sent during a shared chat session.
      */
-    is_source_only?: boolean;
+    is_source_only: boolean|null;
 }
