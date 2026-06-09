@@ -80,11 +80,11 @@ export interface ChannelSuspiciousUserMessageFragment {
     /**
      * Metadata pertaining to the cheermote.
      */
-    cheermote?: ChannelSuspiciousUserMessageFragmentCheermote;
+    cheermote: ChannelSuspiciousUserMessageFragmentCheermote|null;
     /**
      * Metadata pertaining to the emote.
      */
-    emote?: ChannelSuspiciousUserMessageFragmentEmote;
+    emote: ChannelSuspiciousUserMessageFragmentEmote|null;
 }
 
 /**

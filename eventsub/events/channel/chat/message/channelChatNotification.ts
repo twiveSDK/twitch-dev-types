@@ -72,7 +72,7 @@ export interface ChannelChatNotificationResub {
     /**
      * The number of consecutive months the user has subscribed.
      */
-    is_prime?: boolean;
+    is_prime: boolean|null;
     /**
      * Whether the resub was a result of a gift.
      */
@@ -80,25 +80,25 @@ export interface ChannelChatNotificationResub {
     /**
      * Whether the gift was anonymous.
      */
-    gifter_is_anonymous?: boolean;
+    gifter_is_anonymous: boolean|null;
     /**
      * The user ID of the subscription gifter.
      *
      * @remarks Null if anonymous.
      */
-    gifter_user_id?: string|null;
+    gifter_user_id: string|null;
     /**
      * The username of the subscription gifter.
      *
      * @remakrs Null if anonymous.
      */
-    gifter_user_name?: string|null;
+    gifter_user_name: string|null;
     /**
      * The user login of the subscription gifter.
      *
      * @remarks Null if anonymous.
      */
-    gifter_user_login?: string|null;
+    gifter_user_login: string|null;
 }
 
 /**
@@ -134,7 +134,7 @@ export interface ChannelChatNotificationSubGift {
      *
      * @remKRS Null if not associated with a community gift.
      */
-    community_gift_id?: string|null;
+    community_gift_id: string|null;
 }
 
 /**
@@ -158,7 +158,7 @@ export interface ChannelChatNotificationCommunitySubGift {
      *
      * @remKRS Null if anonymous.
      */
-    cumulative_total?: number|null;
+    cumulative_total: number|null;
 }
 
 /**
@@ -174,13 +174,13 @@ export interface ChannelChatNotificationGiftPaidUpgrade {
      *
      * @remarks Null if anonymous.
      */
-    gifter_user_id?: string|null;
+    gifter_user_id: string|null;
     /**
      * The username of the user who gifted the subscription.
      *
      * @remarks Null if anonymous.
      */
-    gifter_user_name?: string|null;
+    gifter_user_name: string|null;
 }
 
 /**
@@ -212,13 +212,13 @@ export interface ChannelChatNotificationPayItForward {
      *
      * @remarks Null if anonymous.
      */
-    gifter_user_name?: string|null;
+    gifter_user_name: string|null;
     /**
      * The user login of the user who gifted the subscription.
      *
      * @remarks Null if anonymous.
      */
-    gifter_user_login?: string|null;
+    gifter_user_login: string|null;
 }
 
 /**
@@ -408,7 +408,7 @@ export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
      * Is not null when in a shared chat session, and the action happens in the channel of a participant other
      * than the broadcaster.
      */
-    source_broadcaster_user_id?: string|null;
+    source_broadcaster_user_id: string|null;
     /**
      * The username of the broadcaster of the channel the message was sent from.
      *
@@ -416,7 +416,7 @@ export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
      * Is not null when in a shared chat session, and the action happens in the channel of a participant other
      * than the broadcaster.
      */
-    source_broadcaster_user_name?: string|null;
+    source_broadcaster_user_name: string|null;
     /**
      * The login of the broadcaster of the channel the message was sent from.
      *
@@ -424,7 +424,7 @@ export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
      * Is not null when in a shared chat session, and the action happens in the channel of a participant other
      * than the broadcaster.
      */
-    source_broadcaster_user_login?: string|null;
+    source_broadcaster_user_login: string|null;
     /**
      * The UUID that identifies the source message from the channel the message was sent from.
      *
@@ -432,7 +432,7 @@ export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
      * Is not null when in a shared chat session, and the action happens in the channel of a participant other
      * than the broadcaster.
      */
-    source_message_id?: string|null;
+    source_message_id: string|null;
     /**
      * The list of chat badges for the chatter in the channel the message was sent from.
      *
@@ -446,7 +446,7 @@ export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
      *
      * @remarks Is `null` if the notification is not in a shared chat session.
      */
-    is_source_only?: boolean|null;
+    is_source_only: boolean|null;
     /**
      * Information about the `shared_chat_sub` event.
      *

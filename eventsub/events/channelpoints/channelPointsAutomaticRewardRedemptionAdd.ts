@@ -43,7 +43,7 @@ export interface ChannelPointsAutomaticRewardRedemption {
     /**
      * Emote that was unlocked.
      */
-    unlocked_emote?: ChannelPointsAutomaticRewardRedemptionEmote;
+    unlocked_emote: ChannelPointsAutomaticRewardRedemptionEmote|null;
 }
 
 /**
@@ -97,7 +97,7 @@ export interface ChannelPointsAutomaticRewardRedemptionAddEvent extends EventBro
     /**
      * A string that the user entered if the reward requires to be input.
      */
-    user_input?: string;
+    user_input: string|null;
     /**
      * The UTC date and time (in RFC3339 format) of when the reward was redeemed.
      */

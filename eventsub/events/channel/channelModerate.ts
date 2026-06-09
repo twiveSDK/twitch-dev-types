@@ -72,7 +72,7 @@ export interface ChannelModerateBan extends EventUserInfo {
     /**
      * Reason given for the ban.
      */
-    reason?: string;
+    reason: string|null;
 }
 
 /**
@@ -82,7 +82,7 @@ export interface ChannelModerateTimeout extends EventUserInfo{
     /**
      * The reason given for the timeout.
      */
-    reason?: string;
+    reason: string|null;
     /**
      * The time at which the timeout ends.
      */
@@ -196,63 +196,63 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
     /**
      * Metadata associated with the followers command.
      */
-    followers?: ChannelModerateFollowers;
+    followers: ChannelModerateFollowers|null;
     /**
      * Metadata associated with the slow command.
      */
-    slow?: ChannelModerateSlow;
+    slow: ChannelModerateSlow|null;
     /**
      * Metadata associated with the vip command.
      */
-    vip?: EventUserInfo;
+    vip: EventUserInfo|null;
     /**
      * Metadata associated with the unvip command.
      */
-    unvip?: EventUserInfo;
+    unvip: EventUserInfo|null;
     /**
      * Metadata associated with the mod command.
      */
-    mod?: EventUserInfo;
+    mod: EventUserInfo|null;
     /**
      * Metadata associated with the unmod command.
      */
-    unmod?: EventUserInfo;
+    unmod: EventUserInfo|null;
     /**
      * Metadata associated with the ban command.
      */
-    ban?: ChannelModerateBan;
+    ban: ChannelModerateBan|null;
     /**
      * Metadata associated with the unban command.
      */
-    unban?: EventUserInfo;
+    unban: EventUserInfo|null;
     /**
      * Metadata associated with the timeout command.
      */
-    timeout?: ChannelModerateTimeout;
+    timeout: ChannelModerateTimeout|null;
     /**
      * Metadata associated with the untimeout command.
      */
-    untimeout?: EventUserInfo;
+    untimeout: EventUserInfo|null;
     /**
      * Metadata associated with the raid command.
      */
-    raid?: ChannelModerateRaid;
+    raid: ChannelModerateRaid|null;
     /**
      * Metadata associated with the unraid command.
      */
-    unraid?: EventUserInfo;
+    unraid: EventUserInfo|null;
     /**
      * Metadata associated with the delete command.
      */
-    delete?: ChannelModerateDelete;
+    delete: ChannelModerateDelete|null;
     /**
      * Metadata associated with the automod terms changes.
      */
-    automod_terms?: ChannelModerateAutomodTerms;
+    automod_terms: ChannelModerateAutomodTerms|null;
     /**
      * Metadata associated with an unban request.
      */
-    unban_request?: ChannelModerateUnbanRequest;
+    unban_request: ChannelModerateUnbanRequest|null;
     /**
      * Information about the `shared_chat_ban event`.
      *
@@ -260,7 +260,7 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
      * but for an action that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
-    shared_chat_ban?: ChannelModerateBan|null;
+    shared_chat_ban: ChannelModerateBan|null;
     /**
      * Information about the `shared_chat_unban` event.
      *
@@ -268,7 +268,7 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
      * but for an action that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
-    shared_chat_unban?: EventUserInfo|null;
+    shared_chat_unban: EventUserInfo|null;
     /**
      * Information about the `shared_chat_timeout` event.
      *
@@ -276,7 +276,7 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
      * field but for an action that happened for a channel in a shared chat session other than the broadcaster in
      * the subscription condition.
      */
-    shared_chat_timeout?: ChannelModerateTimeout|null;
+    shared_chat_timeout: ChannelModerateTimeout|null;
     /**
      * Information about the `shared_chat_untimeout` event.
      *
@@ -284,7 +284,7 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
      * field but for an action that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
-    shared_chat_untimeout?: EventUserInfo|null;
+    shared_chat_untimeout: EventUserInfo|null;
     /**
      * Information about the `shared_chat_delete` event.
      *
@@ -292,5 +292,5 @@ export interface ChannelModerateEvent extends EventBroadcasterInfo, EventModerat
      * field but for an action that happened for a channel in a shared chat session other than the broadcaster in the
      * subscription condition.
      */
-    shared_chat_delete?: ChannelModerateDelete|null;
+    shared_chat_delete: ChannelModerateDelete|null;
 }

@@ -87,15 +87,15 @@ export interface ChannelChatMessageFragment {
     /**
      * Metadata pertaining to the cheermote.
      */
-    cheermote?: ChannelChatMessageFragmentCheermote;
+    cheermote: ChannelChatMessageFragmentCheermote|null;
     /**
      * Metadata pertaining to the emote.
      */
-    emote?: ChannelChatMessageFragmentEmote;
+    emote: ChannelChatMessageFragmentEmote|null;
     /**
      * Metadata pertaining to the mention.
      */
-    mention?: EventUserInfo;
+    mention: EventUserInfo|null;
 }
 
 /**

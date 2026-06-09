@@ -49,7 +49,7 @@ export interface HypeTrainBeginEvent extends EventBroadcasterInfo {
     /**
      * Contains the list of broadcasters in the shared Hype Train.
      */
-    shared_train_participants?: EventBroadcasterInfo[];
+    shared_train_participants: EventBroadcasterInfo[]|null;
     /**
      * The time when the Hype Train started.
      */

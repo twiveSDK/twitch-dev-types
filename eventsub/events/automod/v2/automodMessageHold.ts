@@ -50,9 +50,9 @@ export interface AutomodMessageHoldEventV2 extends EventBroadcasterInfo, EventUs
     /**
      * If the message was caught by automod, this will be populated.
      */
-    automod?: AutomodMessageHoldAutomod;
+    automod: AutomodMessageHoldAutomod|null;
     /**
      * If the message was caught due to a blocked term, this will be populated.
      */
-    blocked_term?: AutomodMessageBlockedTerm;
+    blocked_term: AutomodMessageBlockedTerm|null;
 }
