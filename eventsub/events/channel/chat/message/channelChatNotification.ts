@@ -29,6 +29,7 @@ export enum ChannelChatNotificationNoticeType {
     SharedChatRaid = "shared_chat_raid",
     SharedChatPayItForward = "shared_chat_pay_it_forward",
     SharedChatAnnouncement = "shared_chat_announcement",
+    SharedChatModiversary = "shared_chat_modiversary",
     Unknown = "unknown",
 }
 
@@ -289,6 +290,16 @@ export interface ChannelChatNotificationWatchStreak {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-notification-event
  */
+export interface ChannelChatNotificationModiversary {
+    /**
+     * The number of months the user has been a moderator in this channel.
+     */
+    months: number;
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-notification-event
+ */
 export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
     /**
      * The user ID of the user that sent the message.
@@ -402,6 +413,12 @@ export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
      * @remarks Null if `notice_type` is not `watch_streak`.
      */
     watch_streak: ChannelChatNotificationWatchStreak|null;
+    /**
+     * Information about the modiversary event.
+     *
+     * @remark Null if `notice_type` is not `modiversary`.
+     */
+    modiversary: ChannelChatNotificationModiversary|null;
     /**
      * The broadcaster user ID of the channel the message was sent from.
      *
