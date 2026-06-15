@@ -14,6 +14,8 @@ Up-to-date Twitch Typings based on the official [Twitch Dev Docs](https://dev.tw
 
 ```bash
 npm install twitch-dev-types
+yarn add twitch-dev-types
+pnpm add twitch-dev-types
 ```
 
 ## Usage
