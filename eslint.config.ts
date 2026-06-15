@@ -84,7 +84,7 @@ export default defineConfig(
             ],
             "object-curly-spacing": [
                 "error",
-                "always"
+                "never"
             ],
             "no-restricted-syntax": [
                 "error",
