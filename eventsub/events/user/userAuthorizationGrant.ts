@@ -1,4 +1,4 @@
-import type { EventUserInfo } from "../common";
+import type {EventUserInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#user-authorization-grant-event

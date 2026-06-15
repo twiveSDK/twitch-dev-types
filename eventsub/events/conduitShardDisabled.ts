@@ -1,4 +1,4 @@
-import type { EventSubTransportMethod } from "../common";
+import type {EventSubTransportMethod} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#conduit-shard-disabled-event

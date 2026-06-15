@@ -1,7 +1,7 @@
 import type {
     ChannelPointsAutomaticRewardRedemptionEmote, ChannelPointsAutomaticRewardRedemptionType,
 } from "../channelPointsAutomaticRewardRedemptionAdd";
-import type { EventBroadcasterInfo, EventUserInfo } from "../../common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-points-automatic-reward-redemption-add-v2-event

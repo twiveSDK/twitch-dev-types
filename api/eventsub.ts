@@ -1,4 +1,4 @@
-import type { APIPaginatedResponse, APIResponse, RESTPaginationRequestParams } from "./common";
+import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
 import type {
     EventSubSubscriptionCondition, EventSubSubscriptionStatus, EventSubTransportMethod, EventSubSubscriptionType,
 } from "../eventsub";

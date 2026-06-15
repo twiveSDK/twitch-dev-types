@@ -1,5 +1,5 @@
-import type { EventBroadcasterInfo } from "../../../common";
-import type { ChannelSharedChatSessionHost } from "./common";
+import type {EventBroadcasterInfo} from "../../../common";
+import type {ChannelSharedChatSessionHost} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-shared-chat-session-end-event

@@ -1,6 +1,6 @@
-import type { EventBroadcasterInfo } from "../common";
-import type { HypeTrainTopContribution } from "./common";
-import type { HypeTrainType } from "./hypeTrainBegin";
+import type {EventBroadcasterInfo} from "../common";
+import type {HypeTrainTopContribution} from "./common";
+import type {HypeTrainType} from "./hypeTrainBegin";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#hype-train-end-event

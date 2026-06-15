@@ -1,4 +1,4 @@
-import type { AccessTokenScopes } from "./scopes";
+import type {AccessTokenScopes} from "./scopes";
 
 /**
  * @see https://dev.twitch.tv/docs/authentication/getting-tokens-oauth

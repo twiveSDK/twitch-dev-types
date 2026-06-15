@@ -1,5 +1,5 @@
-import type { EventSubSubscription } from "./subscription";
-import type { EventSubEventPayload, EventSubTransportMethod } from "./common";
+import type {EventSubSubscription} from "./subscription";
+import type {EventSubEventPayload, EventSubTransportMethod} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/websocket-reference/

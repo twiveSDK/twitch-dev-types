@@ -1,5 +1,5 @@
-import type { CharityAmountData } from "./common";
-import type { EventBroadcasterInfo } from "../common";
+import type {CharityAmountData} from "./common";
+import type {EventBroadcasterInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#charity-campaign-progress-event

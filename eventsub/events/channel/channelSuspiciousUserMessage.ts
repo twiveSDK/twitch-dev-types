@@ -1,5 +1,5 @@
-import type { ChannelSuspiciousUserLowTrustStatus } from "./channelSuspiciousUserUpdate";
-import type { EventBroadcasterInfo, EventUserInfo } from "../common";
+import type {ChannelSuspiciousUserLowTrustStatus} from "./channelSuspiciousUserUpdate";
+import type {EventBroadcasterInfo, EventUserInfo} from "../common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-suspicious-user-message-event

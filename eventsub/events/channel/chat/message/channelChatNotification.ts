@@ -1,7 +1,7 @@
-import type { ChannelChatBadge, ChannelChatMessage } from "./common";
-import type { ChannelSubscriptionTier } from "../../sub";
-import type { EventBroadcasterInfo, EventUserInfo } from "../../../common";
-import type { CharityAmountData } from "../../../charity";
+import type {ChannelChatBadge, ChannelChatMessage} from "./common";
+import type {ChannelSubscriptionTier} from "../../sub";
+import type {EventBroadcasterInfo, EventUserInfo} from "../../../common";
+import type {CharityAmountData} from "../../../charity";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-notification-event

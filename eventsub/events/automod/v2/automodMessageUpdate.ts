@@ -1,6 +1,6 @@
-import type { EventBroadcasterInfo, EventModeratorInfo, EventUserInfo } from "../../common";
-import type { AutomodMessageBlockedTerm, AutomodMessageV2 } from "../common";
-import type { AutomodMessageUpdateStatus } from "../automodMessageUpdate";
+import type {EventBroadcasterInfo, EventModeratorInfo, EventUserInfo} from "../../common";
+import type {AutomodMessageBlockedTerm, AutomodMessageV2} from "../common";
+import type {AutomodMessageUpdateStatus} from "../automodMessageUpdate";
 
 /**
  * @sse https://dev.twitch.tv/docs/eventsub/eventsub-reference/#automod-message-update-event-v2

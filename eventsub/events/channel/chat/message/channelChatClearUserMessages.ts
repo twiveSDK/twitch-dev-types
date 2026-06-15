@@ -1,4 +1,4 @@
-import type { EventBroadcasterInfo } from "../../../common";
+import type {EventBroadcasterInfo} from "../../../common";
 
 /**
  * https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-clear-user-messages-event

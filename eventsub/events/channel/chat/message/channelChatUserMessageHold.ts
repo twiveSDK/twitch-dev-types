@@ -1,5 +1,5 @@
-import type { EventBroadcasterInfo, EventUserInfo } from "../../../common";
-import type { ChannelChatMessageFragmentCheermote } from "./common";
+import type {EventBroadcasterInfo, EventUserInfo} from "../../../common";
+import type {ChannelChatMessageFragmentCheermote} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-user-message-hold-event
