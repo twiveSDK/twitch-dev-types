@@ -11,7 +11,7 @@ export enum ChannelPointsCustomRewardRedemptionStatus {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#reward
  */
-export class ChannelPointsCustomRewardRedemption {
+export interface ChannelPointsCustomRewardRedemption {
     /**
      * The reward identifier.
      */
