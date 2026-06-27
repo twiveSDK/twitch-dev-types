@@ -79,7 +79,7 @@ export interface RESTGetAuthorizationCodeGrantFlowTokenResponse extends RESTBase
     /**
      * An array of the scopes requested.
      */
-    scope: AccessTokenScopes[];
+    scope?: AccessTokenScopes[];
 }
 
 /**
