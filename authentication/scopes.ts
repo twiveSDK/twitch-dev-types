@@ -36,6 +36,10 @@ export enum AccessTokenScopes {
      */
     ChannelReadCharity = "channel:read:charity",
     /**
+     * Manage Clips for a channel.
+     */
+    ChannelManageClips = "channel:manage:clips",
+    /**
      * Run commercials on a channel.
      */
     ChannelReadCommercial = "channel:read:commercial",
