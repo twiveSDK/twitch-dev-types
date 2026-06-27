@@ -59,6 +59,10 @@ export interface RESTGetClientCredentialsGrantFlowTokenResponse extends RESTBase
  */
 export interface RESTGetAuthorizationCodeGrantFlowTokenRequestBody extends RESTBaseGetTokenRequestBody {
     /**
+     * Your app’s registered client secret.
+     */
+    client_secret: string;
+    /**
      * The code that the `/authorize` response returned in the code query parameter.
      */
     code: string;
