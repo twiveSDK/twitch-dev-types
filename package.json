@@ -17,22 +17,22 @@
         ".": {
             "types": "./index.d.ts",
             "require": "./index.js",
-            "import": "./index.js.map"
+            "import": "./index.js"
         },
         "./api": {
             "types": "./api/index.d.ts",
             "require": "./api/index.js",
-            "import": "./api/index.js.map"
+            "import": "./api/index.js"
         },
         "./authentication": {
             "types": "./authentication/index.d.ts",
             "require": "./authentication/index.js",
-            "import": "./authentication/index.js.map"
+            "import": "./authentication/index.js"
         },
         "./eventsub": {
             "types": "./eventsub/index.d.ts",
             "require": "./eventsub/index.js",
-            "import": "./eventsub/index.js.map"
+            "import": "./eventsub/index.js"
         }
     },
     "files": [
