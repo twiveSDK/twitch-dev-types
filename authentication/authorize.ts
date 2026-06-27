@@ -54,7 +54,7 @@ export interface OAuth2BaseAuthorizeSuccessParams {
     /**
      * The state string that was passed in the request.
      */
-    state: string;
+    state?: string;
 }
 
 /**
@@ -91,5 +91,5 @@ export interface OAuth2AuthorizeErrorParams {
     /**
      * The state string that was passed in the request.
      */
-    state: string;
+    state?: string;
 }
