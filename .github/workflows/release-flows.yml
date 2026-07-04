@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: EsLint check
+      - name: ESLint check
         run: npm run lint
 
       - name: Build package
@@ -75,7 +75,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: EsLint check
+      - name: ESLint check
         run: npm run lint
 
       - name: Build package
