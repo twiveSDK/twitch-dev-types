@@ -229,6 +229,10 @@ export enum AccessTokenScopes {
      */
     ModeratorReadSuspiciousUsers = "moderator:read:suspicious_users",
     /**
+     * Manage suspicious user statuses in channels where the user has the moderator role.
+     */
+    ModeratorManageSuspiciousUsers = "moderator:manage:suspicious_users",
+    /**
      * View a broadcaster’s unban requests.
      */
     ModeratorReadUnbanRequests = "moderator:read:unban_requests",
