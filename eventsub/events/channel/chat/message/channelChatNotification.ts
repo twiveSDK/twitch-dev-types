@@ -20,6 +20,7 @@ export enum ChannelChatNotificationNoticeType {
     BitsBadgeTier = "bits_badge_tier",
     CharityDonation = "charity_donation",
     WatchStreak = "watch_streak",
+    Modiversary = "modiversary",
     SharedChatSub = "shared_chat_sub",
     SharedChatResub = "shared_chat_resub",
     SharedChatSubGift = "shared_chat_sub_gift",
@@ -537,4 +538,12 @@ export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
      * broadcaster in the subscription condition.
      */
     shared_chat_announcement: ChannelChatNotificationAnnouncement|null;
+    /**
+     * Information about the `shared_chat_modiversary` event.
+     *
+     * @remark Is null if `notice_type` is not `shared_chat_modiversary`. This field has the same information as the
+     * `modiversary` field but for a notice that happened for a channel in a shared chat session other than the
+     * broadcaster in the subscription condition.
+     */
+    shared_chat_modiversary: ChannelChatNotificationModiversary|null;
 }
