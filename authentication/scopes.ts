@@ -168,13 +168,13 @@ export enum AccessTokenScopes {
      */
     ModeratorReadBlockedTerms = "moderator:read:blocked_terms",
     /**
-     * Read deleted chat messages in channels where you have the moderator role.
-     */
-    ModeratorReadChatMessages = "moderator:read:chat_messages",
-    /**
      * Manage a broadcaster’s list of blocked terms.
      */
     ModeratorManageBlockedTerms = "moderator:manage:blocked_terms",
+    /**
+     * Read deleted chat messages in channels where you have the moderator role.
+     */
+    ModeratorReadChatMessages = "moderator:read:chat_messages",
     /**
      * Delete chat messages in channels where you have the moderator role.
      */
