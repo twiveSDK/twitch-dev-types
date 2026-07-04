@@ -542,7 +542,7 @@ export interface ChannelChatNotificationEvent extends EventBroadcasterInfo {
      * Information about the `shared_chat_modiversary` event.
      *
      * @remark Is null if `notice_type` is not `shared_chat_modiversary`. This field has the same information as the
-     * modiversary field but for a notice that happened for a channel in a shared chat session other than the
+     * `modiversary` field but for a notice that happened for a channel in a shared chat session other than the
      * broadcaster in the subscription condition.
      */
     shared_chat_modiversary: ChannelChatNotificationModiversary|null;
