@@ -42,7 +42,7 @@ export enum AccessTokenScopes {
     /**
      * Run commercials on a channel.
      */
-    ChannelReadCommercial = "channel:read:commercial",
+    ChannelEditCommercial = "channel:edit:commercial",
     /**
      * View a list of users with the editor role for a channel.
      */
