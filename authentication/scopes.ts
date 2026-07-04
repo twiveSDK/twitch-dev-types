@@ -36,9 +36,13 @@ export enum AccessTokenScopes {
      */
     ChannelReadCharity = "channel:read:charity",
     /**
+     * Manage Clips for a channel.
+     */
+    ChannelManageClips = "channel:manage:clips",
+    /**
      * Run commercials on a channel.
      */
-    ChannelReadCommercial = "channel:read:commercial",
+    ChannelEditCommercial = "channel:edit:commercial",
     /**
      * View a list of users with the editor role for a channel.
      */
@@ -164,13 +168,13 @@ export enum AccessTokenScopes {
      */
     ModeratorReadBlockedTerms = "moderator:read:blocked_terms",
     /**
-     * Read deleted chat messages in channels where you have the moderator role.
-     */
-    ModeratorReadChatMessages = "moderator:read:chat_messages",
-    /**
      * Manage a broadcaster’s list of blocked terms.
      */
     ModeratorManageBlockedTerms = "moderator:manage:blocked_terms",
+    /**
+     * Read deleted chat messages in channels where you have the moderator role.
+     */
+    ModeratorReadChatMessages = "moderator:read:chat_messages",
     /**
      * Delete chat messages in channels where you have the moderator role.
      */
@@ -224,6 +228,10 @@ export enum AccessTokenScopes {
      * where you have the moderator role.
      */
     ModeratorReadSuspiciousUsers = "moderator:read:suspicious_users",
+    /**
+     * Manage suspicious user statuses in channels where the user has the moderator role.
+     */
+    ModeratorManageSuspiciousUsers = "moderator:manage:suspicious_users",
     /**
      * View a broadcaster’s unban requests.
      */
