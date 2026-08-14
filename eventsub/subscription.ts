@@ -702,17 +702,17 @@ export interface EventSubSubscriptionRequestBody {
     /**
      * The subscription type name.
      */
-    type: EventSubSubscriptionType,
+    type: EventSubSubscriptionType;
     /**
      * The subscription type version.
      */
-    version: string,
+    version: string;
     /**
      * Subscription-specific parameters.
      */
-    condition: EventSubSubscriptionCondition,
+    condition: EventSubSubscriptionCondition;
     /**
      * Transport-specific parameters.
      */
-    transport: EventSubWebhookTransport|EventSubWebsocketTransport,
+    transport: EventSubWebhookTransport|EventSubWebsocketTransport;
 }
