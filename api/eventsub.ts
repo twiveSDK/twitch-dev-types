@@ -11,7 +11,7 @@ export interface APIEventSubSubscriptionTransport {
     /**
      * The transport method.
      */
-    method: EventSubTransportMethod|"conduit";
+    method: EventSubTransportMethod;
     /**
      * The callback URL where the notifications are sent.
      * 
@@ -94,7 +94,7 @@ export interface RESTPostEventSubSubscriptionTransportRequestBodyParam {
     /**
      * The transport method.
      */
-    method: EventSubTransportMethod|"conduit";
+    method: EventSubTransportMethod;
     /**
      * The callback URL where the notifications are sent. The URL must use the HTTPS protocol and port 443.
      * See {@link https://dev.twitch.tv/docs/eventsub/handling-webhook-events/#processing-an-event Processing an event}.

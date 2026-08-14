@@ -26,6 +26,7 @@ import type {
 } from "./conditions";
 import type {EventSubWebhookTransport} from "./webhook";
 import type {EventSubWebsocketTransport} from "./websocket";
+import type {EventSubConduitTransport} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-subscription-types/
@@ -714,7 +715,7 @@ export interface EventSubSubscriptionRequestBody {
     /**
      * Transport-specific parameters.
      */
-    transport: EventSubWebhookTransport|EventSubWebsocketTransport;
+    transport: EventSubWebhookTransport|EventSubWebsocketTransport|EventSubConduitTransport;
 }
 
 /**
