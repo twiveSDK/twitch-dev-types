@@ -24,6 +24,8 @@ import type {
     HypeTrainEndCondition, HypeTrainProgressCondition, StreamOfflineCondition, StreamOnlineCondition,
     UserAuthorizationGrantCondition, UserAuthorizationRevokeCondition, UserUpdateCondition, WhisperReceivedCondition,
 } from "./conditions";
+import type {EventSubWebhookTransport} from "./webhook";
+import type {EventSubWebsocketTransport} from "./websocket";
 
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-subscription-types/
@@ -691,4 +693,26 @@ export interface EventSubSubscription {
      * The time the notification was created.
      */
     created_at: string;
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-subscription-types
+ */
+export interface EventSubSubscriptionRequestBody {
+    /**
+     * The subscription type name.
+     */
+    type: EventSubSubscriptionType,
+    /**
+     * The subscription type version.
+     */
+    version: string,
+    /**
+     * Subscription-specific parameters.
+     */
+    condition: EventSubSubscriptionCondition,
+    /**
+     * Transport-specific parameters.
+     */
+    transport: EventSubWebhookTransport|EventSubWebsocketTransport,
 }
