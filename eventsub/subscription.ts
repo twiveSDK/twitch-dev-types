@@ -676,7 +676,7 @@ export interface EventSubSubscription {
     /**
      * The version of the subscription.
      */
-    version: "1"|"2"|"beta";
+    version: EventSubSubscriptionVersion;
     /**
      * The status of the subscription.
      */
@@ -706,7 +706,7 @@ export interface EventSubSubscriptionRequestBody {
     /**
      * The subscription type version.
      */
-    version: string;
+    version: EventSubSubscriptionVersion;
     /**
      * Subscription-specific parameters.
      */
@@ -716,3 +716,8 @@ export interface EventSubSubscriptionRequestBody {
      */
     transport: EventSubWebhookTransport|EventSubWebsocketTransport;
 }
+
+/**
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-subscription-types
+ */
+export type EventSubSubscriptionVersion = "1"|"2"|"beta";

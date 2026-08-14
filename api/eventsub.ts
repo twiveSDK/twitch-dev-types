@@ -1,6 +1,7 @@
 import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
 import type {
     EventSubSubscriptionCondition, EventSubSubscriptionStatus, EventSubTransportMethod, EventSubSubscriptionType,
+    EventSubSubscriptionVersion,
 } from "../eventsub";
 
 /**
@@ -64,7 +65,7 @@ export interface APIEventSubSubscription {
     /**
      * The version number that identifies this definition of the subscription's data.
      */
-    version: "1"|"2"|"beta";
+    version: EventSubSubscriptionVersion;
     /**
      * The subscription's parameter values.
      * 
@@ -137,7 +138,7 @@ export interface RESTPostEventSubSubscriptionRequestBody {
     /**
      * The version number that identifies the definition of the subscription type that you want the response to use.
      */
-    version: "1"|"2"|"beta";
+    version: EventSubSubscriptionVersion;
     /**
      * A JSON object that contains the parameter values that are specific to the specified subscription type.
      * 
