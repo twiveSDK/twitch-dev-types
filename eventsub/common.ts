@@ -117,4 +117,19 @@ export type EventSubEventPayload = AutomodMessageHoldEvent
 export enum EventSubTransportMethod {
     Webhook = "webhook",
     Websocket = "websocket",
+    Conduit = "conduit",
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#transport
+ */
+export interface EventSubConduitTransport {
+    /**
+     * The transport method.
+     */
+    method: EventSubTransportMethod.Conduit;
+    /**
+     * The ID of the conduit.
+     */
+    conduit_id: string;
 }
