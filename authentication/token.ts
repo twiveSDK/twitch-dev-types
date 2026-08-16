@@ -13,7 +13,7 @@ export enum OAuth2GrantType {
 /**
  * @see https://dev.twitch.tv/docs/authentication/getting-tokens-oauth
  */
-export interface RESTBaseGetTokenRequestBody {
+export interface RESTBaseTokenRequestBody {
     /**
      * Your app’s registered client ID.
      */
@@ -27,7 +27,7 @@ export interface RESTBaseGetTokenRequestBody {
 /**
  * @see https://dev.twitch.tv/docs/authentication/getting-tokens-oauth
  */
-export interface RESTBaseGetTokenResponse {
+export interface RESTBaseTokenResponse {
     /**
      * The authenticated token, to be used for various API endpoints and EventSub subscriptions.
      */
@@ -45,19 +45,19 @@ export interface RESTBaseGetTokenResponse {
 /**
  * @see https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#client-credentials-grant-flow
  */
-export interface RESTGetClientCredentialsGrantFlowTokenRequestBody extends RESTBaseGetTokenRequestBody {
+export interface RESTPostClientCredentialsGrantFlowTokenRequestBody extends RESTBaseTokenRequestBody {
     client_secret: string;
 }
 
 /**
  * @see https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#client-credentials-grant-flow
  */
-export interface RESTGetClientCredentialsGrantFlowTokenResponse extends RESTBaseGetTokenResponse {}
+export interface RESTPostClientCredentialsGrantFlowTokenResponse extends RESTBaseTokenResponse {}
 
 /**
  * @see https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#authorization-code-grant-flow
  */
-export interface RESTGetAuthorizationCodeGrantFlowTokenRequestBody extends RESTBaseGetTokenRequestBody {
+export interface RESTGetAuthorizationCodeGrantFlowTokenRequestBody extends RESTBaseTokenRequestBody {
     /**
      * Your app’s registered client secret.
      */
@@ -75,7 +75,7 @@ export interface RESTGetAuthorizationCodeGrantFlowTokenRequestBody extends RESTB
 /**
  * @see https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#authorization-code-grant-flow
  */
-export interface RESTGetAuthorizationCodeGrantFlowTokenResponse extends RESTBaseGetTokenResponse {
+export interface RESTGetAuthorizationCodeGrantFlowTokenResponse extends RESTBaseTokenResponse {
     /**
      * A token used to refresh the access token.
      */
@@ -89,7 +89,7 @@ export interface RESTGetAuthorizationCodeGrantFlowTokenResponse extends RESTBase
 /**
  * @see https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#device-code-grant-flow
  */
-export interface RESTGetDeviceCodeGrantFlowTokenFormData extends RESTBaseGetTokenRequestBody {
+export interface RESTLocationDeviceCodeGrantFlowTokenFormData extends RESTBaseTokenRequestBody {
     /**
      * URL used to request a token from Twitch. Will always be the same.
      */
@@ -109,7 +109,7 @@ export interface RESTGetDeviceCodeGrantFlowTokenFormData extends RESTBaseGetToke
 /**
  * @see https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#device-code-grant-flow
  */
-export interface RESTGetDeviceCodeGrantFlowTokenResponse extends RESTBaseGetTokenResponse {
+export interface RESTLocationDeviceCodeGrantFlowTokenResponse extends RESTBaseTokenResponse {
     /**
      * A token used to refresh the access token.
      */
@@ -123,7 +123,7 @@ export interface RESTGetDeviceCodeGrantFlowTokenResponse extends RESTBaseGetToke
 /**
  * @see https://dev.twitch.tv/docs/authentication/refresh-tokens/
  */
-export interface RESTPostRefreshTokenRequestBody extends RESTBaseGetTokenRequestBody {
+export interface RESTPostRefreshTokenRequestBody extends RESTBaseTokenRequestBody {
     /**
      * Your app’s client secret.
      */
