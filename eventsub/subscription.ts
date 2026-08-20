@@ -583,6 +583,10 @@ export enum EventSubSubscriptionStatus {
      * The client failed to reconnect to the Twitch WebSocket server within the required time after a Reconnect Message.
      */
     WebsocketFailedToReconnect = "websocket_failed_to_reconnect",
+    /**
+     * The conduit associated with the subscription was deleted.
+     */
+    ConduitDeleted = "conduit_deleted",
 }
 
 /**
