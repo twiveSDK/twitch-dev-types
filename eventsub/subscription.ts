@@ -671,11 +671,11 @@ export type EventSubSubscriptionCondition = AutomodMessageHoldCondition
  */
 export interface EventSubSubscription {
     /**
-     * Your client ID.
+     * The subscription’s ID.
      */
     id: string;
     /**
-     * The notification’s subscription type.
+     * The subscription type.
      */
     type: EventSubSubscriptionType;
     /**
@@ -695,6 +695,10 @@ export interface EventSubSubscription {
      */
     condition: EventSubSubscriptionCondition;
     /**
+     * The transport method used.
+     */
+    transport: EventSubSubscriptionTransport;
+    /**
      * The time the notification was created.
      */
     created_at: string;
@@ -703,26 +707,9 @@ export interface EventSubSubscription {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-subscription-types
  */
-export interface EventSubSubscriptionRequestBody {
-    /**
-     * The subscription type name.
-     */
-    type: EventSubSubscriptionType;
-    /**
-     * The subscription type version.
-     */
-    version: EventSubSubscriptionVersion;
-    /**
-     * Subscription-specific parameters.
-     */
-    condition: EventSubSubscriptionCondition;
-    /**
-     * Transport-specific parameters.
-     */
-    transport: EventSubWebhookTransport|EventSubWebsocketTransport|EventSubConduitTransport;
-}
+export type EventSubSubscriptionVersion = "1"|"2"|"beta";
 
 /**
- * @see https://dev.twitch.tv/docs/eventsub/eventsub-subscription-types
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#transport
  */
-export type EventSubSubscriptionVersion = "1"|"2"|"beta";
+export type EventSubSubscriptionTransport = EventSubWebsocketTransport|EventSubWebhookTransport|EventSubConduitTransport;
