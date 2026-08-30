@@ -1,4 +1,4 @@
-import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
+import type {RESTPaginationRequestParams} from "./common";
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-channel-stream-schedule
@@ -129,7 +129,24 @@ export interface RESTGetChannelStreamScheduleRequestParams extends RESTPaginatio
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-channel-stream-schedule
  */
-export interface RESTGetChannelStreamScheduleResponse extends APIPaginatedResponse<APIChannelStreamSchedule> {}
+export interface RESTGetChannelStreamScheduleResponse {
+    data: APIChannelStreamSchedule;
+    /**
+     * The information used to page through the list of results.
+     *
+     * @remarks The object is empty if there are no more pages left to page through.
+     * {@link https://dev.twitch.tv/docs/api/guide/#pagination Read More}
+     */
+    pagination: {
+        /**
+         * The cursor used to get the next page of results.
+         *
+         * @remarks Set the request’s after or before query parameter to this value depending on
+         * whether you’re paging forwards or backwards.
+         */
+        cursor?: string;
+    };
+}
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#update-channel-stream-schedule
@@ -228,7 +245,7 @@ export interface RESTPostChannelStreamScheduleSegmentRequestBody {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#create-channel-stream-schedule-segment
  */
-export interface RESTPostChannelStreamScheduleSegmentResponse extends APIResponse<APIChannelStreamScheduleSegment> {}
+export interface RESTPostChannelStreamScheduleSegmentResponse extends Omit<RESTGetChannelStreamScheduleResponse, "pagination"> {}
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#update-channel-stream-schedule-segment
@@ -293,7 +310,7 @@ export interface RESTPatchChannelStreamScheduleSegmentRequestBody {
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#update-channel-stream-schedule-segment
  */
-export interface RESTPatchChannelStreamScheduleSegmentResponse extends APIResponse<APIChannelStreamScheduleSegment> {}
+export interface RESTPatchChannelStreamScheduleSegmentResponse extends RESTPostChannelStreamScheduleSegmentResponse {}
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#delete-channel-stream-schedule-segment
