@@ -90,7 +90,7 @@ export interface EventSubWebsocketNotificationMessagePayload {
     /**
      * An object that contains information about your subscription.
      */
-    subscription: EventSubSubscription & EventSubWebsocketSubscriptionTransport;
+    subscription: Omit<EventSubSubscription, "transport"> & EventSubWebsocketSubscriptionTransport;
     /**
      * The event’s data.
      */
@@ -124,7 +124,7 @@ export interface EventSubWebsocketRevocationMessagePayload {
     /**
      * An object that contains information about your subscription.
      */
-    subscription: EventSubSubscription;
+    subscription: Omit<EventSubSubscription, "transport"> & EventSubWebsocketSubscriptionTransport;
 }
 
 /**
