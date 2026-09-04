@@ -8,6 +8,7 @@ export enum ChannelChatMessageFragmentType {
     Cheermote = "cheermote",
     Emote = "emote",
     Mention = "mention",
+    Gif = "gif",
 }
 
 /**
@@ -75,6 +76,22 @@ export interface ChannelChatMessageFragmentCheermote {
 /**
  * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-message-event
  */
+export interface ChannelChatMessageFragmentGif {
+    /**
+     * An ID that uniquely identifies this GIF.
+     */
+    id: string;
+    /**
+     * The URL of the GIF asset.
+     *
+     * @remarks Applications rendering the GIF must use the full URL provided; it must not be modified.
+     */
+    url: string;
+}
+
+/**
+ * @see https://dev.twitch.tv/docs/eventsub/eventsub-reference/#channel-chat-message-event
+ */
 export interface ChannelChatMessageFragment {
     /**
      * The type of chat message fragment.
@@ -96,6 +113,10 @@ export interface ChannelChatMessageFragment {
      * Metadata pertaining to the mention.
      */
     mention: EventUserInfo|null;
+    /**
+     * Metadata pertaining to the GIF.
+     */
+    gif: ChannelChatMessageFragmentGif|null;
 }
 
 /**
