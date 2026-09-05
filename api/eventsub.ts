@@ -1,131 +1,8 @@
 import type {APIPaginatedResponse, APIResponse, RESTPaginationRequestParams} from "./common";
 import type {
-    EventSubSubscriptionCondition, EventSubSubscriptionStatus, EventSubTransportMethod, EventSubSubscriptionType,
-    EventSubSubscriptionVersion,
+    EventSubSubscriptionCondition, EventSubSubscriptionStatus, EventSubSubscriptionType, EventSubSubscriptionVersion,
+    EventSubSubscriptionTransport, EventSubSubscription,
 } from "../eventsub";
-
-/**
- * @see https://dev.twitch.tv/docs/api/reference/#get-eventsub-subscriptions
- */
-export interface APIEventSubSubscriptionTransport {
-    /**
-     * The transport method.
-     */
-    method: EventSubTransportMethod;
-    /**
-     * The callback URL where the notifications are sent.
-     * 
-     * @remarks Included only if `method` is set to **webhook**.
-     */
-    callback?: string;
-    /**
-     * An ID that identifies the WebSocket that notifications are sent to.
-     *
-     * @remarks Included only if `method` is set to **websocket**.
-     */
-    session_id?: string;
-    /**
-     * The UTC date and time that the WebSocket connection was established.
-     *
-     * @remarks Included only if `method` is set to **websocket**.
-     */
-    connected_at?: string;
-    /**
-     * The UTC date and time that the WebSocket connection was lost.
-     *
-     * @remarks Included only if `method` is set to **websocket**.
-     */
-    disconnected_at: string;
-    /**
-     * An ID that identifies the conduit to send notifications to.
-     *
-     * @remarks Included only if `method` is set to **conduit**.
-     */
-    conduit_id?: string;
-}
-
-/**
- * @see https://dev.twitch.tv/docs/api/reference/#get-eventsub-subscriptions
- */
-export interface APIEventSubSubscription {
-    /**
-     * An ID that identifies the subscription.
-     */
-    id: string;
-    /**
-     * The subscription's status.
-     * 
-     * @remarks The subscriber receives events only for enabled subscriptions.
-     */
-    status: EventSubSubscriptionStatus;
-    /**
-     * The subscription's type.
-     */
-    type: EventSubSubscriptionType;
-    /**
-     * The version number that identifies this definition of the subscription's data.
-     */
-    version: EventSubSubscriptionVersion;
-    /**
-     * The subscription's parameter values.
-     * 
-     * @remarks This is a string-encoded JSON object whose contents are determined by the subscription type.
-     */
-    condition: EventSubSubscriptionCondition;
-    /**
-     * The date and time (in RFC3339 format) of when the subscription was created.
-     */
-    created_at: string;
-    /**
-     * The transport details used to send the notifications.
-     */
-    transport: APIEventSubSubscriptionTransport;
-    /**
-     * The amount that the subscription counts against your limit.
-     * {@link https://dev.twitch.tv/docs/eventsub/manage-subscriptions/#subscription-limits Learn More}
-     */
-    cost: number;
-}
-
-/**
- * @see https://dev.twitch.tv/docs/api/reference/#create-eventsub-subscription
- */
-export interface RESTPostEventSubSubscriptionTransportRequestBodyParam {
-    /**
-     * The transport method.
-     */
-    method: EventSubTransportMethod;
-    /**
-     * The callback URL where the notifications are sent. The URL must use the HTTPS protocol and port 443.
-     * See {@link https://dev.twitch.tv/docs/eventsub/handling-webhook-events/#processing-an-event Processing an event}.
-     * 
-     * @remarks Specify this field only if `method` is set to **webhook**.
-     */
-    callback?: string;
-    /**
-     * The secret used to verify the signature.
-     * 
-     * @remarks The secret must be an ASCII string that’s a minimum of 10 characters long and a maximum of 100
-     * characters long. For information about how the secret is used, see
-     * {@link https://dev.twitch.tv/docs/eventsub/handling-webhook-events/#verifying-the-event-message
-     * Verifying the event message}. Specify this field only if `method` is set to **webhook**.
-     */
-    secret?: string;
-    /**
-     * An ID that identifies the WebSocket to send notifications to.
-     *
-     * @remarks When you connect to EventSub using WebSockets, the server returns the ID in the Welcome message.
-     * Specify this field only if `method` is set to **websocket**.
-     */
-    session_id?: string;
-    /**
-     * An ID that identifies the conduit to send notifications to.
-     *
-     * @remarks When you create a conduit, the server returns the conduit ID. Specify this field only if `method` is set
-     * to **conduit**.
-     */
-    conduit_id?: string;
-}
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#create-eventsub-subscription
@@ -148,13 +25,13 @@ export interface RESTPostEventSubSubscriptionRequestBody {
     /**
      * The transport details that you want Twitch to use when sending you notifications.
      */
-    transport: RESTPostEventSubSubscriptionTransportRequestBodyParam;
+    transport: EventSubSubscriptionTransport;
 }
 
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#create-eventsub-subscription
  */
-export interface RESTPostEventSubSubscriptionResponse extends APIResponse<APIEventSubSubscription> {
+export interface RESTPostEventSubSubscriptionResponse extends APIResponse<EventSubSubscription> {
     /**
      * The total number of subscriptions you’ve created.
      */
@@ -214,7 +91,7 @@ export interface RESTGetEventSubSubscriptionsRequestParams extends RESTPaginatio
 /**
  * @see https://dev.twitch.tv/docs/api/reference/#get-eventsub-subscriptions
  */
-export interface RESTGetEventSubSubscriptionsResponse extends APIPaginatedResponse<APIEventSubSubscription> {
+export interface RESTGetEventSubSubscriptionsResponse extends APIPaginatedResponse<EventSubSubscription> {
     /**
      * The total number of subscriptions you’ve created.
      */

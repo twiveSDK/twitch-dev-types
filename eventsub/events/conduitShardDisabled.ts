@@ -23,29 +23,29 @@ export interface ConduitShardDisabledEvent {
     /**
      * The transport method.
      */
-    method: EventSubTransportMethod;
+    method: EventSubTransportMethod.Websocket|EventSubTransportMethod.Webhook;
     /**
      * Webhook callback URL.
      *
      * @remarks Null if `method` is set to **websocket**.
      */
-    callback?: string|null;
+    callback: string|null;
     /**
      * WebSocket session ID.
      *
      * @remarks Null if `method` is set to **webhook**.
      */
-    session_id?: string|null;
+    session_id: string|null;
     /**
      * Time that the WebSocket session connected.
      *
      * @remarks Null if `method` is set to **webhook**.
      */
-    connected_at?: string|null;
+    connected_at: string|null;
     /**
      * Time that the WebSocket session disconnected.
      *
      * @remarks Null if `method` is set to **webhook**.
      */
-    disconnected_at?: string|null;
+    disconnected_at: string|null;
 }

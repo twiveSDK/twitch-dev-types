@@ -82,7 +82,7 @@ export interface EventSubWebhookNotificationRequestBody {
     /**
      * An object that contains information about your subscription.
      */
-    subscription: EventSubSubscription & EventSubWebhookSubscriptionTransport;
+    subscription: Omit<EventSubSubscription, "transport"> & EventSubWebhookSubscriptionTransport;
     /**
      * The event’s data.
      */
@@ -100,7 +100,7 @@ export interface EventSubWebhookVerificationChallengeRequestBody {
     /**
      * An object that contains information about your subscription.
      */
-    subscription: EventSubSubscription & EventSubWebhookSubscriptionTransport;
+    subscription: Omit<EventSubSubscription, "transport"> & EventSubWebhookSubscriptionTransport;
 }
 
 /**
@@ -110,7 +110,7 @@ export interface EventSubWebhookRevokeSubscriptionRequestBody {
     /**
      * An object that contains information about your subscription.
      */
-    subscription: EventSubSubscription & EventSubWebhookSubscriptionTransport;
+    subscription: Omit<EventSubSubscription, "transport"> & EventSubWebhookSubscriptionTransport;
 }
 
 /**
