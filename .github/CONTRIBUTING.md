@@ -3,11 +3,11 @@
 Welcome to the `twitch-dev-types` repository! We appreciate your interest in contributing to our project. To ensure a 
 smooth collaboration, please follow the guidelines outlined below:
 
-- [Code of Conduct](https://github.com/twiveSDK/twitch-dev-types/blob/main/.github/CODE_OF_CONDUCT.md)
+- [Code of Conduct](https://github.com/twive-app/twitch-dev-types/blob/main/.github/CODE_OF_CONDUCT.md)
 - [Get Started](#get-started)
 - [Development Environment Setup](#development-environment-setup)
 - [How to Contribute](#how-to-contribute)
-- [Codebase Structure](https://github.com/twiveSDK/twitch-dev-types/blob/main/.github/CODEBASE.md)
+- [Codebase Structure](https://github.com/twive-app/twitch-dev-types/blob/main/.github/CODEBASE.md)
 
 ## Get Started
 To contribute, you should have a basic familiarity with:
@@ -36,5 +36,5 @@ You will need an LTS version of [Node.js](http://nodejs.org).
 - Write clear and concise commit messages that follow the conventional commits format.
 - Open a pull request against the `main` branch of the original repository for your changes to be reviewed and merged.
 - Mark your pull request as a Draft if you are still working on it.
-- Ensure to follow our [Codebase Structure](https://github.com/twiveSDK/twitch-dev-types/blob/main/.github/CODEBASE.md) 
+- Ensure to follow our [Codebase Structure](https://github.com/twive-app/twitch-dev-types/blob/main/.github/CODEBASE.md) 
   guidelines when adding new types or interfaces.

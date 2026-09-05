@@ -3,7 +3,7 @@
     "name": "twitch-dev-types",
     "description": "Up-to-date Twitch Typings based on the official Twitch Dev Docs",
     "version": "1.5.5",
-    "homepage": "https://github.com/twiveSDK",
+    "homepage": "https://github.com/twive-app",
     "author": "aysib07 <dev@aysib07.de>",
     "keywords": [
         "twitch",
@@ -66,10 +66,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/twiveSDK/twitch-dev-types.git"
+        "url": "git+https://github.com/twive-app/twitch-dev-types.git"
     },
     "bugs": {
-        "url": "https://github.com/twiveSDK/twitch-dev-types/issues"
+        "url": "https://github.com/twive-app/twitch-dev-types/issues"
     },
     "lint-staged": {
         "{api,authentication,eventsub}/**/*.{ts,d.ts,d.ts.map,js,js.map}": [
