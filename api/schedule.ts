@@ -6,13 +6,16 @@ import type {RESTPaginationRequestParams} from "./common";
 export interface APIChannelStreamScheduleSegmentCategory {
     /**
      * An ID that identifies the category that best represents the content that the broadcaster plans to stream.
-     * For example, the game’s ID if the broadcaster will play a game or the Just Chatting ID if the broadcaster
+     *
+     * @remarks For example, the game’s ID if the broadcaster will play a game or the Just Chatting ID if the broadcaster
      * will host a talk show.
      */
     id: string;
     /**
-     * The name of the category. For example, the game’s title if the broadcaster will play a game
-     * or Just Chatting if the broadcaster will host a talk show.
+     * The name of the category.
+     *
+     * @remarks For example, the game’s title if the broadcaster will play a game or Just Chatting if the broadcaster
+     * will host a talk show.
      */
     name: string;
 }
