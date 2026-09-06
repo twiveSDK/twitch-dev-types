@@ -25,6 +25,7 @@
 npm add twitch-dev-types
 yarn add twitch-dev-types
 pnpm add twitch-dev-types
+bun add twitch-dev-types
 ```
 
 ---
