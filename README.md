@@ -22,7 +22,7 @@
 ### Installation
 
 ```bash
-npm install twitch-dev-types
+npm add twitch-dev-types
 yarn add twitch-dev-types
 pnpm add twitch-dev-types
 ```
